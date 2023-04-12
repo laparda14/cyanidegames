@@ -12,13 +12,13 @@
 <div class="ba">
 <div>
 <h1 class="heading"><i>cyanide.</i></h1>
-<h2 class="heading"> created by moondoge#3703.</h2>
+<h2 class="heading"> created by moondoge#0001.</h2>
 <br width=100% height=100%>
 <button onclick="gameselect()" align=left><i>games</i></button></a>
 <button onclick="chatgpt()" align=center><i>chatGPT/chromeGPT</i></button></a>
 <a href="webretro.html"><button align=center><i>webretro</i></button></a>
 <a href="https://drive.google.com/drive/folders/1GxEedgmWqztyYOe4wgM9GVTabaAwKBMb?usp=sharing" target="_blank"><button align=right><i>chrome portal</i></button></a>
-<a href="offlinestuff.html"><button align=right><i>offline stuff</i></button></a>
+<button onclick="offlinedownloads()" align=right><i>offline stuff</i></button>
 <br width=100% class="hr">
 <div align="center">
 <a href=https://discord.gg/8H7g5Wrs5d><button align="center"><i>join our discord!</i></button></a>
@@ -27,7 +27,16 @@
 </div>
 </div>
 </div>
-
+<div id="offlinedownloads" style="display:none">
+  <div class="ba">
+    <div>
+  <h1 class="heading" align="center"><i>cyanide.</i></h1>
+<h2 class="heading" align="center"> created by moondoge#0001.</h2>
+<br width=100% height=100%>
+<p class="paragraph" align="center"> Here you can download sulfur. A scuffed version of cyanide designed to completely run offline. It takes up around 100MB of storage. Download your version of sulfur below using the download links.</p>
+<a download=""></a>
+</div>
+</div>
 
 
 
@@ -35,7 +44,7 @@
 <div id="games" style="display:none">
   <div>
 <a href="index.html"><h1 class="heading"></ul><i>cyanide.</i></h1></a>
-<h2 class="heading"> created by moondoge#3703.</h2>
+<h2 class="heading"> created by moondoge#0001.</h2>
 <br>
 </div>
 <div class="container">
@@ -53,6 +62,8 @@
 <div class="container">
 
 <a id="123 Movies"href="123movies/index.html"><img class="gamethumb" align="center" src="!icons/123movies.png"></a>
+
+<a id="2048"href="2048/index.html"><img class="gamethumb" align="center" src="!icons/2048.png"></a>
 
 <a id="9007199254740992" href="9007199254740992/index.html"><img class="gamethumb" align="center" src="!icons/900.png"></a>
 
@@ -238,7 +249,9 @@
 
 <a id="Funny Shooter" href="funnyshooter/index.html"><img class="gamethumb" align="center" src="!icons/funnyshooter.png"></a>
 
-<a id="Geometry Dash" href="geometrydash/index.html"><img class="gamethumb" align="center" src="!icons/geodash.png"></a>
+<a id="Geometry Dash Lite" href="geometrydashlite/index.html"><img class="gamethumb" align="center" src="!icons/geodashlite.png"></a>
+
+<a id="Geometry Dash Scratch" href="geometrydash/index.html"><img class="gamethumb" align="center" src="!icons/geodash.png"></a>
 
 <a id="Goodnight" href="goodnight/index.html"><img class="gamethumb" align="center" src="!icons/gn.png"></a>
 
@@ -284,6 +297,8 @@
 <a id="Mario" href="mario/index.html"><img class="gamethumb" align="center" src="!icons/mario.png"></a>
 
 <a id="Minecraft" href="minecraft/index.html"><img class="gamethumb" align="center" src="!icons/minecraft.png"></a>
+
+<a id="Mother 3 (Earthbound 3)" href="GBA/mother3.html"><img class="gamethumb" align="center" src="!icons/mother3.png"></a>
 
 </div>
 <div class="container">
@@ -508,7 +523,7 @@
 <div>
     <center>
     <h1 class=heading><i>ChromeGPT.</h1>
-    <h2 class=heading >bricked by moondoge.</i></h2>
+    <h2 class=heading >bricked by moondoge#0001</i></h2>
 <p class="paragraph"> If you cannot click into the textbox, press tab on your keyboard until you are on the textbox and can answer.</p> 
         <form id="chat-form">
         <br>
@@ -588,14 +603,15 @@ async function getChatGPTResponse(prompt) {
       document.getElementById("index").style.display = "none";
       document.getElementById("games").style.display = "block";
          }
-    function chatgpt() {
+    function offlinedownloads() {
       document.getElementById("index").style.display = "none";
-      document.getElementById("chatgpt").style.display = "block";
+      document.getElementById("offlinedownloads").style.display = "block";
          }
                  function webretro() {
       document.getElementById("index").style.display = "none";
       document.getElementById("webretro").style.display = "block";
          }
+
         function gamepicked() {
       document.getElementById("games").style.display = "none";
          }
