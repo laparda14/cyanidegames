@@ -1,0 +1,103 @@
+<script language="JavaScript">
+
+var nl = getNewLine()
+
+function getNewLine() {
+	var agent = navigator.userAgent
+
+	if (agent.indexOf("Win") >= 0)
+		return "\r\n"
+	else
+		if (agent.indexOf("Mac") >= 0)
+			return "\r"
+
+ 	return "\r"
+
+}
+
+pagecode = '<!DOCTYPE html>'+nl+
+	'<html lang="en">'+nl+
+	'<head>'+nl+
+	'    <meta charset="UTF-8">'+nl+
+	'    <meta name="viewport" content="width=device-width, initial-scale=1.0">'+nl+
+	'    <link rel="stylesheet" type="text/css" href="https://raw.githack.com/moondoges/cyanide/main/unversalstyle.css">'+nl+
+	'  <link rel="stylesheet" type="text/css" href="https://rawcdn.githack.com/moondoges/cyanide/9b1ea49a91e97916f16c35cfe5d0a00d6872d12e/background.css">'+nl+nl+
+	'    <link rel="icon" type="image/x-icon" href="schoologyicon.ico">'+nl+
+	'    <title>Home | Schoology</title>'+nl+
+	'</head>'+nl+
+	'<body>'+nl+
+	'<div class="ba" background-size: cover;>'+nl+
+	'<div>'+nl+
+	'    <center>'+nl+
+	'    <h1 class=heading><i>ChromeGPT.</h1>'+nl+
+	'    <h2 class=heading >bricked by moondoge.</i></h2>'+nl+
+	'<p class="paragraph"> If you cannot click into the textbox, press tab on your keyboard until you are on the textbox and can answer.</p> '+nl+
+	'        <form id="chat-form">'+nl+
+	'        <br>'+nl+
+	'        <textarea id="user-input" style="width: 80%; height: 100px;" required></textarea>'+nl+
+	'        <br>'+nl+
+	'        <button type="submit" height="70%">Ask ChromeGPT</button>'+nl+
+	'    </form>'+nl+
+	'    <h1 class=heading class=hr>ChromeGPT reply:</h1>'+nl+
+	'    </center>'+nl+
+	'    <div id="response-container">'+nl+
+	'        <p class=paragraph id="chatgpt-response"></p>'+nl+
+	'        <p class=paragraph id="please-wait" style="display: none;">Please wait...</p>'+nl+
+	'    </div>'+nl+
+	'</div>'+nl+
+	'</div>'+nl+
+	'<scr'+'ipt>'+nl+
+	'javascript:onbeforeunload=i=>1'+nl+
+	'</scr'+'ipt>'+nl+
+	'    <scr'+'ipt> document.addEventListener(\'DOMContentLoaded\', () => {'+nl+
+	'    document.getElementById(\'chat-form\').addEventListener(\'submit\', async (event) => {'+nl+
+	'        event.preventDefault();'+nl+nl+
+	'        const userInput = document.getElementById(\'user-input\').value;'+nl+
+	'        const pleaseWait = document.getElementById(\'please-wait\');'+nl+
+	'        const chatGPTResponseElement = document.getElementById(\'chatgpt-response\');'+nl+nl+
+	'        pleaseWait.style.display = \'block\';'+nl+
+	'        chatGPTResponseElement.innerText = \'\';'+nl+nl+
+	'        try {'+nl+
+	'            const chatGPTResponse = await getChatGPTResponse(userInput);'+nl+
+	'            chatGPTResponseElement.innerText = chatGPTResponse;'+nl+
+	'        } catch (error) {'+nl+
+	'            chatGPTResponseElement.innerText = \'Error: Could not fetch the response.\';'+nl+
+	'        } finally {'+nl+
+	'            pleaseWait.style.display = \'none\';'+nl+
+	'        }'+nl+
+	'    });'+nl+
+	'});'+nl+
+	'// ... (rest of the code remains unchanged)'+nl+nl+nl+
+	'async function getChatGPTResponse(prompt) {'+nl+
+	'    const apiKey = \'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\';'+nl+
+	'    const url = \'https://api.openai.com/v1/chat/completions\';'+nl+
+	'    '+nl+
+	'    const headers = new Headers({'+nl+
+	'        \'Content-Type\': \'application/json\','+nl+
+	'        \'Authorization\': `Bearer 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`,'+nl+
+	'    });'+nl+nl+
+	'    const body = JSON.stringify({'+nl+
+	'        \'model\': \'gpt-3.5-turbo-0301\','+nl+
+	'        \'messages\': [{\'role\': \'user\', \'content\': prompt}],'+nl+
+	'        \'temperature\': 0.7,'+nl+
+	'    });'+nl+nl+
+	'    const response = await fetch(url, {'+nl+
+	'        method: \'POST\','+nl+
+	'        headers: headers,'+nl+
+	'        body: body,'+nl+
+	'    });'+nl+nl+
+	'    if (response.ok) {'+nl+
+	'        const data = await response.json();'+nl+
+	'        const assistantMessage = data.choices[0].message;'+nl+
+	'        return assistantMessage ? assistantMessage.content.trim() : \'\';'+nl+
+	'    } else {'+nl+
+	'        throw new Error(`Error: ${response.status}`);'+nl+
+	'    }'+nl+
+	'}'+nl+
+	'</scr'+'ipt>'+nl+
+	'</body>'+nl+
+	'</html>'
+
+document.write(pagecode);
+
+</script>
