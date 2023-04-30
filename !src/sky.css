@@ -1,0 +1,247 @@
+body {
+  background-color: #121212; /* For browsers that do not support gradients */
+}
+
+/* CSS for the holder, (holds a whole row of games) A container, 
+    (holds one game together) gamethumb, and the thumbtext 
+                (holds text on top of games) */
+
+.holder_sky{
+    align-items: center;
+  justify-content: center;
+display: flex;
+  margin: 10px, 0px, 0px, 0px;
+}
+
+.container_sky {
+  border: 0px solid black;
+  width: 175px;
+  height: 175px;
+  overflow: hidden;
+  transition-duration: 1s;
+      position: relative;
+    text-align: center;
+
+}
+.container_sky:hover, .gamethumb_sky:hover, .holder_sky:hover{
+  border-radius:40px;
+}
+.container:hover, .gamethumb_sky:hover{
+transform: rotate(5, 5, 5);
+}
+.container_sky, .gamethumb_sky, .holder_sky{
+  border-radius:0px;
+}
+.container_sky:hover img {
+      transform: scale(1.25,1.25);
+}
+
+.thumbtext_sky {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gamethumb_sky{
+background-color: #121212;
+  color: aliceblue;
+  font-family: sans-serif;
+  font-size: 18px;
+  float: right; 
+  margin: 0px 5px 20px 0px;
+border: 2px 2px 2px aliceblue;
+  width:175;
+  height:175;
+  border-radius: 2px;
+  transition-duration: 0.5s;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  opacity:0.5;
+}
+
+.gamethumb_sky:hover{
+background-color: #121212;
+  color: aliceblue;
+  font-family: sans-serif;
+  font-size: 18px;
+  float: right; 
+  margin: 0px 5px 20px 0px;
+border: 2px 2px 2px aliceblue;
+  border-radius:  40px;
+  transition-duration: 0.5s;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  opacity:0.5;
+}
+
+/* end of holder, container, gamethumb, and thumbtext css. */
+
+
+/* lol you can't edit this navbar id it stays the same with all themes */
+#navbar {
+      align-items: center;
+  justify-content: center;
+  display: flex;
+
+}
+
+/* this are very basic default classes, but since
+I always apply classes you dont really have to worry
+              about these too much. */
+p {
+  color: aliceblue;
+  font-family: sans-serif
+    animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  text-align: center;
+}
+textarea{
+  background-color: #121212;
+  color: aliceblue;
+  font-family: sans-serif;
+  font-size: 18px;
+border: 2px 2px 2px aliceblue;
+  width:150;
+  height:75;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  opacity:0.5;
+}
+textarea:hover{
+border: 2px 2px 15px aliceblue;
+  opacity:1;
+}
+iframe{
+animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+/* this is the end of the terribly made classes */
+
+/* paragraph, heading, and button classes*/
+.paragraph_sky{
+  font-family: sans-serif;
+  font-size:18px;
+  color:aliceblue;
+  text-align: center;
+  opacity: 0.5;
+  transition-duration: 0.3s;
+    animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  text-align: center;
+}
+.heading_sky{
+font-family: sans-serif;
+font-size:24px;
+color:aliceblue;
+opacity: 0.5;
+    animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  text-align: center;
+transition-duration: 0.5s;
+}
+.heading_sky:hover{
+  border: 4px 4px 30px aliceblue;
+  opacity: 1; 
+  color:white
+}
+.button_sky{
+background-color: #121212;
+  color: aliceblue;
+  font-family: sans-serif;
+  font-size: 18px;
+border: 2px 2px 2px aliceblue;
+  width:200;
+  height:100;
+  border-radius: 2px;
+  transition-duration: 0.5s;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  opacity:0.5;
+}
+.button_sky:hover{
+border: 4px 4px 15px aliceblue;
+background-color: #fffcfc;
+  color: #121212;
+  width:250;
+  height:100;
+  border-radius: 5px;
+  opacity:1;
+}
+/* end of paragraph, heading, and button classes.*/
+
+
+/* this one just makes shit round lol */
+.round_sky{
+border-radius: 50%;
+width:"100";
+height:"100";
+box-shadow: 0px 0px 5px #8FB2D5;
+transition-duration:0.3s;}
+.round_sky:hover{
+  box-shadow: 0px 0px 15px #8FB2D5;
+}
+/* navtext properties (navtext is just navigation text :O */
+.navtext_sky{
+  text-align: center;
+    font-family: sans-serif;
+  font-size:20px;
+  color:aliceblue;
+  text-decoration: none;
+  border: 2px;
+  background-color: #121212;
+  opacity: 0.5;
+  transition-duration: 0.5s;
+}
+
+.navtext_sky:hover{
+  padding: 10px 0;
+  text-align: center;
+    font-family: sans-serif;
+  font-size:24px;
+  color:aliceblue;
+  text-decoration: none;
+  border: 2px, 2px, 15px, aliceblue;
+  background-color: #121212;
+  opacity: 1;
+}
+
+/* don't change this */
+.game_sky{
+  border-style: solid;
+  color:aliceblue;
+  width:100%;
+  height:100%;
+  align:center;
+}
+/* it would break your fork or whatever in the near future */
+
+.bar_sky{
+    background: #121212;
+    transition: .4s;
+    z-index:4;
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    opacity: 1;
+}
+
+/* This is the effect that is used in cyanide 1.0. 
+    Do whatever you want to it, I don't care! */
+@keyframes rotate{
+  0%{transform: rotate3d(5, 5, 5, 600deg); opacity: 0;}
+  100%{transform: rotate3d(0, 0, 0, 600deg); opacity:0.5}  
+}
+/* Thanks for joining me on the journey through the
+cyanide css files, and I hope you stay safe and healthy out there!
+Don't forget to NEVER, EVER, take drugs kids! */ 

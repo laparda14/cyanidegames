@@ -3,35 +3,56 @@
 <head>
   <title>cyanide.</title>
 </style>
-  <link rel="stylesheet" type="text/css"  href="!src/style.css">
+
+
+  <link rel="stylesheet" type="text/css"  href="!src/default.css">
+  <link rel="stylesheet" type="text/css"  href="!src/sky.css">
+  <link rel="stylesheet" type="text/css"  href="!src/underwater.css">
+  <link rel="stylesheet" type="text/css"  href="!src/oldschool.css">
+  <link rel="stylesheet" type="text/css"  href="!src/red.css">
+  <link rel="stylesheet" type="text/css"  href="!src/minimal.css">
+
+
   <link rel="stylesheet" type="text/css"  href="!src/background.css">
    <link rel="icon" type="image/x-icon"  href="!contributors/moondoge.gif">
 </head>
-<body>
-  <div class="navtext" id="navbar" display="block">
+<body class="sky">
+
+
+
+  <div class="navtext" id="navbar" display="block" style="padding: 10px 0;">
     <div>
-    <button onclick="index()" class="navtext"><i>home</i></button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="index()" class="navtext" style="padding: 10px 0;"><i>home</i></button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </div>
 <div>
-    <button onclick="gameselect()" class="navtext"><i>games</i></button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="gameselect()" class="navtext" style="padding: 10px 0;"><i>games</i></button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </div>
   <div>
 
-    <button onclick="webretro()" class="navtext"><i>webretro</i></button></a>
+    <button onclick="webretro()" class="navtext" style="padding: 10px 0;"><i>webretro</i></button></a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </div>
   <div>
 
-    <button onclick="offlinedownloads()" class="navtext"><i>sulfur</i></button>
+    <button onclick="offlinedownloads()" class="navtext" style="padding: 10px 0;"><i>sulfur</i></button>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </div>
   <div>
 
-    <a onclick="aboutbl()"><button class="navtext"><i>about:blank</i></button></a>
+    <a onclick="aboutbl()"><button class="navtext" style="padding: 10px 0;"><i>about:blank</i></button></a>
   </div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <div>
+    <a onclick="scratchanide()"><button class="navtext" style="padding: 10px 0;"><i>scratchanide</i></button></a>
+  </div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <div>
+    <a onclick="scratchanide()"><button class="navtext" style="padding: 10px 0;"><i>settings</i></button></a>
+  </div>
 
-</div>
+</div> 
+
+
 
   <div id="index">
     <div class="ba">
@@ -52,6 +73,9 @@
 </div>
 </div>
 </div>
+
+
+
 <div id="offlinedownloads" style="display:none">
   <div class="ba">
     <div>
@@ -64,38 +88,36 @@
 </div>
 
 
+
 <div id="games" style="display:none">
 <a  href="index.html"><h1 class="heading"></ul><i>cyanide.</i></h1></a>
 <h2 class="heading"> created by moondoge#0001.</h2>
 <br>
 <div class="holder">
 
-<div class="container"><a id="1 (2048 Spoof)"  href="!games/1/index.html"><img class="gamethumb" align="center" src="!icons/1.png">
-<div class="thumbtext">1 (2048 Spoof)</div>
-</a>
-</div>
+<a id="1 (2048 Spoof)"  href="!games/1/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/1.png">
+<div class="thumbtext, paragraph">1 (2048 Spoof)</div></div></a>
 
-<div class="container"><a id="1v1"  href="!games/1v1/index.html"><img class="gamethumb" align="center" src="!icons/1v1.png"><div class="thumbtext">1v1</div></a>
-</div>
+<a id="1v1"  href="!games/1v1/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/1v1.png"><div class="thumbtext">1v1</div></div></a>
 
-<div class="container"><a id="1v1space"  href="!games/1v1space/index.html"><img class="gamethumb" align="center" src="!icons/1v1space.png"><div class="thumbtext">1v1space</div></a>
-</div>
+<a id="1v1space"  href="!games/1v1space/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/1v1space.png"><div class="thumbtext">1v1space</div>
+</div></a>
 
-<div class="container"><a id="10 Minutes Till Dawn"  href="!games/10-minutes-till-dawn/index.html"><img class="gamethumb" align="center" src="!icons/10m.png"><div class="thumbtext">10 Minutes Till Dawn</div></a>
-</div>
+<a id="10 Minutes Till Dawn"  href="!games/10-minutes-till-dawn/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/10m.png"><div class="thumbtext">10 Minutes Till Dawn</div></div></a>
 
-<div class="container"><a id="100 Player Pong"  href="!games/100-player-pong/index.html"><img class="gamethumb" align="center" src="!icons/100pong.png"><div class="thumbtext">100 Player Pong</div></a>
-</div>
+<a id="100 Player Pong"  href="!games/100-player-pong/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/100pong.png"><div class="thumbtext">100 Player Pong</div></a>
+</div></a>
 
-<div class="container"><a id="123 Movies"  href="!games/123movies/index.html"><img class="gamethumb" align="center" src="!icons/123movies.png"><div class="thumbtext">123 movies</div></a></div>
-</div>
+<a id="123 Movies"  href="!games/123movies/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/123movies.png"><div class="thumbtext">123 movies</div></a></div>
+</div></a>
 
 <div class="holder">
-<div class="container"><a id="2048"  href="!static/2048.html"><img class="gamethumb" align="center" src="!icons/2048.png"><div class="thumbtext">2048</div></a></div>
+<a id="2048"  href="!static/2048.html">
+<div class="container"><img class="gamethumb" align="center" src="!icons/2048.png"><div class="thumbtext">2048</div></div></a>
 
-<div class="container"><a id="9007199254740992"   href="!games//9007199254740992/index.html"><img class="gamethumb" align="center" src="!icons/900.png"><div class="thumbtext">9007199254740992</div></a></div>
+<a id="9007199254740992" href="!games//9007199254740992/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/900.png"><div class="thumbtext">9007199254740992</div></div></a>
 
-<div class="container"><a id="Alien Hominid"   href="!games//alienhominid/index.html"><img class="gamethumb" align="center" src="!icons/alienhominid.png"><div class="thumbtext">Alien Hominid</div></a></div>
+<a id="Alien Hominid" href="!games//alienhominid/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/alienhominid.png"><div class="thumbtext">Alien Hominid</div></div></a>
 
 <div class="container"><a id="Advance Wars"   href="!games//GBA/advancewars.html"><img class="gamethumb" align="center" src="!icons/advancewars.png"><div class="thumbtext">Advance Wars</div></a></div>
 
@@ -107,9 +129,15 @@
 
 <div class="container"><a id="Ages of Conflict"   href="!games//ages-of-conflict/index.html"><img class="gamethumb" align="center" src="!icons/ages-of-conflict.png"><div class="thumbtext">Ages Of Conflict</div></a></div>
 
-<div class="container"><a id="Achievement Unlocked"   href="!games//achievementunlocked/index.html"><img class="gamethumb" align="center" src="!icons/achievementunlocked.png"><div class="thumbtext">Achievement Unlocked</div></a></div>
+<div class="container"><a id="Achievement Unlocked"   href="!games/achievementunlocked/index.html"><img class="gamethumb" align="center" src="!icons/achievementunlocked.png"><div class="thumbtext">Achievement Unlocked</div></a></div>
+
+<div class="container"><a id="Adrenaline Challenge"   href="!games/adrenalinechallenge/index.html"><img class="gamethumb" align="center" src="!icons/adrenalinechallenge.png"><div class="thumbtext">Adrenaline Challenge</div></a></div>
 
 <div class="container"><a id="Amidst The Clouds"   href="!games//amidst-the-clouds/index.html"><img class="gamethumb" align="center" src="!icons/amidst-the-clouds.png"><div class="thumbtext">Amidst The Clouds</div></a></div>
+
+<div class="container"><a id="Amidst The Clouds"   href="!games/amazing-rope-police/index.html"><img class="gamethumb" align="center" src="!icons/amazingropepolice.png"><div class="thumbtext">amazing rope police</div></a></div>
+
+<div class="container"><a id="Among Us"   href="!games/amongus/index.html"><img class="gamethumb" align="center" src="!icons/amongus.png"><div class="thumbtext">Among Us</div></a></div>
 
 <div class="container"><a id="Antimatter Dimensions"   href="!games/antimatter/index.html"><img class="gamethumb" align="center" src="!icons/antid.png"><div class="thumbtext">Antimatter Dimensions</div></a></div>
 
@@ -118,56 +146,58 @@
 <div class="container"><a id="Backrooms"  href="!games/backrooms/index.html"><img class="gamethumb" align="center" src="!icons/backrooms.png"><div class="thumbtext">Backrooms</div></a></div></div>
 <div class="holder">
 
-<div class="container"><a id="Bad Ice Cream 1"   href="!games//bad-ice-cream/index.html"><img class="gamethumb" align="center" src="!icons/bad-ice-cream.png"><div class="thumbtext">Bad Ice Cream 1</div></a></div>
+<div class="container"><a id="Bad Ice Cream 1"   href="!games/bad-ice-cream/index.html"><img class="gamethumb" align="center" src="!icons/bad-ice-cream.png"><div class="thumbtext">Bad Ice Cream 1</div></a></div>
 
-<div class="container"><a id="Bad Ice Cream 2"   href="!games//bad-ice-cream-2/index.html"><img class="gamethumb" align="center" src="!icons/bad-ice-cream-2.png"><div class="thumbtext">Bad Ice Cream 2</div></a></div>
+<div class="container"><a id="Bad Ice Cream 2"   href="!games/bad-ice-cream-2/index.html"><img class="gamethumb" align="center" src="!icons/bad-ice-cream-2.png"><div class="thumbtext">Bad Ice Cream 2</div></a></div>
 
-<div class="container"><a id="Bad Ice Cream 3"   href="!games//bad-ice-cream-3/index.html"><img class="gamethumb" align="center" src="!icons/bad-ice-cream-3.png"><div class="thumbtext">Bad Ice Cream 3</div></a></div>
+<div class="container"><a id="Bad Ice Cream 3"   href="!games/bad-ice-cream-3/index.html"><img class="gamethumb" align="center" src="!icons/bad-ice-cream-3.png"><div class="thumbtext">Bad Ice Cream 3</div></a></div>
 
 
-<div class="container"><a id="Baldis Basics"   href="!games//baldis-basics/index.html"><img class="gamethumb" align="center" src="!icons/baldis-basics.png"><div class="thumbtext">Baldis Basics</div></a></div>
+<div class="container"><a id="Baldis Basics"   href="!games/baldis-basics/index.html"><img class="gamethumb" align="center" src="!icons/baldis-basics.png"><div class="thumbtext">Baldis Basics</div></a></div>
 
-<div class="container"><a id="Ball Hop"   href="!games//ball-hop/index.html"><img class="gamethumb" align="center" src="!icons/ballhop.png"><div class="thumbtext">Ball Hop</div></a></div>
+<div class="container"><a id="Ball Hop"   href="!games/ball-hop/index.html"><img class="gamethumb" align="center" src="!icons/ballhop.png"><div class="thumbtext">Ball Hop</div></a></div>
 
-<div class="container"><a id="Ballistic Chickens"   href="!games//ballistic-chickens/index.html"><img class="gamethumb" align="center" src="!icons/ballistic-chickens.png"><div class="thumbtext">Ballistic Chickens</div></a></div></div>
+<div class="container"><a id="Ballistic Chickens"   href="!games/ballistic-chickens/index.html"><img class="gamethumb" align="center" src="!icons/ballistic-chickens.png"><div class="thumbtext">Ballistic Chickens</div></a></div></div>
 <div class="holder">
 
-<div class="container"><a id="Basketball Stars"   href="!games//basketball-stars/index.html"><img class="gamethumb" align="center" src="!icons/BAS.png"><div class="thumbtext">Basketball Stars</div></a></div>
+<div class="container"><a id="Basketball Stars"   href="!games/basketball-stars/index.html"><img class="gamethumb" align="center" src="!icons/BAS.png"><div class="thumbtext">Basketball Stars</div></a></div>
 
 <div class="container"><a id="Biters.io"   href="!games//biters-io/index.html"><img class="gamethumb" align="center" src="!icons/biters.png"><div class="thumbtext">Biters.io</div></a></div>
 
-<div class="container"><a id="Binding Of Issac - Wrath Of The Lamb"   href="!games//binding-of-issac/index.html"><img class="gamethumb" align="center" src="!icons/bindingofissac.png"><div class="thumbtext">Binding Of Issac - Wrath Of The Lamb</div></a></div>
+<div class="container"><a id="Binding Of Issac - Wrath Of The Lamb"   href="!games/binding-of-issac/index.html"><img class="gamethumb" align="center" src="!icons/bindingofissac.png"><div class="thumbtext">Binding Of Issac - Wrath Of The Lamb</div></a></div>
 
 
 
-<div class="container"><a id="Bitlife"   href="!games//bitlife/index.html"><img class="gamethumb" align="center" src="!icons/bitlife.png"><div class="thumbtext">Bitlife</div></a></div>
+<div class="container"><a id="Bitlife"   href="!games/bitlife/index.html"><img class="gamethumb" align="center" src="!icons/bitlife.png"><div class="thumbtext">Bitlife</div></a></div>
 
-<div class="container"><a id="Blocky Tower"   href="!games//blocky-tower/index.html"><img class="gamethumb" align="center" src="!icons/blocky.png"><div class="thumbtext">Blocky Tower</div></a></div>
+<div class="container"><a id="Blocky Tower"   href="!games/blocky-tower/index.html"><img class="gamethumb" align="center" src="!icons/blocky.png"><div class="thumbtext">Blocky Tower</div></a></div>
 
-<div class="container"><a id="Bloons Tower Defense"   href="!games//bloonstd/index.html"><img class="gamethumb" align="center" src="!icons/bloonstd.png"><div class="thumbtext">Bloons Tower Defense</div></a></div>
+<div class="container"><a id="Bloons Tower Defense"   href="!games/bloonstd/index.html"><img class="gamethumb" align="center" src="!icons/bloonstd.png"><div class="thumbtext">Bloons Tower Defense</div></a></div>
 </div>
 
 <div class="holder">
-<div class="container"><a id="Bloons Tower Defense 2"   href="!games//bloonstd2/index.html"><img class="gamethumb" align="center" src="!icons/bloonstd2.png"><div class="thumbtext">Bloons Tower Defense 2</div></a></div>
+<div class="container"><a id="Bloons Tower Defense 2"   href="!games/bloonstd2/index.html"><img class="gamethumb" align="center" src="!icons/bloonstd2.png"><div class="thumbtext">Bloons Tower Defense 2</div></a></div>
 
-<div class="container"><a id="Bloons Tower Defense 4"   href="!games//bloonstd4/index.html"><img class="gamethumb" align="center" src="!icons/bloonstd4.png"><div class="thumbtext">Bloons Tower Defense 4</div></a></div>
+<div class="container"><a id="Bloons Tower Defense 4"   href="!games/bloonstd4/index.html"><img class="gamethumb" align="center" src="!icons/bloonstd4.png"><div class="thumbtext">Bloons Tower Defense 4</div></a></div>
 
-<div class="container"><a id="Bloons Tower Defense 5"   href="!games//bloonstd5/index.html"><img class="gamethumb" align="center" src="!icons/bloonstd5.png"><div class="thumbtext">Bloons Tower Defense 5</div></a></div>
+<div class="container"><a id="Bloons Tower Defense 5"   href="!games/bloonstd5/index.html"><img class="gamethumb" align="center" src="!icons/bloonstd5.png"><div class="thumbtext">Bloons Tower Defense 5</div></a></div>
 
 
 
-<div class="container"><a id="Bloxorz"   href="!games//bloxorz/index.html"><img class="gamethumb" align="center" src="!icons/bloxorz.png"><div class="thumbtext">Bloxorz</div></a></div>
+<div class="container"><a id="Bloxorz"   href="!games/bloxorz/index.html"><img class="gamethumb" align="center" src="!icons/bloxorz.png"><div class="thumbtext">Bloxorz</div></a></div>
 
-<div class="container"><a id="Big Tower Tiny Square"   href="!games//big-tower-tiny-square/index.html"><img class="gamethumb" align="center" src="!icons/btts.png"><div class="thumbtext">Big Tower Tiny Square</div></a></div>
+<div class="container"><a id="Big Tower Tiny Square"   href="!games/big-tower-tiny-square/index.html"><img class="gamethumb" align="center" src="!icons/btts.png"><div class="thumbtext">Big Tower Tiny Square</div></a></div>
 
-<div class="container"><a id="Cactus McCoy"  href="!games//cactusmccoy1.html"><img class="gamethumb" align="center" src="!icons/cactusmccoy1.png"><div class="thumbtext">Cactus McCoy</div></a></div>
+<div class="container"><a id="Bouncy Heroes"   href="!games/bouncyheroes/index.html"><img class="gamethumb" align="center" src="!icons/bouncyheroes.png"><div class="thumbtext">Bloons Tower Defense 2</div></a></div>
+
+<div class="container"><a id="Cactus McCoy"  href="!games/cactusmccoy1.html"><img class="gamethumb" align="center" src="!icons/cactusmccoy1.png"><div class="thumbtext">Cactus McCoy</div></a></div>
 </div>
 
 <div class="holder">
 
-<div class="container"><a id="Chill Radio (they play nujabes on here sometimes)"  href="!games//chill-radio/index.html"><img class="gamethumb" align="center" src="!icons/chillradio.png"><div class="thumbtext">Chill Radio</div></a></div>
+<div class="container"><a id="Chill Radio (they play nujabes on here sometimes)"  href="!games/chill-radio/index.html"><img class="gamethumb" align="center" src="!icons/chillradio.png"><div class="thumbtext">Chill Radio</div></a></div>
 
-<div class="container"><a id="Chrome Dinosaur Game"   href="!games//chrome-dino/index.html"><img class="gamethumb" align="center" src="!icons/chromedino.png"><div class="thumbtext">Chrome Dino</div></a></div>
+<div class="container"><a id="Chrome Dinosaur Game"   href="!games/chrome-dino/index.html"><img class="gamethumb" align="center" src="!icons/chromedino.png"><div class="thumbtext">Chrome Dino</div></a></div>
 
 <div class="container"><a id="Circlo"  href="!games/circlo/index.html"><img class="gamethumb" align="center" src="!icons/circlo.png"><div class="thumbtext">Circlo</div></a></div>
 
@@ -186,6 +216,8 @@
 <div class="container"><a id="Crossy Road"  href="!games/crossyroad/index.html"><img class="gamethumb" align="center" src="!icons/crossyroad.png"><div class="thumbtext">Crossy Road</div></a></div>
 
 <div class="container"><a id="Cyber City Driver"  href="!games/cyber-city-driver/index.html"><img class="gamethumb" align="center" src="!icons/cyber.png"><div class="thumbtext">Cyber City Driver</div></a></div>
+
+<div class="container"><a id="Coolman DX"  href="!games/coolman/index.html"><img class="gamethumb" align="center" src="!icons/coolman.png"><div class="thumbtext">Coolman DX</div></a></div>
 
 <div class="container"><a id="CSGO Clicker"  href="!games/csgo-clicker/index.html"><img class="gamethumb" align="center" src="!icons/CSGO.png"><div class="thumbtext">CSGO Clicker</div></a></div>
 
@@ -213,7 +245,7 @@
 
 <div class="container"><a id="Duck Life 4"  href="!games/ducklife4/index.html"><img class="gamethumb" align="center" src="!icons/ducklife4.png"><div class="thumbtext">Duck Life 4</div></a></div>
 
-<div class="container"><a id="Doom 64"  href="!games/gba/doom64.html"><img class="gamethumb" align="center" src="!icons/doom64.png"><div class="thumbtext">DOOM 64</div></a></div>
+<div class="container"><a id="Doom 64"  href="!games/GBA/doom64.html"><img class="gamethumb" align="center" src="!icons/doom64.png"><div class="thumbtext">DOOM 64</div></a></div>
 
 <div class="container"><a id="Dune"  href="!games/dune/index.html"><img class="gamethumb" align="center" src="!icons/dune.png"><div class="thumbtext">Dune</div></a></div>
 
@@ -295,9 +327,15 @@
 
 <div class="container"><a id="Goodnight"  href="!games/goodnight/index.html"><img class="gamethumb" align="center" src="!icons/gn.png"><div class="thumbtext">Goodnight</div></a></div>
 
+<div class="container"><a id="Google Snake"  href="!games/google-snake/index.html"><img class="gamethumb" align="center" src="!icons/googlesnake.png"><div class="thumbtext">Google Snake</div></a></div>
+
 <div class="container"><a id="Hextris"  href="!games/hextris/index.html"><img class="gamethumb" align="center" src="!icons/hextrt.png"><div class="thumbtext">Hextris</div></a></div>
 
 <div class="container"><a id="Idle Breakout"  href="!games/idle-breakout/index.html"><img class="gamethumb" align="center" src="!icons/idlebreakout.png"><div class="thumbtext">Idle Breakout</div></a></div>
+
+<div class="container"><a id="Ice Age Baby"  href="!games/iceagebaby/index.html"><img class="gamethumb" align="center" src="!icons/iceagebaby.png"><div class="thumbtext">Ice Age Baby</div></a></div>
+
+<div class="container"><a id="Ice Age Baby 2"  href="!games/iceagebaby2/index.html"><img class="gamethumb" align="center" src="!icons/iceagebaby2.png"><div class="thumbtext">Ice Age Baby 2</div></a></div>
 
 <div class="container"><a id="Impossible Quiz"  href="!games/impossiblequiz/index.html"><img class="gamethumb" align="center" src="!icons/impossiblequiz.png"><div class="thumbtext">Impossible Quiz</div></a></div>
 
@@ -316,6 +354,10 @@
 <div class="container"><a id="Kitten Cannon"  href="!games/kittencannon/index.html"><img class="gamethumb" align="center" src="!icons/kittencannon.png"><div class="thumbtext">Kitten Cannon</div></a></div>
 
 <div class="container"><a id="Kirby 64"  href="!games/GBA/kirby64.html"><img class="gamethumb" align="center" src="!icons/kirby64.png"><div class="thumbtext">Kirby 64</div></a></div>
+
+<div class="container"><a id="Kirby And The Amazing Mirror"  href="!games/GBA/katam.html"><img class="gamethumb" align="center" src="!icons/katam.png"><div class="thumbtext">Kirby ATAM</div></a></div>
+
+<div class="container"><a id="Kirby - Nightmare in Dreamland"  href="!games/GBA/katam.html"><img class="gamethumb" align="center" src="!icons/nightmareindl.png"><div class="thumbtext">Kirby - NIDL</div></a></div>
 
 <div class="container"><a id="Krunker"  href="!games/krunker/index.html"><img class="gamethumb" align="center" src="!icons/krunker.png"><div class="thumbtext">Krunker</div></a></div>
 </div>
@@ -351,9 +393,14 @@
 
 <div class="container"><a id="Multiplayer Pong"  href="!games/multiplayer-pong/index.html"><img class="gamethumb" align="center" src="!icons/pong.png"><div class="thumbtext">Multiplayer Pong</div></a></div>
 
+<div class="container"><a id="osu!"  href="!games/osu!/index.html"><img class="gamethumb" align="center" src="!icons/osu!.png"><div class="thumbtext">Osu! Mania</div></a></div>
+
+
 <div class="container"><a id="Papa's Burgeria"  href="!games/papasburgeria/index.html"><img class="gamethumb" align="center" src="!icons/papas-burgeria.png"><div class="thumbtext">Papa's Burgeria</div></a></div>
 
 <div class="container"><a id="Papa's Pizzarea"  href="!games/papas-pizzarea/index.html"><img class="gamethumb" align="center" src="!icons/papas-pizzeria.png"><div class="thumbtext">Papa's Pizzarea</div></a></div>
+
+<div class="container"><a id="Pokemon Clover"  href="!games/GBA/pokemonclover.html"><img class="gamethumb" align="center" src="!icons/clover.png"><div class="thumbtext">Pokemon Clover</div></a></div>
 
 <div class="container"><a id="Pokemon Emerald"  href="!games/GBA/pokemonemerald.html"><img class="gamethumb" align="center" src="!icons/pokemonemerald.png"><div class="thumbtext">Pokemon Emerald</div></a></div>
 
@@ -368,6 +415,8 @@
 <div class="container"><a id="Pokemon Ruby"  href="!games/GBA/pokemonruby.html"><img class="gamethumb" align="center" src="!icons/pokemonruby.png"><div class="thumbtext">Pokemon Ruby</div></a></div>
 
 <div class="container"><a id="Pokemon Sapphire"  href="!games/GBA/pokemonsapphire.html"><img class="gamethumb" align="center" src="!icons/pokemonsapphire.png"><div class="thumbtext">Pokemon Sapphire</div></a></div>
+
+<div class="container"><a id="Pokemon SunSky"  href="!games/GBA/pokemonsunsky.html"><img class="gamethumb" align="center" src="!icons/sunsky.png"><div class="thumbtext">Pokemon SunSky</div></a></div>
 
 <div class="container"><a id="Pokemon Unbound"  href="!games/GBA/pokemonunbound.html"><img class="gamethumb" align="center" src="!icons/pokemonunbound.png"><div class="thumbtext">Pokemon Unbound</div></a></div>
 
@@ -413,6 +462,10 @@
 
 <div class="container"><a id="Sans"  href="!games/sans/index.html"><img class="gamethumb" align="center" src="!icons/sans.png"><div class="thumbtext">Custom Sans Fight</div></a></div>
 
+<div class="container"><a id="Santy is Home"  href="!games/santy-is-home/index.html"><img class="gamethumb" align="center" src="!icons/santyishome.png"><div class="thumbtext">Santy is Home</div></a></div>
+
+<div class="container"><a id="Scratcharia"  href="!games/scratcharia/index.html"><img class="gamethumb" align="center" src="!icons/scratcharia.png"><div class="thumbtext">Scratcharia</div></a></div>
+
 <div class="container"><a id="Sonic Advance 1"  href="!games/GBA/sonicadvance1.html"><img class="gamethumb" align="center" src="!icons/sonicadvance1.png"><div class="thumbtext">Sonic Advance</div></a></div>
 
 <div class="container"><a id="Sonic Advance 2"  href="!games/GBA/sonicadvance2.html"><img class="gamethumb" align="center" src="!icons/sonicadvance2.png"><div class="thumbtext">Sonic Advance 2</div></a></div>
@@ -437,6 +490,8 @@
 
 <div class="container"><a id="Spongebob Squarepants - The Movie"  href="!games/GBA/spongebob_movie.html"><img class="gamethumb" align="center" src="!icons/spongebobmovie.png"><div class="thumbtext">Spongebob Squarepants - The Movie</div></a></div>
 
+<div class="container"><a id="Soccer Random"  href="!games/volley-random/index.html"><img class="gamethumb" align="center" src="!icons/soccerandom.png"><div class="thumbtext">Soccer Random</div></a></div>
+
 <div class="container"><a id="Stack Ball"  href="!games/stack-ball/index.html"><img class="gamethumb" align="center" src="!icons/stackball.png"><div class="thumbtext">Stack Ball</div></a></div>
 
 <div class="container"><a id="Super Mario Advance 1"  href="!games/GBA/supermarioadvance1.html"><img class="gamethumb" align="center" src="!icons/supermarioadvance1.png"><div class="thumbtext">Super Mario Advance 1</div></a></div>
@@ -451,6 +506,12 @@
 
 <div class="container"><a id="Super Mario 64"  href="!games/GBA/supermario64.html"><img class="gamethumb" align="center" src="!icons/supermario64.png"><div class="thumbtext">Super Mario 64</div></a></div>
 
+<div class="container"><a id="Super Mario Party"  href="!games/GBA/supermarioparty.html"><img class="gamethumb" align="center" src="!icons/marioparty.png"><div class="thumbtext">Super Mario Party</div></a></div>
+
+<div class="container"><a id="Super Smash Bros."  href="!games/GBA/supersmashbros64.html"><img class="gamethumb" align="center" src="!icons/supersmashbros64.png"><div class="thumbtext">Super Smash Bros.</div></a></div>
+
+<div class="container"><a id="Super Mario Kart"  href="!games/GBA/mariokart64.html"><img class="gamethumb" align="center" src="!icons/mariokart64.png"><div class="thumbtext">Super Mario Kart</div></a></div>
+
 <div class="container"><a id="Stack"  href="!games/stack/index.html"><img class="gamethumb" align="center" src="!icons/stack.png"><div class="thumbtext">Stack</div></a></div>
 
 <div class="container"><a id="Station Meltdown"  href="!games/station-meltdown/index.html"><img class="gamethumb" align="center" src="!icons/Station-Meltdown.png"><div class="thumbtext">Station Meltdown</div></a></div>
@@ -460,6 +521,7 @@
 <div class="container"><a id="Subway Surfers"  href="!games/subwaysurferssanfrancisco/index.html"><img class="gamethumb" align="center" src="!icons/subsan.png"><div class="thumbtext">Subway Surfers</div></a></div>
 </div>
 <div class="holder">
+<div class="container"><a id="Super Auto Pets"  href="!games/superautopets/index.html"><img class="gamethumb" align="center" src="!icons/superautopets.png"><div class="thumbtext">Super Auto Pets</div></a></div>
 
 <div class="container"><a id="Superhot"  href="!games/superhot/index.html"><img class="gamethumb" align="center" src="!icons/superhot.png"><div class="thumbtext">Superhot</div></a></div>
 
@@ -493,6 +555,9 @@
 
 <div class="container"><a id="Veloce"  href="!games/veloce/index.html"><img class="gamethumb" align="center" src="!icons/VELOCE.png"><div class="thumbtext">Veloce</div></a></div>
 
+<div class="container"><a id="Vex 2"  href="!games/vex2/index.html"><img class="gamethumb" align="center" src="!icons/vex2.png"><div class="thumbtext">Vex 2</div></a></div>
+
+
 <div class="container"><a id="Vex 3"  href="!games/vex3/index.html"><img class="gamethumb" align="center" src="!icons/vex3.png"><div class="thumbtext">Vex 3</div></a></div>
 
 <div class="container"><a id="Vex 4"  href="!games/vex4/index.html"><img class="gamethumb" align="center" src="!icons/vex4.png"><div class="thumbtext">Vex 4</div></a></div>
@@ -510,6 +575,8 @@
 <div class="container"><a id="Waterworks"  href="!games/waterworks/index.html"><img class="gamethumb" align="center" src="!icons/waterworks.png"><div class="thumbtext">Waterworks</div></a></div>
 
 <div class="container"><a id="Weavesilk"  href="!games/weavesilk/index.html"><img class="gamethumb" align="center" src="!icons/weavesilk.png"><div class="thumbtext">Weavesilk</div></a></div>
+
+<div class="container"><a id="Weavesilk"  href="!games/win-the-whitehouse/index.html"><img class="gamethumb" align="center" src="!icons/winthewhitehouse.png"><div class="thumbtext">Win the Whitehouse</div></a></div>
 
 <div class="container"><a id="Fluid WebGL Simulation"  href="!games/webgl-fluid-simulation/index.html"><img class="gamethumb" align="center" src="!icons/webgl-fluid-simulation.png"><div class="thumbtext">Fluid Simulation ;)</div></a></div>
 
@@ -553,6 +620,10 @@
   </div>
 </div>
 </div>
+</div>
+
+
+
 <div id="chatgpt" style="display:none">
 <div class="ba" background-size: cover;>
 <div>
@@ -573,64 +644,60 @@
         <p class=paragraph id="please-wait" style="display: none;">Please wait...</p>
     </div>
 </div>
-    <script> document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('chat-form').addEventListener('submit', async (event) => {
-        event.preventDefault();
-
-        const userInput = document.getElementById('user-input').value;
-        const pleaseWait = document.getElementById('please-wait');
-        const chatGPTResponseElement = document.getElementById('chatgpt-response');
-
-        pleaseWait.style.display = 'block';
-        chatGPTResponseElement.innerText = '';
-
-        try {
-            const chatGPTResponse = await getChatGPTResponse(userInput);
-            chatGPTResponseElement.innerText = chatGPTResponse;
-        } catch (error) {
-            chatGPTResponseElement.innerText = 'Error: Could not fetch the response.';
-        } finally {
-            pleaseWait.style.display = 'none';
-        }
-    });
-});
-
-
-async function getChatGPTResponse(prompt) {
-    const apiKey = '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';
-    const url = 'https://api.openai.com/v1/chat/completions';
-    
-    const headers = new Headers({
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer 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`,
-    });
-
-    const body = JSON.stringify({
-        'model': 'gpt-3.5-turbo-0301',
-        'messages': [{'role': 'user', 'content': prompt}],
-        'temperature': 0.7,
-    });
-
-    const response = await fetch(url, {
-        method: 'POST',
-        headers: headers,
-        body: body,
-    });
-
-    if (response.ok) {
-        const data = await response.json();
-        const assistantMessage = data.choices[0].message;
-        return assistantMessage ? assistantMessage.content.trim() : '';
-    } else {
-        throw new Error(`Error: ${response.status}`);
-    }
-}
-</script>
 </div>
+</div>
+
+
+
+<div id="scratchanide" style="display:none;">
+  <div class="ba">
+    <div>
+  <h1 class="heading"><i>scratchanide</i></h1>
+    <h2 class="heading">bricked by sm4rd4#2278</h2>
+    <p class="paragraph">This tool allows you to load Scratch projects without chrome extensions (e.g blocksi) spying on you.<br>You will need to know the project ID, but loading it should be super simple.</p>
+    <center>
+     <form id="chat-form" align="center">
+        <br>
+        <input type="text" class="textarea" id="scratch-loader" placeholder="Insert Project ID here">
+        <br><br>
+        <button onclick="loadscratchProject()" class="button" type="submit" height="70%">Open project in new tab</button>
+    </form>
+  </center>
+<p class="paragraph">Don't know any project IDs? Here's some fun projects you can try:<br>(copy the numbers in parenthesis beside the name!) <br>
+
+<br><br><b>clickfire (379574992)</b>
+<br>You already know why this is here.
+
+<br><br><b>Ramond: The Shattered Core DEMO DX (660440519)</b>
+<br>"self promotion is always necessary" -sm4rd4
+<br>My (sm4rd4's) game! It's been in development hell, but hopefully the full product should be out within 2 years.
+<br>This demo contains the first level and the first boss.
+
+<br><br><b>Coolman DEMO XL (660399013)</b>
+<br>A fun Run N' Gun platformer! One day, when Coolman went to buy beans at the store, a wizard stole his wallet, and now he has to get it back!
+<br>This demo contains the first level and the first boss.
+
+<br><br><b>Chirpy Reverie (434825906)</b>
+<br><b>WARNING: This project is big. And by big, I mean it. Assets might not load properly (gray questionmarks), or your chromebook can crash.</b>
+<br><b>It is suggested to close out all other tabs before loading this game.</b>
+    
+<br><br>A new world was on the horizon, however something went horribly wrong. Can you make your way through this challenging platformer?
+<br>This is the 5th game in the "Chirpy the Penguin" series.
+
+</p>
+</div>
+</div>
+</div>
+
+
+
+
 <div id="webretro" style="display:none;">
   <iframe src="!games/webretro.html" class="game" frameborder="0" allowfullscreen></iframe>
   </div>
-<script src="index.js">
+<script src="!js/index.js">
+</script>
+<script src="!js/chatgpt.js">
 </script>
 </body>
 </html>
