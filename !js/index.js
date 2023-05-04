@@ -79,23 +79,9 @@ document.getElementById("nbaccess").style.display = "none";
          function loadscratchProject() {
   var projectID = document.getElementById('scratch-loader').value;
   var newTab = window.open();
-  newTab.document.write(`<html><head><style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-    
-    embed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style></head>
+  newTab.document.write(`<html>
   <body>
-    <embed src="https://scratch.mit.edu/projects/${projectID}/embed"></embed>
+    <iframe src="https://rawcdn.githack.com/moondoges/cyanidegames/b29d0eb4989d6a25451e4db91b13e62f4661ad64/!games/forkphorus/index.htmlembed.html?id=${projectID}&auto-start=true&light-content=false" width="482" height="393" allowfullscreen="true" allowtransparency="true" style="border:none;"></iframe>
   </body></html>`);
 }
          function aboutblank() {
