@@ -1,6 +1,5 @@
   function index() {
   document.getElementById("index").style.display = "block";
-      document.getElementById("chatgpt").style.display = "none";
     document.getElementById("offlinedownloads").style.display = "none";
       document.getElementById("games").style.display = "none";
       document.getElementById("aboutblank").style.display = "none";
@@ -10,7 +9,6 @@
     }
     function gameselect() {
   document.getElementById("index").style.display = "none";
-      document.getElementById("chatgpt").style.display = "none";
     document.getElementById("offlinedownloads").style.display = "none";
       document.getElementById("games").style.display = "block";
       document.getElementById("aboutblank").style.display = "none";
@@ -20,7 +18,6 @@
          }
     function webretro() {
   document.getElementById("index").style.display = "none";
-      document.getElementById("chatgpt").style.display = "none";
     document.getElementById("offlinedownloads").style.display = "none";
       document.getElementById("games").style.display = "none";
       document.getElementById("aboutblank").style.display = "none";
@@ -29,15 +26,8 @@
       document.getElementById("settings").style.display = "none";
     }
 
-        function chatgpt() {
-      document.getElementById("index").style.display = "none";
-      document.getElementById("chatgpt").style.display = "block";
-      document.getElementById("scratchinide").style.display = "none";
-         }
-
     function offlinedownloads() {
   document.getElementById("index").style.display = "none";
-      document.getElementById("chatgpt").style.display = "none";
     document.getElementById("offlinedownloads").style.display = "block";
       document.getElementById("games").style.display = "none";
       document.getElementById("aboutblank").style.display = "none";
@@ -50,7 +40,6 @@
          }
                   function aboutbl() {
   document.getElementById("index").style.display = "none";
-      document.getElementById("chatgpt").style.display = "none";
     document.getElementById("offlinedownloads").style.display = "none";
       document.getElementById("games").style.display = "none";
       document.getElementById("aboutblank").style.display = "block";
@@ -60,7 +49,6 @@
                   }
                   function scratchanide() {
   document.getElementById("index").style.display = "none";
-      document.getElementById("chatgpt").style.display = "none";
     document.getElementById("offlinedownloads").style.display = "none";
       document.getElementById("games").style.display = "none";
       document.getElementById("aboutblank").style.display = "none";
