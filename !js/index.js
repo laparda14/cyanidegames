@@ -6,6 +6,7 @@
       document.getElementById("webretro").style.display = "none";
       document.getElementById("scratchanide").style.display = "none";
       document.getElementById("settings").style.display = "none";
+      document.getElementById("cocomelonmoondoge").style.display = "none";
     }
     function gameselect() {
   document.getElementById("index").style.display = "none";
@@ -15,6 +16,7 @@
       document.getElementById("webretro").style.display = "none";
       document.getElementById("scratchanide").style.display = "none";
       document.getElementById("settings").style.display = "none";
+      document.getElementById("cocomelonmoondoge").style.display = "none";
          }
     function webretro() {
   document.getElementById("index").style.display = "none";
@@ -24,6 +26,7 @@
       document.getElementById("webretro").style.display = "block";
       document.getElementById("scratchanide").style.display = "none";
       document.getElementById("settings").style.display = "none";
+      document.getElementById("cocomelonmoondoge").style.display = "none";
     }
 
     function offlinedownloads() {
@@ -34,6 +37,7 @@
       document.getElementById("webretro").style.display = "none";
       document.getElementById("scratchanide").style.display = "none";
       document.getElementById("settings").style.display = "none";
+      document.getElementById("cocomelonmoondoge").style.display = "none";
          }
         function gamepicked() {
       document.getElementById("games").style.display = "none";
@@ -46,7 +50,9 @@
       document.getElementById("webretro").style.display = "none";
       document.getElementById("scratchanide").style.display = "none";
       document.getElementById("settings").style.display = "none";
+      document.getElementById("cocomelonmoondoge").style.display = "none";
                   }
+
                   function scratchanide() {
   document.getElementById("index").style.display = "none";
     document.getElementById("offlinedownloads").style.display = "none";
@@ -55,6 +61,18 @@
       document.getElementById("webretro").style.display = "none";
       document.getElementById("scratchanide").style.display = "block";
       document.getElementById("settings").style.display = "none";
+      document.getElementById("cocomelonmoondoge").style.display = "none";
+                  }
+
+                  function cocomelon() {
+  document.getElementById("index").style.display = "none";
+    document.getElementById("offlinedownloads").style.display = "none";
+      document.getElementById("games").style.display = "none";
+      document.getElementById("aboutblank").style.display = "none";
+      document.getElementById("webretro").style.display = "none";
+      document.getElementById("scratchanide").style.display = "none";
+      document.getElementById("settings").style.display = "none";
+      document.getElementById("cocomelonmoondoge").style.display = "block";
                   }
                   function hidenav() {
 document.getElementById("navbar").style.display = "none";
