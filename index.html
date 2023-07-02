@@ -2,985 +2,2065 @@
 <html>
 <head>
   <title>cyanide.</title>
-</style>
-
-
-  <link rel="stylesheet" type="text/css"  href="!src/default.css">
-  <link rel="stylesheet" type="text/css"  href="!src/sky.css">
-  <link rel="stylesheet" type="text/css"  href="!src/underwater.css">
-  <link rel="stylesheet" type="text/css"  href="!src/oldschool.css">
-  <link rel="stylesheet" type="text/css"  href="!src/red.css">
-  <link rel="stylesheet" type="text/css"  href="!src/minimal.css">
-
-
-  <link rel="stylesheet" type="text/css"  href="!src/background.css">
+<link rel="stylesheet" id="themeStyle" type="text/css" href="!src/default.css">
+<link rel="stylesheet" type="text/css" href="!src/buttonstyles.css">
    <link rel="icon" type="image/x-icon"  href="!contributors/moondoge.gif">
 </head>
 <body class="sky">
-
-
-
-  <div class="navtext" id="navbar" display="block" style="padding: 10px 0;">
+    <div class="navtext" id="navbar" display="block" style="padding: 10px 0;">
     <div>
-    <button onclick="index()" class="navtext" style="padding: 10px 0;"><i>home</i></button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="index()" class="navtext" style="padding: 10px 0;"><i>home</i></button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </div>
 <div>
-    <button onclick="gameselect()" class="navtext" style="padding: 10px 0;"><i>games</i></button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </div>
-  <div>
-
-    <button onclick="webretro()" class="navtext" style="padding: 10px 0;"><i>webretro</i></button></a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="gameselect()" class="navtext" style="padding: 10px 0;"><i>games</i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </div>
 
   <div>
-    <a onclick="extras()"><button class="navtext" style="padding: 10px 0;"><i>extras</i></button></a>
+    <button onclick="extras()" class="navtext" style="padding: 10px 0;"><i>extras</i></button>
   </div>
 
-</div> 
+</div>
+<div class="ba">
 
 
 
   <div id="index">
-    <div class="ba">
 <div>
+<br>
+<br>
+<br>
+<br>
+<center>
 <h1 class="heading"><i>cyanide.</i></h1>
-<h2 class="heading"> created by moondoge#0001.</h2>
+<p class="paragraph" id="randomMessage"></p>
 <br width=100% height=100%>
 <button onclick="gameselect()" class="button" align=left><i>games</i></button></a>
 <a href="chatgpt.html"><button class="button" align=center><i>chatGPT/chromeGPT</i></button></a>
 <a href=https://discord.gg/8H7g5Wrs5d target="_blank"><button class="button" align="center"><i>join our discord!</i></button></a>
-</div>
+<hr style="opacity: 0;">
+<div class="paragraph" id="clock"></div>
+</center>
 </div>
 </div>
 
 
 
 <div id="offlinedownloads" style="display:none">
-  <div class="ba">
     <div>
     <center>
-    <h1 class="heading"><i>cyanide</h1>
-    <h2 class="heading">created by moondoge#0001</i></h2>
+    <h1 class="heading"><i>cyanide</i></h1>
+    <h2 class="heading"><i>created by moondoge#0001</i></h2>
 <p class="paragraph"> Here you can download sulfur. A scuffed version of cyanide designed to completely run offline. It takes up around 100MB of storage. Download your version of sulfur below using the download links.</p> 
-</div>
 </div>
 </div>
 
 
 
 <div id="games" style="display:none">
-<h1 class="heading"></ul><i>cyanide.</i></h1>
-<h2 class="heading"> created by moondoge#0001.</h2>
+<center>
+<br>
+<br>
+<br>
+<br>
+<h1 class="heading"><i>cyanide.</i></h1>
+
+<br width=100% height=100%>
+
+<input class="functioninput" type="text" id="searchBar" placeholder="Search...">
+<br>
+<br>
+<br>
 <br>
 
+  <div id="gameList"></div>
+</center>
+  <script>
+        // Define the game data
+    const games = [
+{
+title: "1",
+thumbnail: "!icons/1.jpg",
+  url: "!games/1/index.html"
+  },
+{
+title: "1v1lol",
+thumbnail: "!icons/1v1lol.jpg",
+ url: "!games/1v1lol/index.html"
+  },
+{
+title: "1v1space",
+thumbnail: "!icons/1v1space.jpg",
+ url: "!games/1v1space/index.html"
+  },
+{
+title: "10 Minutes Till Dawn",
+thumbnail: "!icons/10minutestilldawn.jpg",
+ url: "!games/10minutestilldawn/index.html"
+  },
+{
+title: "99balls",
+thumbnail: "!icons/99Balls.jpg",
+ url: "!games/99balls/index.html"
+  },
+{
+title: "100 Player Pong",
+thumbnail: "!icons/100-player-pong.jpg",
+ url: "!games/100-player-pong/index.html"
+  },
+{
+title: "123movies",
+thumbnail: "!icons/123movies.jpg",
+ url: "!games/123movies/index.html"
+  },
+{
+title: "2048",
+thumbnail: "!icons/2048.jpg",
+ url: "!games/2048/index.html"
+  },
+{
+title: "2048 Multitask",
+thumbnail: "!icons/2048-multitask.jpg",
+ url: "!games/2048-multitask/index.html"
+  },
+{
+title: "9007199254740992",
+thumbnail: "!icons/9007199254740992.jpg",
+ url: "!games/9007199254740992/index.html"
+  },
+{
+title: "A Dance Of Fire And Ice",
+thumbnail: "!icons/a-dance-of-fire-and-ice.jpg",
+ url: "!games/a-dance-of-fire-and-ice/index.html"
+  },
+{
+title: "Achievement Unlocked",
+thumbnail: "!icons/achievementunlocked.jpg",
+ url: "!games/achievementunlocked/index.html"
+  },
+{
+title: "A Dark Room",
+thumbnail: "!icons/adarkroom.jpg",
+ url: "!games/adarkroom/index.html"
+  },
+{
+title: "Adrenaline Challenge",
+thumbnail: "!icons/adrenalinechallenge.jpg",
+ url: "!games/adrenalinechallenge/index.html"
+  },
+{
+  title: "Advance Wars",
+thumbnail: "!icons/advance-wars.jpg",
+ url: "!games/advance-wars/index.html"
+  },
+{
+  title: "Advance Wars 2",
+thumbnail: "!icons/advance-wars-2.jpg",
+ url: "!games/advance-wars-2/index.html"
+  },
+{
+  title: "Adventure Drivers",
+thumbnail: "!icons/adventure-drivers.jpg",
+ url: "!games/adventure-drivers/index.html"
+  },
+{
+  title: "Ages Of Conflict",
+thumbnail: "!icons/ages-of-conflict.jpg",
+ url: "!games/ages-of-conflict/index.html"
+  },
+{
+  title: "Alien Hominid",
+thumbnail: "!icons/alienhominid.jpg",
+ url: "!games/alienhominid/index.html"
+  },
+{
+  title: "amazing rope police",
+thumbnail: "!icons/amazing-rope-police.jpg",
+ url: "!games/amazing-rope-police/index.html"
+  },
+{
+  title: "Amidst The Clouds",
+thumbnail: "!icons/amidst-the-clouds.jpg",
+ url: "!games/amidst-the-clouds/index.html"
+  },
+{
+  title: "Among Us",
+thumbnail: "!icons/amongus.jpg",
+ url: "!games/amongus/index.html"
+  },
+{
+  title: "Angry Sharks",
+thumbnail: "!icons/angry-sharks.jpg",
+ url: "!games/angry-sharks/index.html"
+  },
+{
+  title: "Animal Crossing - Wild World",
+thumbnail: "!icons/animal-crossing-wild-world.jpg",
+ url: "!games/animal-crossing-wild-world/index.html"
+  },
+{
+  title: "Antimatter Dimensions",
+thumbnail: "!icons/antimatter.jpg",
+ url: "!games/antimatter/index.html"
+  },
+{
+  title: "Aquapark Slides",
+thumbnail: "!icons/aquapark-slides.jpg",
+ url: "!games/aquapark-slides/index.html"
+  },
+{
+  title: "Astray",
+thumbnail: "!icons/astray.jpg",
+ url: "!games/astray/index.html"
+  },
+{
+  title: "Avalanche",
+thumbnail: "!icons/avalanche.jpg",
+ url: "!games/avalanche/index.html"
+  },
+{
+  title: "Awesome Tanks 2",
+thumbnail: "!icons/awesometanks2.jpg",
+ url: "!games/awesometanks2/index.html"
+  },
+{
+  title: "Backrooms",
+thumbnail: "!icons/backrooms.jpg",
+ url: "!games/backrooms/index.html"
+  },
+{
+  title: "Bacon May Die",
+thumbnail: "!icons/bacon-may-die.jpg",
+ url: "!games/bacon-may-die/index.html"
+  },
+{
+  title: "Bad Ice Cream",
+thumbnail: "!icons/bad-ice-cream.jpg",
+ url: "!games/bad-ice-cream/index.html"
+  },
+{
+  title: "Bad Ice Cream 2",
+thumbnail: "!icons/bad-ice-cream-2.jpg",
+ url: "!games/bad-ice-cream-2/index.html"
+  },
+{
+  title: "Bad Ice Cream 3",
+thumbnail: "!icons/bad-ice-cream-3.jpg",
+ url: "!games/bad-ice-cream-3/index.html"
+  },
+{
+  title: "Baldis Basics",
+thumbnail: "!icons/baldis-basics.jpg",
+ url: "!games/baldis-basics/index.html"
+  },
+{
+  title: "Balldodge",
+thumbnail: "!icons/balldodge.jpg",
+ url: "!games/balldodge/index.html"
+  },
+{
+  title: "Ballistic Chickens",
+thumbnail: "!icons/ballistic-chickens.jpg",
+ url: "!games/ballistic-chickens/index.html"
+  },
+{
+  title: "BananaSaber",
+thumbnail: "!icons/banana-saber.jpg",
+ url: "!games/banana-saber/index.html"
+  },
+{
+  title: "Basketball Stars",
+thumbnail: "!icons/basketball-stars.jpg",
+ url: "!games/basketball-stars/index.html"
+  },
+{
+  title: "Basketball Random",
+thumbnail: "!icons/basketballrandom.jpg",
+ url: "!games/basketballrandom/index.html"
+  },
+{
+  title: "BasketBros.io",
+thumbnail: "!icons/basketbrosio.jpg",
+ url: "!games/basketbrosio/index.html"
+  },
+{
+  title: "Battle for Gondor",
+thumbnail: "!icons/battleforgondor.jpg",
+ url: "!games/battleforgondor/index.html"
+  },
+{
+  title: "Ben 10 Omniverse",
+thumbnail: "!icons/ben10-omniverse.jpg",
+ url: "!games/ben10-omniverse/index.html"
+  },
+{
+    title: "Big Tower Tiny Square",
+thumbnail: "!icons/big-tower-tiny-square.jpg",
+ url: "!games/bigredbutton/index.html"
+  },
+{
+  title: "Big Red Button",
+thumbnail: "!icons/bigredbutton.jpg",
+ url: "!games/bigredbutton/index.html"
+  },
+{
+  title: "Binding Of Issac",
+thumbnail: "!icons/bindingofissac.jpg",
+ url: "!games/bindingofissac/index.html"
+  },
+{
+  title: "Biters",
+thumbnail: "!icons/biters.jpg",
+ url: "!games/biters/index.html"
+  },
+{
+  title: "Bitlife",
+thumbnail: "!icons/bitlife.jpg",
+ url: "!games/bitlife/index.html"
+  },
+{
+  title: "Black Hole Square",
+thumbnail: "!icons/blackholesquare.jpg",
+ url: "!games/blackholesquare/index.html"
+  },
+{
+  title: "Black Knight",
+thumbnail: "!icons/blackknight.jpg",
+ url: "!games/blackknight/index.html"
+  },
+{
+  title: "Blocky Tower",
+thumbnail: "!icons/blocky.jpg",
+ url: "!games/blocky-tower/index.html"
+  },
+{
+  title: "Bloons Tower Defense 4",
+thumbnail: "!icons/bloonstd4.jpg",
+ url: "!games/bloonstd4/index.html"
+  },
+{
+  title: "Bloxorz",
+thumbnail: "!icons/bloxorz.jpg",
+ url: "!games/bloxorz/index.html"
+  },
+{
+  title: "Bouncy Basketball",
+thumbnail: "!icons/bouncybasketball.jpg",
+ url: "!games/bouncybasketball/index.html"
+  },
+{
+  title: "Bouncy Heroes",
+thumbnail: "!icons/bouncyheroes.jpg",
+ url: "!games/bouncyheroes/index.html"
+  },
+{
+  title: "Bomberman Max 2 Blue",
+thumbnail: "!icons/bomberman-max-2-blue.jpg",
+ url: "!games/bomberman-max-2-blue/index.html"
+  },
+{
+  title: "Bomberman Tournament",
+thumbnail: "!icons/bomberman-tournament.jpg",
+ url: "!games/bomberman-tournament/index.html"
+  },
+{
+  title: "boxhead2play",
+thumbnail: "!icons/boxhead2play.jpg",
+ url: "!games/boxhead2play/index.html"
+  },
+{
+  title: "Boxing Physics",
+thumbnail: "!icons/boxing-physics.jpg",
+ url: "!games/boxing-physics/index.html"
+  },
+{
+  title: "Boxing Random",
+thumbnail: "!icons/boxing-random.jpg",
+ url: "!games/boxing-random/index.html"
+  },
+{
+  title: "Breaking The Bank",
+thumbnail: "!icons/breakingthebank.jpg",
+ url: "!games/breakingthebank/index.html"
+  },
+{
+  title: "Breaklock",
+thumbnail: "!icons/breaklock.jpg",
+ url: "!games/breaklock/index.html"
+  },
+{
+  title: "Breakout",
+thumbnail: "!icons/breakout.jpg",
+ url: "!games/breakout/index.html"
+  },
+{
+  title: "Browser Quest",
+thumbnail: "!icons/browserquest.jpg",
+ url: "!games/browserquest/index.html"
+  },
+{
+  title: "Bubble Bobble",
+thumbnail: "!icons/bubblebobble.jpg",
+ url: "!games/bubblebobble/index.html"
+  },
+{
+  title: "Burger And Frights",
+thumbnail: "!icons/burger-and-frights.jpg",
+ url: "!games/burger-and-frights/index.html"
+  },
+{
+  title: "Cannon Basketball 4",
+thumbnail: "!icons/cannon-basketball-4.jpg",
+ url: "!games/cannon-basketball-4/index.html"
+  },
+{
+  title: "Canyon Defense",
+thumbnail: "!icons/canyondefense.jpg",
+ url: "!games/canyondefense/index.html"
+  },
+{
+  title: "Cars Simulator",
+thumbnail: "!icons/cars-simulator.jpg",
+ url: "!games/cars-simulator/index.html"
+  },
+{
+  title: "Castlevania - Harmony Of Dissonance",
+thumbnail: "!icons/castlevania-harmony-of-dissonance.jpg",
+ url: "!games/castlevania-harmony-of-dissonance/index.html"
+  },
+{
+  title: "Cell Machine",
+thumbnail: "!icons/cell-machine.jpg",
+ url: "!games/cell-machine/index.html"
+  },
+{
+  title: "Champion Archer",
+thumbnail: "!icons/champion-archer.jpg",
+ url: "!games/champion-archer/index.html"
+  },
+{
+  title: "Champion Island",
+thumbnail: "!icons/champion-island.jpg",
+ url: "!games/champion-island/index.html"
+  },
+{
+  title: "Chess",
+thumbnail: "!icons/chess.jpg",
+ url: "!games/chess/index.html"
+  },
+{
+  title: "Chill Radio",
+thumbnail: "!icons/chill-radio.jpg",
+ url: "!games/chill-radio/index.html"
+  },
+{
+  title: "Chrome Dino",
+thumbnail: "!icons/chrome-dino.jpg",
+ url: "!games/chrome-dino/index.html"
+  },
+{
+  title: "Chronotrigger",
+thumbnail: "!icons/chronotrigger.jpg",
+ url: "!games/chronotrigger/index.html"
+  },
+{
+  title: "Circlo",
+thumbnail: "!icons/circlo.jpg",
+ url: "!games/circlo/index.html"
+  },
+{
+  title: "clickfire",
+thumbnail: "!icons/clickfire.jpg",
+ url: "!games/clickfire1/index.html"
+  },
+{
+  title: "clickfire 2",
+thumbnail: "!icons/clickfire.gif",
+ url: "!games/clickfire2/index.html"
+  },
+{
+  title: "Cluster Rush",
+thumbnail: "!icons/clusterush.jpg",
+ url: "!games/cluster-rush/index.html"
+  },
+{
+  title: "Connect 3",
+thumbnail: "!icons/connect3.jpg",
+ url: "!games/connect3/index.html"
+  },
+{
+  title: "Cookie Clicker",
+thumbnail: "!icons/cookieclicker.jpg",
+ url: "!games/cookieclicker/index.html"
+  },
+{
+  title: "Coolman DEMO XL",
+thumbnail: "!icons/coolman.jpg",
+ url: "!games/coolman/index.html"
+  },
+{
+  title: "Core Ball",
+thumbnail: "!icons/coreball.jpg",
+ url: "!games/coreball/index.html"
+  },
+{
+  title: "Creative Kill Chamber",
+thumbnail: "!icons/creativekillchamber.jpg",
+ url: "!games/creativekillchamber/index.html"
+  },
+{
+  title: "Crossy Road",
+thumbnail: "!icons/crossyroad.jpg",
+ url: "!games/crossyroad/index.html"
+  },
+{
+  title: "CSGO Clicker",
+thumbnail: "!icons/csgo-clicker.jpg",
+ url: "!games/csgo-clicker/index.html"
+  },
+{
+  title: "Cut The Rope - Holiday",
+thumbnail: "!icons/ctr-holiday.jpg",
+ url: "!games/ctr-holiday/index.html"
+  },
+{
+  title: "Cut The Rope",
+thumbnail: "!icons/cuttherope.jpg",
+ url: "!games/cuttherope/index.html"
+  },
+{
+  title: "Cyber City Driver",
+thumbnail: "!icons/cyber-city-driver.jpg",
+ url: "!games/cyber-city-driver/index.html"
+  },
+{
+  title: "Dante",
+thumbnail: "!icons/dante.jpg",
+ url: "!games/dante/index.html"
+  },
+{
+  title: "Deal Or No Deal",
+thumbnail: "!icons/deal-or-no-deal.jpg",
+ url: "!games/deal-or-no-deal/index.html"
+  },
+{
+  title: "Death Run 3D",
+thumbnail: "!icons/death-run-3d.jpg",
+ url: "!games/death-run-3d/index.html"
+  },
+{
+  title: "Deepest Sword",
+thumbnail: "!icons/deepest-sword.jpg",
+ url: "!games/deepest-sword/index.html"
+  },
+{
+  title: "Defend The Tank",
+thumbnail: "!icons/defend-the-tank.jpg",
+ url: "!games/defend-the-tank/index.html"
+  },
+{
+  title: "Derek 1",
+thumbnail: "!icons/derek1.jpg",
+ url: "!games/derek1/index.html"
+  },
+{
+  title: "Derek 2",
+thumbnail: "!icons/derek2.jpg",
+ url: "!games/derek2/index.html"
+  },
+{
+  title: "Derek 3",
+thumbnail: "!icons/derek3.jpg",
+ url: "!games/derek3/index.html"
+  },
+{
+  title: "Derek 4",
+thumbnail: "!icons/derek4.jpg",
+ url: "!games/derek4/index.html"
+  },
+{
+  title: "Derek 5",
+thumbnail: "!icons/derek5.jpg",
+ url: "!games/derek5/index.html"
+  },
+{
+  title: "Derek 6",
+thumbnail: "!icons/derek6.jpg",
+ url: "!games/derek6/index.html"
+  },
+{
+  title: "Derek 7",
+thumbnail: "!icons/derek7.jpg",
+ url: "!games/derek7/index.html"
+  },
+{
+  title: "Derek 8",
+thumbnail: "!icons/derek8.jpg",
+ url: "!games/derek8/index.html"
+  },
+{
+  title: "Doctor Acorn 2",
+thumbnail: "!icons/doctor-acorn2.jpg",
+ url: "!games/doctor-acorn2/index.html"
+  },
+{
+  title: "Doge 2048",
+thumbnail: "!icons/doge2048.jpg",
+ url: "!games/doge2048/index.html"
+  },
+{
+  title: "Doge Miner",
+thumbnail: "!icons/dogeminer.jpg",
+ url: "!games/dogeminer/index.html"
+  },
+{
+  title: "Doge Miner 2",
+thumbnail: "!icons/dogeminer2.jpg",
+ url: "!games/dogeminer2/index.html"
+  },
+{
+  title: "Doodle Jump",
+thumbnail: "!icons/doodlejump.jpg",
+ url: "!games/doodlejump/index.html"
+  },
+{
+  title: "Doom 64",
+thumbnail: "!icons/doom64.jpg",
+ url: "!games/doom64/index.html"
+  },
+{
+  title: "Doublewires",
+thumbnail: "!icons/doublewires.jpg",
+ url: "!games/doublewires/index.html"
+  },
+{
+  title: "Dragon Ball Z - Supersonic Warriors",
+thumbnail: "!icons/dbz-supersonic.jpg",
+ url: "!games/dbz-supersonic/index.html"
+  },
+{
+  title: "Drift City",
+thumbnail: "!icons/drift-city.jpg",
+ url: "!games/drift-city/index.html"
+  },
+{
+  title: "Drift King",
+thumbnail: "!icons/driftking.jpg",
+ url: "!games/driftking/index.html"
+  },
+{
+  title: "Ducklife",
+thumbnail: "!icons/ducklife.jpg",
+ url: "!games/ducklife/index.html"
+  },
+{
+  title: "Ducklife 2",
+thumbnail: "!icons/ducklife2.jpg",
+ url: "!games/ducklife2/index.html"
+  },
+{
+  title: "Ducklife 3",
+thumbnail: "!icons/ducklife3.jpg",
+ url: "!games/ducklife3/index.html"
+  },
+{
+  title: "Ducklife 4",
+thumbnail: "!icons/ducklife4.jpg",
+ url: "!games/ducklife4/index.html"
+  },
+{
+  title: "Dune",
+thumbnail: "!icons/dune.jpg",
+ url: "!games/dune/index.html"
+  },
+{
+  title: "Dunkers Fight",
+thumbnail: "!icons/dunkers-fight.jpg",
+ url: "!games/dunkers-fight/index.html"
+  },
+{
+  title: "Duke Nukem",
+thumbnail: "!icons/dukenukem.jpg",
+ url: "!games/dukenukem/index.html"
+  },
+{
+  title: "Earthbound",
+thumbnail: "!icons/earthbound.jpg",
+ url: "!games/earthbound/index.html"
+  },
+{
+  title: "Eatio",
+thumbnail: "!icons/eatio.jpg",
+ url: "!games/eatio/index.html"
+  },
+{
+  title: "Edge Surf",
+thumbnail: "!icons/edge-surf.jpg",
+ url: "!games/edge-surf/index.html"
+  },
+{
+  title: "EdgeNotFound",
+thumbnail: "!icons/edgenotfound.jpg",
+ url: "!games/edgenotfound/index.html"
+  },
+{
+  title: "Eel Slap",
+thumbnail: "!icons/eel-slap.jpg",
+ url: "!games/eel-slap/index.html"
+  },
+{
+  title: "Eggy Car",
+thumbnail: "!icons/eggy-car.jpg",
+ url: "!games/eggy-car/index.html"
+  },
+{
+  title: "Elastic Man",
+thumbnail: "!icons/elasticman.jpg",
+ url: "!games/elasticman/index.html"
+  },
+{
+  title: "Endless War 3",
+thumbnail: "!icons/endlesswar3.jpg",
+ url: "!games/endlesswar3/index.html"
+  },
+{
+  title: "Escaping The Prison",
+thumbnail: "!icons/escapingtheprison.jpg",
+ url: "!games/escapingtheprison/index.html"
+  },
+{
+  title: "Evil Glitch",
+thumbnail: "!icons/evil-glitch.jpg",
+ url: "!games/evil-glitch/index.html"
+  },
+{
+  title: "Evolution",
+thumbnail: "!icons/evolution.jpg",
+ url: "!games/evolution/index.html"
+  },
+{
+  title: "Exo",
+thumbnail: "!icons/exo.jpg",
+ url: "!games/exo/index.html"
+  },
+{
+  title: "Fall Boys",
+thumbnail: "!icons/fallboys.jpg",
+ url: "!games/fallboys/index.html"
+  },
+{
+  title: "Ferge",
+thumbnail: "!icons/ferge.jpg",
+ url: "!games/ferge/index.html"
+  },
+{
+  title: "Fire Emblem",
+thumbnail: "!icons/fire_emblem.jpg",
+ url: "!games/fire-emblem/.html"
+  },
+{
+  title: "Flappy Bird",
+thumbnail: "!icons/flappy.jpg",
+ url: "!games/flappy/index.html"
+  },
+{
+  title: "Fleeing The Complex",
+thumbnail: "!icons/fleeingthecomplex.jpg",
+ url: "!games/fleeingthecomplex/index.html"
+  },
+{
+  title: "Flip Hero",
+thumbnail: "!icons/fliphero.jpg",
+ url: "!games/fliphero/index.html"
+  },
+{
+  title: "Fly Guy",
+thumbnail: "!icons/flyguy.jpg",
+ url: "!games/flyguy/index.html"
+  },
+{
+  title: "Five Nights At Freddy's",
+thumbnail: "!icons/fnaf.jpg",
+ url: "!games/fnaf/index.html"
+  },
+{
+  title: "Five Nights At Freddy's 2",
+thumbnail: "!icons/fnaf2.jpg",
+ url: "!games/fnaf2/index.html"
+  },
+{
+  title: "Five Nights At Freddy's 3",
+thumbnail: "!icons/fnaf3.jpg",
+ url: "!games/fnaf3/index.html"
+  },
+{
+  title: "Five Nights At Freddy's 4",
+thumbnail: "!icons/fnaf4.jpg",
+ url: "!games/fnaf4/index.html"
+  },
+{
+  title: "Five Nights At Freddy's: Sister Location",
+thumbnail: "!icons/fnaf-sister-location.jpg",
+ url: "!games/fnaf-sister-location/index.html"
+  },
+{
+  title: "FNAF thing",
+thumbnail: "!icons/fnafthing.jpg",
+ url: "!games/fnafthing/index.html"
+  },
+{
+  title: "Forkphorus",
+thumbnail: "!icons/forkphorus.jpg",
+ url: "!games/forkphorus/index.html"
+  },
+{
+  title: "Fruit Ninja (broken)",
+thumbnail: "!icons/fruitninja.jpg",
+ url: "!games/fruitninja/index.html"
+  },
+{
+  title: "Funny Shooter 2",
+thumbnail: "!icons/funnyshooter.jpg",
+ url: "!games/funnyshooter/index.html"
+  },
+{
+  title: "Gateways",
+thumbnail: "!icons/gateways.jpg",
+ url: "!games/gateways/index.html"
+  },
+{
+  title: "Geometry Dash Lite",
+thumbnail: "!icons/geodashlite.jpg",
+ url: "!games/forkphorus/index.html"
+  },
+{
+  title: "Geometry Dash Scratch",
+thumbnail: "!icons/geometrydash.jpg",
+ url: "!games/geometrydash/index.html"
+  },
+{
+  title: "Getaway Shootout",
+thumbnail: "!icons/getawayshootout.jpg",
+ url: "!games/getawayshootout/index.html"
+  },
+{
+  title: "Glass City",
+thumbnail: "!icons/glass-city.jpg",
+ url: "!games/glass-city/index.html"
+  },
+{
+  title: "GoldenEye007",
+thumbnail: "!icons/goldeneye.jpg",
+ url: "!games/goldeneye/index.html"
+  },
+{
+  title: "Goodnight",
+thumbnail: "!icons/goodnight.jpg",
+ url: "!games/goodnight/index.html"
+  },
+{
+  title: "Google Snake",
+thumbnail: "!icons/google-snake.jpg",
+ url: "!games/google-snake/index.html"
+  },
+{
+  title: "Gravity Soccer",
+thumbnail: "!icons/gravity-soccer.jpg",
+ url: "!games/gravity-soccer/index.html"
+  },
+{
+  title: "Grindcraft",
+thumbnail: "!icons/grindcraft.jpg",
+ url: "!games/grindcraft/index.html"
+  },
+{
+  title: "Handshakes",
+thumbnail: "!icons/handshakes.jpg",
+ url: "!games/handshakes/index.html"
+  },
+{
+  title: "Harvest Moon - Friends Of Mineral Town",
+thumbnail: "!icons/hm-friends-of-mineral-town.jpg",
+ url: "!games/hm-friends-of-mineral-town/index.html"
+  },
+{
+  title: "Harvest Moon - More Friends Of Mineral Town",
+thumbnail: "!icons/hm-more-friends-of-mineral-town.jpg",
+ url: "!games/hm-more-friends-of-mineral-town/index.html"
+  },
+{
+  title: "Hell Inc.",
+thumbnail: "!icons/hell-inc.jpg",
+ url: "!games/hell-inc/static/index.html"
+  },
+{
+  title: "HexGL",
+thumbnail: "!icons/hexgl.jpg",
+ url: "!games/hexgl/index.html"
+  },
+{
+  title: "Hextris",
+thumbnail: "!icons/hextris.jpg",
+ url: "!games/hextris/index.html"
+  },
+{
+  title: "Ice Age Baby",
+thumbnail: "!icons/iceagebaby.jpg",
+ url: "!games/iceagebaby/index.html"
+  },
+{
+  title: "Idle Breakout",
+thumbnail: "!icons/idlebreakout.jpg",
+ url: "!games/idlebreakout/index.html"
+  },
+{
+  title: "Impossible Quiz",
+thumbnail: "!icons/impossiblequiz.jpg",
+ url: "!games/impossiblequiz/index.html"
+  },
+{
+  title: "Infiltrating The Airship",
+thumbnail: "!icons/infiltratingtheairship.jpg",
+ url: "!games/infiltratingtheairship/index.html"
+  },
+{
+  title: "Interactive Buddy",
+thumbnail: "!icons/interactivebuddy.jpg",
+ url: "!games/interactivebuddy/index.html"
+  },
+{
+  title: "Jetpack Joyride",
+thumbnail: "!icons/jetpack-joyride.jpg",
+ url: "!games/jetpack-joyride/index.html"
+  },
+{
+  title: "Just Fall",
+thumbnail: "!icons/just-fall.jpg",
+ url: "!games/just-fall/index.html"
+  },
+{
+  title: "Just One Boss",
+thumbnail: "!icons/just-one-boss.jpg",
+ url: "!games/just-one-boss/index.html"
+  },
+{
+  title: "Kirby and The Amazing Mirror",
+thumbnail: "!icons/kirby-and-the-amazing-mirror.jpg",
+ url: "!games/kirby-and-the-amazing-mirror/index.html"
+  },
+{
+  title: "Kirby - Nightmare In Dreamland",
+thumbnail: "!icons/kirby-nightmare-in-dreamland.jpg",
+ url: "!games/kirby-nightmare-in-dreamland/index.html"
+  },
+{
+  title: "Kirby - Super Star Ultra",
+thumbnail: "!icons/kirby-super-star-ultra.jpg",
+ url: "!games/kirby-super-star-ultra/index.html"
+  },
+{
+  title: "Kirby And The Crystal Shards",
+thumbnail: "!icons/kirby-and-the-crystal-shards.jpg",
+ url: "!games/kirby-and-the-crystal-shards/index.html"
+  },
+{
+  title: "Kitchen Gun Game",
+thumbnail: "!icons/kitchen-gun-game.jpg",
+ url: "!games/kitchen-gun-game/index.html"
+  },
+{
+  title: "Kitten Cannon",
+thumbnail: "!icons/kittencannon.jpg",
+ url: "!games/kittencannon/index.html"
+  },
+{
+  title: "Learn to Fly",
+thumbnail: "!icons/learntofly.jpg",
+ url: "!games/learntofly/index.html"
+  },
+{
+  title: "Learn to Fly 2 (broken)",
+thumbnail: "!icons/learntofly2.jpg",
+ url: "!games/learntofly2/index.html"
+  },
 
+{
+  title: "LOZ - Links Awakening",
+thumbnail: "!icons/loz-links-awakening.jpg",
+ url: "!games/loz-links-awakening/index.html"
+  },
+{
+  title: "LOZ - Link To The Past",
+thumbnail: "!icons/loz-link-to-the-past.jpg",
+ url: "!games/loz-link-to-the-past/index.html"
+  },
+{
+  title: "LOZ - The Minish Cap",
+thumbnail: "!icons/loz-minish-cap.jpg",
+ url: "!games/loz-minish-cap/index.html"
+  },
+{
+  title: "LOZ - Majora's Mask",
+thumbnail: "!icons/loz-majoras-mask.jpg",
+ url: "!games/loz-majoras-mask/index.html"
+  },
+{
+  title: "LOZ - Ocarina Of Time",
+thumbnail: "!icons/loz-ocarina-of-time.jpg",
+ url: "!games/loz-ocarina-of-time/index.html"
+  },
+{
+  title: "LOZ - Oracle Of Ages",
+thumbnail: "!icons/loz-oracle-of-ages.jpg",
+ url: "!games/loz-oracle-of-ages/index.html"
+  },
+{
+  title: "Mario HTML",
+thumbnail: "!icons/mario.jpg",
+ url: "!games/mario/index.html"
+  },
+{
+  title: "Mario Kart 64",
+thumbnail: "!icons/mariokart64.jpg",
+ url: "!games/mariokart64/index.html"
+  },
+{
+  title: "Mario Kart DS",
+thumbnail: "!icons/mario-kart-ds.jpg",
+ url: "!games/mario-kart-ds/index.html"
+  },
+{
+  title: "Mario Party",
+thumbnail: "!icons/marioparty.jpg",
+ url: "!games/marioparty/index.html"
+  },
+{
+  title: "Mindustry",
+thumbnail: "!icons/mindustry.jpg",
+ url: "!games/mindustry/index.html"
+  },
+{
+  title: "Minecraft",
+thumbnail: "!icons/minecraft.jpg",
+ url: "!games/minecraft/index.html"
+  },
+{
+  title: "Monkey Mart",
+thumbnail: "!icons/monkey-mart.jpg",
+ url: "!games/monkey-mart/index.html"
+  },
+{
+  title: "Mother 3",
+thumbnail: "!icons/mother3.jpg",
+ url: "!games/mother3/index.html"
+  },
+{
+  title: "Mindustry",
+thumbnail: "!icons/mindustry.jpg",
+ url: "!games/mindustry/index.html"
+  },
+{
+  title: "Moto x3m",
+thumbnail: "!icons/motox3m.jpg",
+ url: "!games/motox3m/index.html"
+  },
+{
+  title: "Moto x3m Pool",
+thumbnail: "!icons/motox3m-pool.jpg",
+ url: "!games/motox3m-pool/index.html"
+  },
+{
+  title: "Moto x3m Spooky",
+thumbnail: "!icons/motox3m-spooky.jpg",
+ url: "!games/motox3m-spooky/index.html"
+  },
+{
+  title: "Moto x3m Winter",
+thumbnail: "!icons/motox3m-winter.jpg",
+ url: "!games/motox3m-winter/index.html"
+  },
+{
+  title: "Motox3m 2",
+thumbnail: "!icons/motox3m2.jpg",
+ url: "!games/motox3m2/index.html"
+  },
+{
+  title: "Multiplayer Pong",
+thumbnail: "!icons/multiplayer-pong.jpg",
+ url: "!games/multiplayer-pong/index.html"
+  },
+{
+  title: "My Rusty Submarine",
+thumbnail: "!icons/my-rusty-submarine.jpg",
+ url: "!games/my-rusty-submarine/index.html"
+  },
+{
+  title: "n-gon",
+thumbnail: "!icons/n-gon.jpg",
+ url: "!games/n-gon/index.html"
+  },
+{
+  title: "New Super Mario Bros",
+thumbnail: "!icons/new-super-mario-bros.jpg",
+ url: "!games/new-super-mario-bros/index.html"
+  },
+{
+  title: "Offline Paradise",
+thumbnail: "!icons/my-rusty-submarine.jpg",
+ url: "!games/my-rusty-submarine/index.html"
+  },
+{
+  title: "Paper Mario",
+thumbnail: "!icons/papermario.jpg",
+ url: "!games/papermario/index.html"
+  },
+{
+  title: "Plants Vs. Zombies DS",
+thumbnail: "!icons/plants-vs-zombies-ds.jpg",
+ url: "!games/plants-vs-zombies-ds/index.html"
+  },
+{
+  title: "Pokemon Clover",
+thumbnail: "!icons/pokemonclover.jpg",
+ url: "!games/pokemonclover/index.html"
+  },
+{
+  title: "Pokemon Emerald",
+thumbnail: "!icons/pokemonemerald.jpg",
+ url: "!games/pokemonemerald/index.html"
+  },
+{
+  title: "Pokemon FloraSky",
+thumbnail: "!icons/pokemonflorasky.jpg",
+ url: "!games/pokemonflorasky/index.html"
+  },
+{
+  title: "Pokemon LeafGreen",
+thumbnail: "!icons/pokemonleafgreen.jpg",
+ url: "!games/pokemonleafgreen/index.html"
+  },
+{
+  title: "Pokemon FireRed",
+thumbnail: "!icons/pokemonfirered.jpg",
+ url: "!games/pokemonfirered/index.html"
+  },
+{
+  title: "Pokemon Platnium",
+thumbnail: "!icons/pokemon-platnium.jpg",
+ url: "!games/pokemon-platnium/index.html"
+  },
+{
+  title: "Pokemon Ruby",
+thumbnail: "!icons/pokemonruby.jpg",
+ url: "!games/pokemonruby/index.html"
+  },
+{
+  title: "Pokemon Sapphire",
+thumbnail: "!icons/pokemonsapphire.jpg",
+ url: "!games/pokemonsapphire/index.html"
+  },
+{
+  title: "Pokemon HeartGold",
+thumbnail: "!icons/pokemon-heartgold.jpg",
+ url: "!games/pokemon-heartgold/index.html"
+  },
+{
+  title: "Pokemon SoulSilver",
+thumbnail: "!icons/pokemon-soulsilver.jpg",
+ url: "!games/pokemon-soulsilver/index.html"
+  },
+{
+  title: "Pokemon SunSky",
+thumbnail: "!icons/pokemonsunsky.jpg",
+ url: "!games/pokemonsunsky/index.html"
+  },
+{
+  title: "Pokemon Unbound",
+thumbnail: "!icons/pokemonunbound.jpg",
+ url: "!games/pokemonunbound/index.html"
+  },
+{
+  title: "Pokemon Mystery Dungeon - Explorers Of Sky",
+thumbnail: "!icons/pokemon-mystery-dungeon-explorers-of-sky.jpg",
+ url: "!games/pokemon-mystery-dungeon-explorers-of-sky/index.html"
+  },
+{
+  title: "Racer",
+thumbnail: "!icons/racer.jpg",
+ url: "!games/racer/index.html"
+  },
+{
+  title: "Radius Raid",
+thumbnail: "!icons/radiusraid.jpg",
+ url: "!games/radiusraid/index.html"
+  },
+{
+  title: "Resturant Rush",
+thumbnail: "!icons/resturant-rush.jpg",
+ url: "!games/resterant-rush/index.html"
+  },
+{
+  title: "Retrobowl",
+thumbnail: "!icons/retrobowl.jpg",
+ url: "!games/retrobowl/index.html"
+  },
+{
+  title: "Retrohaunt",
+thumbnail: "!icons/retrohaunt.jpg",
+ url: "!games/retrohaunt/index.html"
+  },
+{
+  title: "Riddle School",
+thumbnail: "!icons/riddleschool1.jpg",
+ url: "!games/riddleschool1/index.html"
+  },
+{
+  title: "Riddle School 2",
+thumbnail: "!icons/riddleschool2.jpg",
+ url: "!games/riddleschool2/index.html"
+  },
+{
+  title: "Riddle School 3",
+thumbnail: "!icons/riddleschool3.jpg",
+ url: "!games/riddleschool3/index.html"
+  },
+{
+  title: "Riddle School 4",
+thumbnail: "!icons/riddleschool4.jpg",
+ url: "!games/riddleschool4/index.html"
+  },
+{
+  title: "Riddle School 5",
+thumbnail: "!icons/riddleschool5.jpg",
+ url: "!games/riddleschool5/index.html"
+  },
+{
+  title: "Riddle Transfer",
+thumbnail: "!icons/riddletransfer.jpg",
+ url: "!games/riddletransfer/index.html"
+  },
+{
+  title: "Riddle Transfer 2",
+thumbnail: "!icons/riddletransfer2.jpg",
+ url: "!games/riddletransfer2/index.html"
+  },
+{
+  title: "Rooftop Snipers 2",
+thumbnail: "!icons/rooftop-snipers-2.jpg",
+ url: "!games/rooftop-snipers-2/index.html"
+  },
+{
+  title: "Run 3",
+thumbnail: "!icons/run3.jpg",
+ url: "!games/run3/index.html"
+  },
+{
+  title: "Sans Custom Fight",
+thumbnail: "!icons/sans.jpg",
+ url: "!games/sans/index.html"
+  },
+{
+  title: "Santy Is Home",
+thumbnail: "!icons/santy-is-home.jpg",
+ url: "!games/santy-is-home/index.html"
+  },
+{
+  title: "Scratcharia",
+thumbnail: "!icons/scratcharia.jpg",
+ url: "!games/scratcharia/index.html"
+  },
+{
+  title: "Slime Rush TD",
+thumbnail: "!icons/slime-rush-td.jpg",
+ url: "!games/slime-rush-td/index.html"
+  },
+{
+  title: "Slope",
+thumbnail: "!icons/slope.jpg",
+ url: "!games/slope/index.html"
+  },
+{
+  title: "Slope 2",
+thumbnail: "!icons/slope2.jpg",
+ url: "!games/slope2/index.html"
+  },
+{
+  title: "Solitaire",
+thumbnail: "!icons/solitaire.jpg",
+ url: "!games/solitaire/index.html"
+  },
+{
+  title: "Sonic Advance",
+thumbnail: "!icons/sonicadvance1.jpg",
+ url: "!games/sonicadvance1/index.html"
+  },
+{
+  title: "Sonic Advance 2",
+thumbnail: "!icons/sonicadvance2.jpg",
+ url: "!games/sonicadvance2/index.html"
+  },
+{
+  title: "Sonic Advance 3",
+thumbnail: "!icons/sonicadvance3.jpg",
+ url: "!games/sonicadvance3/index.html"
+  },
+{
+  title: "Sonic Battles",
+thumbnail: "!icons/sonicbattle.jpg",
+ url: "!games/sonicbattle/index.html"
+  },
+{
+  title: "Soul Jumper",
+thumbnail: "!icons/souljumper.jpg",
+ url: "!games/souljumper/index.html"
+  },
+{
+  title: "Space Company",
+thumbnail: "!icons/space-company.jpg",
+ url: "!games/space-company/index.html"
+  },
+{
+  title: "Space Garden",
+thumbnail: "!icons/spacegarden.jpg",
+ url: "!games/spacegarden/index.html"
+  },
+{
+  title: "Space Invaders",
+thumbnail: "!icons/spaceinvaders.jpg",
+ url: "!games/spaceinvaders/index.html"
+  },
+{
+  title: "Spadium (HTML ONLY PROXY)",
+thumbnail: "!icons/spadium.jpg",
+ url: "!games/spadium/index.html"
+  },
+{
+  title: "Spelunky",
+thumbnail: "!icons/spelunky.jpg",
+ url: "!games/spelunky/index.html"
+  },
+{
+  title: "Spinning Rat",
+thumbnail: "!icons/spinningrat.jpg",
+ url: "!games/spinningrat/index.html"
+  },
+{
+  title: "Spongebob Squarepants - The Movie (GBA)",
+thumbnail: "!icons/spongebob-movie.jpg",
+ url: "!games/spongebob-movie/index.html"
+  },
+{
+  title: "Stack",
+thumbnail: "!icons/stack.jpg",
+ url: "!games/stack/index.html"
+  },
+{
+  title: "Stack Ball",
+thumbnail: "!icons/stack-ball.jpg",
+ url: "!games/stack-ball/index.html"
+  },
+{
+  title: "Station Meltdown",
+thumbnail: "!icons/station-meltdown.jpg",
+ url: "!games/station-meltdown/index.html"
+  },
+{
+  title: "Steal This Election",
+thumbnail: "!icons/steal-this-election.jpg",
+ url: "!games/steal-this-election/index.html"
+  },
+{
+  title: "Stealing The Diamond",
+thumbnail: "!icons/stealingthediamond.jpg",
+ url: "!games/stealingthediamond/index.html"
+  },
+{
+  title: "Stack Ball",
+thumbnail: "!icons/stack-ball.jpg",
+ url: "!games/stack-ball/index.html"
+  },
+{
+  title: "Subway Surfers",
+thumbnail: "!icons/subwaysurfers.jpg",
+ url: "!games/subwaysurfers/index.html"
+  },
+{
+  title: "Super Auto Pets",
+thumbnail: "!icons/superautopets.jpg",
+ url: "!games/superautopets/index.html"
+  },
+{
+  title: "Super Flash Smash",
+thumbnail: "!icons/supersmashflash.jpg",
+ url: "!games/supersmashflash/index.html"
+  },
+{
+  title: "Super Smash Bros.",
+thumbnail: "!icons/ssb.jpg",
+ url: "!games/ssb/index.html"
+  },
+{
+  title: "Superhot",
+thumbnail: "!icons/superhot.jpg",
+ url: "!games/superhot/index.html"
+  },
+{
+  title: "Super Mario 64",
+thumbnail: "!icons/super-mario-64.jpg",
+ url: "!games/super-mario-64/index.html"
+  },
+{
+  title: "Super Mario 64 DS",
+thumbnail: "!icons/super-mario-64-ds.jpg",
+ url: "!games/super-mario-64-ds/index.html"
+  },
+{
+  title: "Super Mario Advance",
+thumbnail: "!icons/super-mario-advance-1.jpg",
+ url: "!games/super-mario-advance-1/index.html"
+  },
+{
+  title: "Super Mario Advance 2",
+thumbnail: "!icons/super-mario-advance-2.jpg",
+ url: "!games/super-mario-advance-2/index.html"
+  },
+{
+  title: "Super Mario Advance 3",
+thumbnail: "!icons/super-mario-advance-3.jpg",
+ url: "!games/super-mario-advance-3/index.html"
+  },
+{
+  title: "Super Mario Advance 4",
+thumbnail: "!icons/super-mario-advance-4.jpg",
+ url: "!games/super-mario-advance-4/index.html"
+  },
+{
+  title: "Sushi Unroll",
+thumbnail: "!icons/sushi-unroll.jpg",
+ url: "!games/sushi-unroll/index.html"
+  },
+{
+  title: "Starfox 64",
+thumbnail: "!icons/starfox64.jpg",
+ url: "!games/starfox64/index.html"
+  },
+{
+  title: "Swerve",
+thumbnail: "!icons/swerve.jpg",
+ url: "!games/swerve/index.html"
+  },
+{
+  title: "Synesthesia",
+thumbnail: "!icons/synesthesia.jpg",
+ url: "!games/synesthesia/index.html"
+  },
+{
+  title: "Table Tennis Ultimate Tournament",
+thumbnail: "!icons/tabletennisultimatetournament.jpg",
+ url: "!games/tabletennisultimatetournament/index.html"
+  },
+{
+  title: "Temple Run",
+thumbnail: "!icons/templerun.jpg",
+ url: "!games/templerun/index.html"
+  },
+{
+  title: "Tetris",
+thumbnail: "!icons/tetris.jpg",
+ url: "!games/tetris/index.html"
+  },
+{
+  title: "The Final Earth",
+thumbnail: "!icons/the-final-earth.jpg",
+ url: "!games/the-final-earth/index.html"
+  },
+{
+  title: "The Final Earth 2",
+thumbnail: "!icons/the-final-earth-2.jpg",
+ url: "!games/the-final-earth-2/index.html"
+  },
+{
+  title: "The Hotel",
+thumbnail: "!icons/the-hotel.jpg",
+ url: "!games/the-hotel/index.html"
+  },
+{
+  title: "There is No Game",
+thumbnail: "!icons/there-is-no-game.jpg",
+ url: "!games/there-is-no-game/index.html"
+  },
+{
+  title: "The Square",
+thumbnail: "!icons/thesquare.jpg",
+ url: "!games/thesquare/index.html"
+  },
+{
+  title: "This Is Patrick",
+thumbnail: "!icons/thisispatrick.jpg",
+ url: "!games/thisispatrick/index.html"
+  },
+{
+  title: "Tic Tac Toe",
+thumbnail: "!icons/tic-tac-toe.jpg",
+ url: "!games/tic-tac-toe/index.html"
+  },
+{
+  title: "Tic Tac Toe AI",
+thumbnail: "!icons/tic-tac-toe-ai.jpg",
+ url: "!games/tic-tac-toe-ai/index.html"
+  },
+{
+  title: "Timeshooter",
+thumbnail: "!icons/timeshooter.jpg",
+ url: "!games/timeshooter/index.html"
+  },
+{
+  title: "Tiny Fishing",
+thumbnail: "!icons/tiny-fishing.jpg",
+ url: "!games/tiny-fishing/index.html"
+  },
+{
+  title: "Towermaster",
+thumbnail: "!icons/towermaster.jpg",
+ url: "!games/towermaster/index.html"
+  },
+{
+  title: "Tube Jumpers",
+thumbnail: "!icons/tube-jumpers.jpg",
+ url: "!games/tube-jumpers/index.html"
+  },
+{
+  title: "Tunnel Rush",
+thumbnail: "!icons/tunnelrush.jpg",
+ url: "!games/tunnelrush/index.html"
+  },
+{
+  title: "TV STATIC!!!!11!!!!!",
+thumbnail: "!icons/tv-static.jpg",
+ url: "!games/tv-static/index.html"
+  },
+{
+  title: "Twitch Tetris",
+thumbnail: "!icons/twitchtetris.jpg",
+ url: "!games/twitchtetris/index.html"
+  },
+{
+  title: "Unfair Mario",
+thumbnail: "!icons/unfairmario.jpg",
+ url: "!games/unfairmario/index.html"
+  },
+{
+  title: "Vectoid TD 3D",
+thumbnail: "!icons/vectoid-td-3d.jpg",
+ url: "!games/vectoid-td-3d/index.html"
+  },
+{
+  title: "Veloce",
+thumbnail: "!icons/veloce.jpg",
+ url: "!games/veloce/index.html"
+  },
+{
+  title: "Vex 2",
+thumbnail: "!icons/vex2.jpg",
+ url: "!games/vex2/index.html"
+  },
+{
+  title: "Vex 3",
+thumbnail: "!icons/vex3.jpg",
+ url: "!games/vex3/index.html"
+  },
+{
+  title: "Vex 4",
+thumbnail: "!icons/vex4.jpg",
+ url: "!games/vex4/index.html"
+  },
+{
+  title: "Vex 5",
+thumbnail: "!icons/vex5.jpg",
+ url: "!games/vex5/index.html"
+  },
+{
+  title: "Vex 6",
+thumbnail: "!icons/vex6.jpg",
+ url: "!games/vex6/index.html"
+  },
+{
+  title: "Vex 7",
+thumbnail: "!icons/vex7.jpg",
+ url: "!games/vex7/index.html"
+  },
+{
+  title: "Volleyball Random",
+thumbnail: "!icons/volley-random.jpg",
+ url: "!games/volley-random/index.html"
+  },
+{
+  title: "Wallsmash",
+thumbnail: "!icons/wallsmash.jpg",
+ url: "!games/wallsmash/index.html"
+  },
+{
+  title: "Waterworks",
+thumbnail: "!icons/waterworks.jpg",
+ url: "!games/waterworks/index.html"
+  },
+{
+  title: "Weavesilk",
+thumbnail: "!icons/weavesilk.jpg",
+ url: "!games/weavesilk/index.html"
+  },
+{
+  title: "WebGL 'fluid' Simulation ;)",
+thumbnail: "!icons/webgl-fluid-simulation.jpg",
+ url: "!games/webgl-fluid-simulation/index.html"
+  },
+{
+  title: "Webretro",
+thumbnail: "!icons/webretro.jpg",
+ url: "!games/webretro/index.html"
+  },
+{
+  title: "Webxash",
+thumbnail: "!icons/webxash.jpg",
+ url: "!games/webxash/index.html"
+  },
+{
+  title: "Whac-A-Mole!",
+thumbnail: "!icons/whac-a-mole.jpg",
+ url: "!games/whac-a-mole/index.html"
+  },
+{
+  title: "World's Hardest Game",
+thumbnail: "!icons/whg.jpg",
+ url: "!games/whg/index.html"
+  },
+{
+  title: "World's Hardest Game 2",
+thumbnail: "!icons/whg2.jpg",
+ url: "!games/whg2/index.html"
+  },
+{
+  title: "Win The Whitehouse",
+thumbnail: "!icons/win-the-whitehouse.jpg",
+ url: "!games/win-the-whitehouse/index.html"
+  },
+{
+  title: "WinWin",
+thumbnail: "!icons/winwin.jpg",
+ url: "!games/winwin/index.html"
+  },
+{
+  title: "Wolfenstien 3D",
+thumbnail: "!icons/wolf3d.jpg",
+ url: "!games/wolf3d/index.html"
+  },
+{
+  title: "Wordle",
+thumbnail: "!icons/wordle.jpg",
+ url: "!games/wordle/index.html"
+  },
+{
+  title: "X Trial Racing",
+thumbnail: "!icons/x-trial-racing.jpg",
+ url: "!games/x-trial-racing/index.html"
+  },
+{
+  title: "xx142-b2.exe",
+thumbnail: "!icons/xx142-b2exe.jpg",
+ url: "!games/xx142-b2exe/index.html"
+  },
+{
+  title: "YoHoHo",
+thumbnail: "!icons/yohoho.jpg",
+ url: "!games/yohoho/index.html"
+  },
+{
+  title: "Yoshi Fabrication",
+thumbnail: "!icons/yoshifabrication.jpg",
+ url: "!games/yoshifabrication/index.html"
+  },
+{
+  title: "You Are Bezos",
+thumbnail: "!icons/you-are-bezos.jpg",
+ url: "!games/you-are-bezos/index.html"
+  },
+{
+  title: "Zigzag (uncanny)",
+thumbnail: "!icons/zigzag.jpg",
+ url: "!games/zigzag/index.html"
+  },
+{
+  title: "Zombs Royale",
+thumbnail: "!icons/zombs-royale.jpg",
+ url: "!games/zombs-royale/index.html"
+  },
+{
+  title: "Zoro",
+thumbnail: "!icons/zoro.jpg",
+ url: "!games/zoro/index.html"
+  },
+      // Add more games here
+    ];
 
-<!-- Numbers 1-10 !-->
-<div class="holder">
+     // Generate the game list
+    const gameList = document.getElementById("gameList");
 
-<a id="1 (2048 Spoof)"  href="!games/1/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/1.png"><div class="thumbtext">1 (2048 Spoof)</div></div></a>
+    games.forEach(function(game, index) {
+      // Create a new container div for every 5 games
+      if (index % 5 === 0) {
+        const holder = document.createElement("div");
+        holder.classList.add("holder");
+        gameList.appendChild(holder);
+      }
 
-<a id="1v1"  href="!games/1v1/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/1v1.png"><div class="thumbtext">1v1</div></div></a>
+      // Create a new container div for each game
+      const container = document.createElement("div");
+      container.classList.add("container");
 
-<a id="1v1space"  href="!games/1v1space/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/1v1space.png"><div class="thumbtext">1v1space</div>
-</div></a>
+      // Create a new <a> tag for the game
+      const link = document.createElement("a");
+      const url = `game.html?game=${encodeURIComponent(game.url)}&name=${encodeURIComponent(game.title)}`;
+      link.href = url;
 
-<a id="10 Minutes Till Dawn"  href="!games/10-minutes-till-dawn/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/10m.png"><div class="thumbtext">10 Minutes Till Dawn</div></div></a>
+      // Create a new <img> tag for the game thumbnail
+      const thumbnail = document.createElement("img");
+      thumbnail.classList.add("gamethumb");
+      thumbnail.src = game.thumbnail;
+      link.appendChild(thumbnail);
 
-<a id="100 Player Pong"  href="!games/100-player-pong/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/100pong.png"><div class="thumbtext">100 Player Pong</div></a>
-</div></a>
+      // Create a new <div> tag for the game title
+      const titleDiv = document.createElement("div");
+      titleDiv.classList.add("thumbtext");
+      titleDiv.textContent = game.title;
+      link.appendChild(titleDiv);
 
-<a id="123 Movies"  href="!games/123movies/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/123movies.png"><div class="thumbtext">123 movies</div></a></div>
+      container.appendChild(link);
 
+      // Append the container div to the last holder div
+      const holders = document.getElementsByClassName("holder");
+      const lastHolder = holders[holders.length - 1];
+      lastHolder.appendChild(container);
+    });
+
+    // Get the search bar element
+    const searchBar = document.getElementById("searchBar");
+
+    // Add event listener for input changes
+    searchBar.addEventListener("input", function(event) {
+      // Get the search query
+      const query = event.target.value.toLowerCase();
+
+      // Get all the filterable container div elements
+      const holders = document.getElementsByClassName("holder");
+
+      // Loop through the holders and filter the container div elements based on the search query
+      Array.from(holders).forEach(function(holder) {
+        const containers = holder.getElementsByClassName("container");
+
+        // Loop through the container div elements and hide or show them based on the search query
+        Array.from(containers).forEach(function(container) {
+          const link = container.querySelector("a");
+          const gameTitle = link.querySelector(".thumbtext").textContent.toLowerCase();
+          if (gameTitle.includes(query)) {
+            container.style.display = "inline-block"; // Show the container
+          } else {
+            container.style.display = "none"; // Hide the container
+          }
+        });
+
+        // Check if any container is visible within the holder
+        const visibleContainers = Array.from(containers).filter(function(container) {
+          return container.style.display !== "none";
+        });
+
+        // Update the visibility of the holder based on the visibility of containers
+        if (visibleContainers.length > 0) {
+          holder.style.display = "block"; // Show the holder
+        } else {
+          holder.style.display = "none"; // Hide the holder
+        }
+      });
+    });
+  </script>
 </div>
-<div class="holder">
 
-<a id="2048"  href="!static/2048.html">
-<div class="container"><img class="gamethumb" align="center" src="!icons/2048.png"><div class="thumbtext">2048</div></div></a>
 
-<a id="9007199254740992" href="!games//9007199254740992/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/900.png"><div class="thumbtext">9007199254740992</div></div></a>
-
-<a id="2048"  href="!games/99balls.html">
-<div class="container"><img class="gamethumb" align="center" src="!icons/99balls.png"><div class="thumbtext">99balls</div></div></a>
-
-<!-- Letter A -->
-
-<div class="container"><a id="Achievement Unlocked"   href="!games/achievementunlocked/index.html"><img class="gamethumb" align="center" src="!icons/achievementunlocked.png"><div class="thumbtext">Achievement Unlocked</div></a></div>
-
-<div class="container"><a id="Advance Wars"   href="!games//GBA/advancewars.html"><img class="gamethumb" align="center" src="!icons/advancewars.png"><div class="thumbtext">Advance Wars</div></a></div>
-
-<div class="container"><a id="Advance Wars 2"   href="!games//GBA/advancewars2.html"><img class="gamethumb" align="center" src="!icons/advancewars2.png"><div class="thumbtext">Advance Wars 2</div></a></div>
-
-<div class="container"><a id="A Dark Room"   href="!games//adarkroom/index.html"><img class="gamethumb" align="center" src="!icons/adarkroom.png"><div class="thumbtext">A Dark Room</div></a></div>
-
-<div class="container"><a id="Adventure Drivers"   href="!games//adventure-drivers/index.html"><img class="gamethumb" align="center" src="!icons/adventure-drivers.png"><div class="thumbtext">Adventure Drivers</div></a></div>
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Ages of Conflict"   href="!games//ages-of-conflict/index.html"><img class="gamethumb" align="center" src="!icons/ages-of-conflict.png"><div class="thumbtext">Ages Of Conflict</div></a></div>
-
-<div class="container"><a id="Adrenaline Challenge"   href="!games/adrenalinechallenge/index.html"><img class="gamethumb" align="center" src="!icons/adrenalinechallenge.png"><div class="thumbtext">Adrenaline Challenge</div></a></div>
-
-<div class="container"><a id="Adrenaline Challenge"   href="!games/a-dance-of-fire-and-ice/index.html"><img class="gamethumb" align="center" src="!icons/a-dance-of-fire-and-ice.png"><div class="thumbtext">A Dance of Fire and Ice</div></a></div>
-
-<a id="Alien Hominid" href="!games//alienhominid/index.html"><div class="container"><img class="gamethumb" align="center" src="!icons/alienhominid.png"><div class="thumbtext">Alien Hominid</div></div></a>
-
-<div class="container"><a id="Amidst The Clouds"   href="!games//amidst-the-clouds/index.html"><img class="gamethumb" align="center" src="!icons/amidst-the-clouds.png"><div class="thumbtext">Amidst The Clouds</div></a></div>
-
-<div class="container"><a id="amazing rope police"   href="!games/amazing-rope-police/index.html"><img class="gamethumb" align="center" src="!icons/amazingropepolice.png"><div class="thumbtext">amazing rope police</div></a></div>
-
-<div class="container"><a id="Angry Sharks"   href="!games/angry-sharks/index.html"><img class="gamethumb" align="center" src="!icons/angry-sharks.png"><div class="thumbtext">Angry Sharks</div></a></div>
-
-<div class="container"><a id="Aquapark Slides"   href="!games/aquapark-slides/index.html"><img class="gamethumb" align="center" src="!icons/aquapark-slides.png"><div class="thumbtext">Aquapark Slides</div></a></div>
-
-<div class="container"><a id="Astray"   href="!games/astray/index.html"><img class="gamethumb" align="center" src="!icons/astray.png"><div class="thumbtext">Astray</div></a></div>
-
-<div class="container"><a id="Awesome Tanks 2"   href="!games/awesometanks2/index.html"><img class="gamethumb" align="center" src="!icons/awesometanks2.png"><div class="thumbtext">Awesome Tanks 2</div></a></div>
-
-</div>
-<div class="holder">
-
-<div class="container"><a id="Among Us"   href="!games/amongus/index.html"><img class="gamethumb" align="center" src="!icons/amongus.png"><div class="thumbtext">Among Us</div></a></div>
-
-<div class="container"><a id="Antimatter Dimensions"   href="!games/antimatter/index.html"><img class="gamethumb" align="center" src="!icons/antid.png"><div class="thumbtext">Antimatter Dimensions</div></a></div>
-
-<div class="container"><a id="Avalanche"   href="!games/avalanche/index.html"><img class="gamethumb" align="center" src="!icons/avalanche.png"><div class="thumbtext">Avalanche</div></a></div>
-
-<!-- Letter B -->
-
-
-<div class="container"><a id="Backrooms"  href="!games/backrooms/index.html"><img class="gamethumb" align="center" src="!icons/backrooms.png"><div class="thumbtext">Backrooms</div></a></div>
-
-<div class="container"><a id="Bacon May Die"  href="!games/bacon-may-die/index.html"><img class="gamethumb" align="center" src="!icons/bacon-may-die.png"><div class="thumbtext">Bacon May Die</div></a></div>
-
-<div class="container"><a id="Bad Ice Cream 1"   href="!games/bad-ice-cream/index.html"><img class="gamethumb" align="center" src="!icons/bad-ice-cream.png"><div class="thumbtext">Bad Ice Cream 1</div></a></div>
-
-<div class="container"><a id="Bad Ice Cream 2"   href="!games/bad-ice-cream-2/index.html"><img class="gamethumb" align="center" src="!icons/bad-ice-cream-2.png"><div class="thumbtext">Bad Ice Cream 2</div></a></div>
-
-</div>
-<div class="holder">
-
-<div class="container"><a id="Bad Ice Cream 3"   href="!games/bad-ice-cream-3/index.html"><img class="gamethumb" align="center" src="!icons/bad-ice-cream-3.png"><div class="thumbtext">Bad Ice Cream 3</div></a></div>
-
-<div class="container"><a id="Baldis Basics"   href="!games/baldis-basics/index.html"><img class="gamethumb" align="center" src="!icons/baldis-basics.png"><div class="thumbtext">Baldis Basics</div></a></div>
-
-<div class="container"><a id="Balldodge"   href="!games/balldodge/index.html"><img class="gamethumb" align="center" src="!icons/balldodge.png"><div class="thumbtext">Balldodge</div></a></div>
-
-<div class="container"><a id="Ball Hop"   href="!games/ball-hop/index.html"><img class="gamethumb" align="center" src="!icons/ballhop.png"><div class="thumbtext">Ball Hop</div></a></div>
-
-<div class="container"><a id="Ballistic Chickens"   href="!games/ballistic-chickens/index.html"><img class="gamethumb" align="center" src="!icons/ballistic-chickens.png"><div class="thumbtext">Ballistic Chickens</div></a></div>
-
-<div class="container"><a id="Bananasaber"  href="!games/banana-saber/index.html"><img class="gamethumb" align="center" src="!icons/bananasaber.png"><div class="thumbtext">Bananasaber</div></a></div>
-
-<div class="container"><a id="Basketball Stars"   href="!games/basketball-stars/index.html"><img class="gamethumb" align="center" src="!icons/BAS.png"><div class="thumbtext">Basketball Stars</div></a></div>
-
-</div>
-<div class="holder">
-
-<div class="container"><a id="Basketball Random"   href="!games/basketballrandom/index.html"><img class="gamethumb" align="center" src="!icons/basketballrandom.png"><div class="thumbtext">Basket Random</div></a></div>
-
-<div class="container"><a id="Basketbros.io"   href="!games/basketbrosio/index.html"><img class="gamethumb" align="center" src="!icons/basketbrosio.png"><div class="thumbtext">Basketbros.io</div></a></div>
-
-<div class="container"><a id="Battle For Gondor"   href="!games/battleforgondor/index.html"><img class="gamethumb" align="center" src="!icons/battleforgondor.png"><div class="thumbtext">Battle For Gondor</div></a></div>
-
-<div class="container"><a id="Biters.io"   href="!games//biters-io/index.html"><img class="gamethumb" align="center" src="!icons/biters.png"><div class="thumbtext">Biters.io</div></a></div>
-
-<div class="container"><a id="Big Red Button"   href="!games/bigredbutton/index.html"><img class="gamethumb" align="center" src="!icons/bigredbutton.png"><div class="thumbtext">Big Red Button</div></a></div>
-
-<div class="container"><a id="Binding Of Issac - Wrath Of The Lamb"   href="!games/binding-of-issac/index.html"><img class="gamethumb" align="center" src="!icons/bindingofissac.png"><div class="thumbtext">Binding Of Issac - Wrath Of The Lamb</div></a></div>
-
-<div class="container"><a id="Bitlife"   href="!games/bitlife/index.html"><img class="gamethumb" align="center" src="!icons/bitlife.png"><div class="thumbtext">Bitlife</div></a></div>
-
-<div class="container"><a id="Black Hole Square"   href="!games/blackholesquare/index.html"><img class="gamethumb" align="center" src="!icons/blackholesquare.png"><div class="thumbtext">Black Hole Square</div></a></div>
-
-<div class="container"><a id="Black Night"   href="!games/blackknight/index.html"><img class="gamethumb" align="center" src="!icons/blackknight.png"><div class="thumbtext">Black Knight</div></a></div>
-
-<div class="container"><a id="Blocky Tower"   href="!games/blocky-tower/index.html"><img class="gamethumb" align="center" src="!icons/blocky.png"><div class="thumbtext">Blocky Tower</div></a></div>
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Bloons Tower Defense"   href="!games/bloonstd/index.html"><img class="gamethumb" align="center" src="!icons/bloonstd.png"><div class="thumbtext">Bloons Tower Defense</div></a></div>
-
-<div class="container"><a id="Bloons Tower Defense 2"   href="!games/bloonstd2/index.html"><img class="gamethumb" align="center" src="!icons/bloonstd2.png"><div class="thumbtext">Bloons Tower Defense 2</div></a></div>
-
-<div class="container"><a id="Bloons Tower Defense 4"   href="!games/bloonstd4/index.html"><img class="gamethumb" align="center" src="!icons/bloonstd4.png"><div class="thumbtext">Bloons Tower Defense 4</div></a></div>
-
-<div class="container"><a id="Bloons Tower Defense 5"   href="!games/bloonstd5/index.html"><img class="gamethumb" align="center" src="!icons/bloonstd5.png"><div class="thumbtext">Bloons Tower Defense 5</div></a></div>
-
-<div class="container"><a id="Bloxorz"   href="!games/bloxorz/index.html"><img class="gamethumb" align="center" src="!icons/bloxorz.png"><div class="thumbtext">Bloxorz</div></a></div>
-
-<div class="container"><a id="Bob The Robber 2"   href="!games/bobtherobber2/index.html"><img class="gamethumb" align="center" src="!icons/bobtherobber2.png"><div class="thumbtext">Bob The Robber 2</div></a></div>
-
-<div class="container"><a id="Big Tower Tiny Square"   href="!games/big-tower-tiny-square/index.html"><img class="gamethumb" align="center" src="!icons/btts.png"><div class="thumbtext">Big Tower Tiny Square</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Bomberman Max2 Blue"   href="!games/GBA/bomberman_max_2blue.html"><img class="gamethumb" align="center" src="!icons/bombermanmax2.png"><div class="thumbtext">Bomberman Max2</div></a></div>
-
-<div class="container"><a id="Bouncy Heroes"   href="!games/bouncyheroes/index.html"><img class="gamethumb" align="center" src="!icons/bouncyheroes.png"><div class="thumbtext">Bouncy Heroes</div></a></div>
-
-<div class="container"><a id="boxhead2play"   href="!games/boxhead2play/index.html"><img class="gamethumb" align="center" src="!icons/boxhead2play.png"><div class="thumbtext">boxhead2play</div></a></div>
-
-<div class="container"><a id="Boxing Random"   href="!games/boxing-random/index.html"><img class="gamethumb" align="center" src="!icons/boxing-random.png"><div class="thumbtext">Boxing Random</div></a></div>
-
-<div class="container"><a id="Burger And Frights"   href="!games/burger-and-frights/index.html"><img class="gamethumb" align="center" src="!icons/burger-and-frights.png"><div class="thumbtext">Burger & Frights</div></a></div>
-
-<!-- Letter C -->
-
-
-<div class="container"><a id="Cactus McCoy"  href="!games/cactusmccoy1.html"><img class="gamethumb" align="center" src="!icons/cactusmccoy1.png"><div class="thumbtext">Cactus McCoy</div></a></div>
-
-<div class="container"><a id="Champion Island"  href="!games/champion-island/index.html"><img class="gamethumb" align="center" src="!icons/championisland.png"><div class="thumbtext">Champion Island</div></a></div>
-
-<div class="container"><a id="Coolman DX"  href="!games/coolman/index.html"><img class="gamethumb" align="center" src="!icons/coolman.png"><div class="thumbtext">Coolman DX</div></a></div>
-
-<div class="container"><a id="Chill Radio (they play nujabes on here sometimes)"  href="!games/chill-radio/index.html"><img class="gamethumb" align="center" src="!icons/chillradio.png"><div class="thumbtext">Chill Radio</div></a></div>
-
-
-</div>
-<div class="holder">
-
-<div class="container"><a id="Cannon Basketball 4"   href="!games/cannon-basketball-4/index.html"><img class="gamethumb" align="center" src="!icons/cannon-basketball-4.png"><div class="thumbtext">Cannon Basketball 4</div></a></div>
-
-<div class="container"><a id="Canyon Defense"   href="!games/canyondefense/index.html"><img class="gamethumb" align="center" src="!icons/canyondefense.png"><div class="thumbtext">Canyon Defense</div></a></div>
-
-<div class="container"><a id="Cell Machine"  href="!games/cell-machine.html"><img class="gamethumb" align="center" src="!icons/cell-machine.png"><div class="thumbtext">Cell Machine</div></a></div>
-
-<div class="container"><a id="Champion Archer"   href="!games/champion-archer/index.html"><img class="gamethumb" align="center" src="!icons/champion-archer.png"><div class="thumbtext">Champion Archer</div></a></div>
-
-<div class="container"><a id="Chess"   href="!games/chess/index.html"><img class="gamethumb" align="center" src="!icons/chess.png"><div class="thumbtext">Chess</div></a></div>
-
-<div class="container"><a id="Chrome Dinosaur Game"   href="!games/chrome-dino/index.html"><img class="gamethumb" align="center" src="!icons/chromedino.png"><div class="thumbtext">Chrome Dino</div></a></div>
-
-<div class="container"><a id="Circlo"  href="!games/circlo/index.html"><img class="gamethumb" align="center" src="!icons/circlo.png"><div class="thumbtext">Circlo</div></a></div>
-
-<div class="container"><a id="Cluster Rush"  href="!games/cluster-rush/index.html"><img class="gamethumb" align="center" src="!icons/cluster-rush.png"><div class="thumbtext">Cluster Rush</div></a></div>
-
-<div class="container"><a id="clickfire"  href="!games/clickfire2/index.html"><img class="gamethumb" align="center" src="!icons/clickfire2.png"><div class="thumbtext"><i>clickfire</i></div></a></div>
-
-<div class="container"><a id="clickfire classic"  href="!games/clickfire1/index.html"><img class="gamethumb" align="center" src="!icons/clickfireT.png"><div class="thumbtext">clickfire old</div></a></div>
-
-<div class="container"><a id="Connect 3"  href="!games/connect3/index.html"><img class="gamethumb" align="center" src="!icons/con3.png"><div class="thumbtext">Connect 3</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Cookie Clicker"  href="!games/cookieclicker/index.html"><img class="gamethumb" align="center" src="!icons/cookie.png"><div class="thumbtext">Cookie Clicker</div></a></div>
-
-<div class="container"><a id="Core Ball"  href="!games/core-ball/index.html"><img class="gamethumb" align="center" src="!icons/coreball.png"><div class="thumbtext">Core Ball</div></a></div>
-
-<div class="container"><a id="Creative Kill Chamber"  href="!games/creativekillchamber/index.html"><img class="gamethumb" align="center" src="!icons/creativekillchamber.png"><div class="thumbtext">Creative Kill Chamber</div></a></div>
-
-<div class="container"><a id="ChronoTrigger"  href="!games/GBA/chronotrigger.html"><img class="gamethumb" align="center" src="!icons/chronotrigger.png"><div class="thumbtext">ChronoTrigger</div></a></div>
-
-<div class="container"><a id="Crossy Road"  href="!games/crossyroad/index.html"><img class="gamethumb" align="center" src="!icons/crossyroad.png"><div class="thumbtext">Crossy Road</div></a></div>
-
-<div class="container"><a id="Cyber City Driver"  href="!games/cyber-city-driver/index.html"><img class="gamethumb" align="center" src="!icons/cyber.png"><div class="thumbtext">Cyber City Driver</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="CSGO Clicker"  href="!games/csgo-clicker/index.html"><img class="gamethumb" align="center" src="!icons/CSGO.png"><div class="thumbtext">CSGO Clicker</div></a></div>
-
-<div class="container"><a id="Cut the Rope"  href="!games/cuttherope/index.html"><img class="gamethumb" align="center" src="!icons/ctr.png"><div class="thumbtext">Cut the Rope</div></a></div>
-
-<div class="container"><a id="Cupcakes for edp"  href="!games/cupcakes/index.html"><img class="gamethumb" align="center" src="!icons/cupcakes.png"><div class="thumbtext">2048 Cupcakes</div></a></div>
-
-
-<!-- Letter D -->
-
-
-<div class="container"><a id="Doodle Jump"  href="!games/doodlejump/index.html"><img class="gamethumb" align="center" src="!icons/doodle.png"><div class="thumbtext">Doodle Jump</div></a></div>
-
-<div class="container"><a id="Deal Or No Deal"  href="!games/deal-or-no-deal/index.html"><img class="gamethumb" align="center" src="!icons/dealornodeal.png"><div class="thumbtext">Deal Or No Deal</div></a></div>
-
-<div class="container"><a id="Deepest Sword"  href="!games/deepest-sword/index.html"><img class="gamethumb" align="center" src="!icons/deepestsword.png"><div class="thumbtext">Deepest Sword</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Drift City"  href="!games/drift-city/index.html"><img class="gamethumb" align="center" src="!icons/driftc.png"><div class="thumbtext">Drift City</div></a></div>
-
-<div class="container"><a id="Drift King"  href="!games/driftking/index.html"><img class="gamethumb" align="center" src="!icons/driftking.png"><div class="thumbtext">Drift King</div></a></div>
-
-<div class="container"><a id="Duck Life 1"  href="!games/!flash/ducklife.html"><img class="gamethumb" align="center" src="!icons/ducklife.png"><div class="thumbtext">Duck Life</div></a></div>
-
-
-<div class="container"><a id="Duck Life 2"  href="!games/ducklife2/index.html"><img class="gamethumb" align="center" src="!icons/ducklife2.png"><div class="thumbtext">Duck Life 2</div></a></div>
-
-
-<div class="container"><a id="Duck Life 3"  href="!games/ducklife3/index.html"><img class="gamethumb" align="center" src="!icons/ducklife3.png"><div class="thumbtext">Duck Life 3</div></a></div>
-
-<div class="container"><a id="Duck Life 4"  href="!games/ducklife4/index.html"><img class="gamethumb" align="center" src="!icons/ducklife4.png"><div class="thumbtext">Duck Life 4</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Doom 64"  href="!games/GBA/doom64.html"><img class="gamethumb" align="center" src="!icons/doom64.png"><div class="thumbtext">DOOM 64</div></a></div>
-
-<div class="container"><a id="Dune"  href="!games/dune/index.html"><img class="gamethumb" align="center" src="!icons/dune.png"><div class="thumbtext">Dune</div></a></div>
-
-<div class="container"><a id="Dunkers Fight"  href="!games/dunkers-fight/index.html"><img class="gamethumb" align="center" src="!icons/dunk.png"><div class="thumbtext">Dunkers Fight</div></a></div>
-
-<div class="container"><a id="Derek 1"  href="!games/derek1/index.html"><img class="gamethumb" align="center" src="!icons/der1.png"><div class="thumbtext">DTCMGT</div></a></div>
-
-<div class="container"><a id="Derek 2"  href="!games/derek2/index.html"><img class="gamethumb" align="center" src="!icons/der2.png"><div class="thumbtext">DTCMGT 2</div></a></div>
-
-<div class="container"><a id="Derek 3"  href="!games/derek3/index.html"><img class="gamethumb" align="center" src="!icons/der3.png"><div class="thumbtext">DTCMGT 3</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Derek 4"  href="!games/derek4/index.html"><img class="gamethumb" align="center" src="!icons/der4.png"><div class="thumbtext">DTCMGT 4</div></a></div>
-
-<div class="container"><a id="Derek 5"  href="!games/derek5/index.html"><img class="gamethumb" align="center" src="!icons/derek5.png"><div class="thumbtext">DTCMGT 5</div></a></div>
-
-<div class="container"><a id="Derek 6"  href="!games/derek6/index.html"><img class="gamethumb" align="center" src="!icons/derek6.png"><div class="thumbtext">DTCMGT 6</div></a></div>
-
-<div class="container"><a id="Derek 7"  href="!games/derek7/index.html"><img class="gamethumb" align="center" src="!icons/derek7.png"><div class="thumbtext">DTCMGT 7</div></a></div>
-
-<div class="container"><a id="Derek 8"  href="!games/derek8/index.html"><img class="gamethumb" align="center" src="!icons/derek8.png"><div class="thumbtext">DTCMGT 8</div></a></div>
-
-<div class="container"><a id="dogeminer"  href="!games/dogeminer/index.html"><img class="gamethumb" align="center" src="!icons/dogeminer.png"><div class="thumbtext">Doge Miner</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Doge Miner 2"  href="!games/Dogeminer2/index.html"><img class="gamethumb" align="center" src="!icons/dogeminer2.png"><div class="thumbtext">Doge Miner 2</div></a></div>
-
-<div class="container"><a id="Duke Nukem"  href="!games/GBA/dukenukem.html"><img class="gamethumb" align="center" src="!icons/dukenukem.png"><div class="thumbtext">Duke Nukem 64</div></a></div>
-
-<!-- Letter E -->
-
-
-<div class="container"><a id="eatio"  href="!games/eatio/index.html"><img class="gamethumb" align="center" src="!icons/eatio.png"><div class="thumbtext">eatio</div></a></div>
-
-<div class="container"><a id="Earthbound"  href="!games/GBA/earthbound.html"><img class="gamethumb" align="center" src="!icons/earthbound.png"><div class="thumbtext">Earthbound</div></a></div>
-
-<div class="container"><a id="Edge Surf"  href="!games/edge-surf/index.html"><img class="gamethumb" align="center" src="!icons/edge-surf.png"><div class="thumbtext">Edge Surf</div></a></div>
-
-
-<div class="container"><a id="Edge Not Found"   href="!games/edgenotfound/index.html"><img class="gamethumb" align="center" src="!icons/edgenotfound.png"><div class="thumbtext">EdgeNotFound</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Eel Slap"  href="!games/eel-slap/index.html"><img class="gamethumb" align="center" src="!icons/eel-slap.png"><div class="thumbtext">Eel Slap</div></a></div>
-
-<div class="container"><a id="Eggy Car"  href="!games/eggy-car/index.html"><img class="gamethumb" align="center" src="!icons/eggy-car.png"><div class="thumbtext">Eggy Car</div></a></div>
-
-<div class="container"><a id="Elastic Man"  href="!games/elasticman/index.html"><img class="gamethumb" align="center" src="!icons/elasticman.png"><div class="thumbtext">Elastic Man</div></a></div>
-
-<div class="container"><a id="Endless War 3"  href="!games/endlesswar3/index.html"><img class="gamethumb" align="center" src="!icons/endlesswar3.png"><div class="thumbtext">Endless War 3</div></a></div>
-
-
-
-
-<div class="container"><a id="Escaping the Prison"  href="!games/escapingtheprison/index.html"><img class="gamethumb" align="center" src="!icons/escapingtheprison.png"><div class="thumbtext">Escaping The Prison</div></a></div>
-
-
-<div class="container"><a id="exo"  href="!games/exo/index.html"><img class="gamethumb" align="center" src="!icons/exo.png"><div class="thumbtext">exo</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<!-- Letter F -->
-
-
-<div class="container"><a id="Fall Boys"  href="!games/fallboys/index.html"><img class="gamethumb" align="center" src="!icons/fall-boys.png"><div class="thumbtext">Fall Boys (joke)</div></a></div>
-
-<div class="container"><a id="ferge"  href="!games/ferge/index.html"><img class="gamethumb" align="center" src="!icons/ferge.png"><div class="thumbtext">Ferge</div></a></div>
-
-<div class="container"><a id="Flappy Bird"  href="!games/flappy/index.html"><img class="gamethumb" align="center" src="!icons/flappy.png"><div class="thumbtext">Flappy Bird</div></a></div>
-
-<div class="container"><a id="Henry Stickman - Fleeing the complex"  href="!games/!flash/fleeingthecomplex.html"><img class="gamethumb" align="center" src="!icons/fleeingthecomplex.png"><div class="thumbtext">Fleeing The Complex</div></a></div>
-
-<div class="container"><a id="Flip Hero"  href="!games/fliphero/index.html"><img class="gamethumb" align="center" src="!icons/fliphero.png"><div class="thumbtext">Flip Hero</div></a></div>
-
-
-<div class="container"><a id="Fly Guy"  href="!games/flyguy/index.html"><img class="gamethumb" align="center" src="!icons/flyguy.png"><div class="thumbtext">Fly Guy</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Five Nights at Freddy's 1"  href="!games/fnaf/index.html"><img class="gamethumb" align="center" src="!icons/fnaf.png"><div class="thumbtext">FNAF 1</div></a></div>
-
-<div class="container"><a id="Five Nights at Freddy's 2"  href="!games/fnaf2/index.html"><img class="gamethumb" align="center" src="!icons/fnaf2.png"><div class="thumbtext">FNAF 2</div></a></div>
-
-<div class="container"><a id="Five Nights at Freddy's 3"  href="!games/fnaf3/index.html"><img class="gamethumb" align="center" src="!icons/fnaf3.png"><div class="thumbtext">FNAF 3</div></a></div>
-
-<div class="container"><a id="Five Nights at Freddy's 4"  href="!games/fnaf4/index.html"><img class="gamethumb" align="center" src="!icons/fnaf4.png"><div class="thumbtext">FNAF 4</div></a></div>
-
-<div class="container"><a id="Five Nights At Freddy's: Sister location"  href="!games/sister-location/index.html"><img class="gamethumb" align="center" src="!icons/sisterlocation.png"><div class="thumbtext">FNAF: Sister Location</div></a></div>
-
-<div class="container"><a id="Fnaf Thing"  href="!games/fnafthing/index.html"><img class="gamethumb" align="center" src="!icons/fnafthing.png"><div class="thumbtext">FNAF Thing</div></a></div>
-
-<div class="container"><a id="Fire Emblem"  href="!games/GBA/fire_emblem.html"><img class="gamethumb" align="center" src="!icons/fire_emblem.png"><div class="thumbtext">Fire Emblem</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Friends Of Mineral Town"  href="!games/placeholder"><img class="gamethumb" align="center" src="!icons/fomt.png"><div class="thumbtext">Harvest Moon - FOMT</div></a></div>
-
-
-<div class="container"><a id="More Friends Of Mineral Town"  href="!games/placeholder"><img class="gamethumb" align="center" src="!icons/mfomt.png"><div class="thumbtext">Harvest Moon - MFOMT</div></a></div>
-
-<div class="container"><a id="Fruit Ninja"  href="!games/fruitninja/index.html"><img class="gamethumb" align="center" src="!icons/fruitninja.png"><div class="thumbtext">Fruit Ninja (broken)</div></a></div>
-
-<div class="container"><a id="Funny Shooter"  href="!games/funnyshooter/index.html"><img class="gamethumb" align="center" src="!icons/funnyshooter.png"><div class="thumbtext">Funny Shooter</div></a></div>
-
-<!-- Letter G -->
-
-
-<div class="container"><a id="Gateways"  href="!games/gateways/index.html"><img class="gamethumb" align="center" src="!icons/gateways.png"><div class="thumbtext">Gateways</div></a></div>
-
-<div class="container"><a id="Geometry Dash Lite"  href="!games/geodashlite/index.html"><img class="gamethumb" align="center" src="!icons/geodashlite.png"><div class="thumbtext">Geometry Dash Lite</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Geometry Dash Scratch"  href="!games/geometrydash/index.html"><img class="gamethumb" align="center" src="!icons/geodash.png"><div class="thumbtext">Geometry Dash (scratch)</div></a></div>
-
-<div class="container"><a id="Glass City"  href="!games/glass-city/index.html"><img class="gamethumb" align="center" src="!icons/glasscity.png"><div class="thumbtext">Glass City</div></a></div>
-
-<div class="container"><a id="Goodnight"  href="!games/goodnight/index.html"><img class="gamethumb" align="center" src="!icons/gn.png"><div class="thumbtext">Goodnight</div></a></div>
-
-<div class="container"><a id="GoldenEye007"  href="!games/GBA/goldeneye.html"><img class="gamethumb" align="center" src="!icons/goldeneye007.png"><div class="thumbtext">GoldenEye 007</div></a></div>
-
-
-<div class="container"><a id="Google Snake"  href="!games/google-snake/index.html"><img class="gamethumb" align="center" src="!icons/googlesnake.png"><div class="thumbtext">Google Snake</div></a></div>
-
-<div class="container"><a id="Gravity Soccer"  href="!games/gravity-soccer/index.html"><img class="gamethumb" align="center" src="!icons/gravitysoccer.png"><div class="thumbtext">Gravity Soccer</div></a></div>
-
-<div class="container"><a id="Grindcraft"  href="!games/grindcraft/index.html"><img class="gamethumb" align="center" src="!icons/grindcraft.png"><div class="thumbtext">Grindcraft</div></a></div>
-
-</div>
-<div class="holder">
-
-
-<!-- Letter H -->
-
-<div class="container"><a id="Handshakes"  href="!games/handshakes/index.html"><img class="gamethumb" align="center" src="!icons/handshakes.png"><div class="thumbtext">Handshakes</div></a></div>
-
-<div class="container"><a id="Hextris"  href="!games/hextris/index.html"><img class="gamethumb" align="center" src="!icons/hextrt.png"><div class="thumbtext">Hextris</div></a></div>
-
-<!-- Letter I -->
-
-
-<div class="container"><a id="Idle Breakout"  href="!games/idle-breakout/index.html"><img class="gamethumb" align="center" src="!icons/idlebreakout.png"><div class="thumbtext">Idle Breakout</div></a></div>
-
-<div class="container"><a id="Ice Age Baby"  href="!games/iceagebaby/index.html"><img class="gamethumb" align="center" src="!icons/iceagebaby.png"><div class="thumbtext">Ice Age Baby</div></a></div>
-
-<div class="container"><a id="Impossible Quiz"  href="!games/impossiblequiz/index.html"><img class="gamethumb" align="center" src="!icons/impossiblequiz.png"><div class="thumbtext">Impossible Quiz</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Interactive Buddy"  href="!games/interactivebuddy/index.html"><img class="gamethumb" align="center" src="!icons/interactivebuddy.png"><div class="thumbtext">Interactive Buddy</div></a></div>
-
-<!-- Letter J -->
-
-
-<div class="container"><a id="Jetpack Joyride"  href="!games/jetpack-joyride/index.html"><img class="gamethumb" align="center" src="!icons/jetpack-joyride.png"><div class="thumbtext">Jetpack Joyride</div></a></div>
-
-<div class="container"><a id="Just Fall"  href="!games/just-fall/index.html"><img class="gamethumb" align="center" src="!icons/just-fall.png"><div class="thumbtext">Just Fall</div></a></div>
-
-<div class="container"><a id="Just One Boss"  href="!games/just-one-boss/index.html"><img class="gamethumb" align="center" src="!icons/just-one-boss.png"><div class="thumbtext">Just One Boss</div></a></div>
-
-<!-- Letter K -->
-
-
-<div class="container"><a id="Kitchen Gun Game"  href="!games/kitchen-gun-game/index.html"><img class="gamethumb" align="center" src="!icons/kitchen-gun-game.png"><div class="thumbtext">Kitchen Gun Game</div></a></div>
-
-<div class="container"><a id="Kitten Cannon"  href="!games/kittencannon/index.html"><img class="gamethumb" align="center" src="!icons/kittencannon.png"><div class="thumbtext">Kitten Cannon</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Kirby 64"  href="!games/GBA/kirby64.html"><img class="gamethumb" align="center" src="!icons/kirby64.png"><div class="thumbtext">Kirby 64</div></a></div>
-
-<div class="container"><a id="Kirby And The Amazing Mirror"  href="!games/GBA/katam.html"><img class="gamethumb" align="center" src="!icons/katam.png"><div class="thumbtext">Kirby ATAM</div></a></div>
-
-<div class="container"><a id="Kirby - Nightmare in Dreamland"  href="!games/GBA/kirbynid.html"><img class="gamethumb" align="center" src="!icons/nightmareindl.png"><div class="thumbtext">Kirby - NIDL</div></a></div>
-
-<div class="container"><a id="Krunker"  href="!games/krunker/index.html"><img class="gamethumb" align="center" src="!icons/krunker.png"><div class="thumbtext">Krunker</div></a></div>
-
-<!-- Letter L -->
-<div class="container"><a id="Legend Of Zelda - A Link to the past"  href="!games/GBA/linktothepast.html"><img class="gamethumb" align="center" src="!icons/linktothepast.png"><div class="thumbtext">LOZ - A Link to the past</div></a></div>
-
-<div class="container"><a id="Legend Of Zelda - Link's Awakening"  href="!games/GBA/linksawakening.html"><img class="gamethumb" align="center" src="!icons/linksawakening.png"><div class="thumbtext">LOZ - Link's Awakening</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Legend Of Zelda - Majora's Mask"  href="!games/GBA/majorasmask.html"><img class="gamethumb" align="center" src="!icons/majoras-mask.png"><div class="thumbtext">LOZ - Majora's Mask</div></a></div>
-
-<div class="container"><a id="Legend Of Zelda - The Minish Cap"  href="!games/GBA/theminishcap.html"><img class="gamethumb" align="center" src="!icons/theminishcap.png"><div class="thumbtext">LOZ - Minish Cap</div></a></div>
-
-<div class="container"><a id="Legend Of Zelda - Ocarina Of Time"  href="!games/GBA/ocarinaoftime.html"><img class="gamethumb" align="center" src="!icons/ocarinaoftime.png"><div class="thumbtext">LOZ - Ocarina Of Time</div></a></div>
-
-<div class="container"><a id="Legend Of Zelda - Oracle Of Ages"  href="!games/GBA/oracleofages.html"><img class="gamethumb" align="center" src="!icons/oracleofages.png"><div class="thumbtext">LOZ - Oracle Of Ages</div></a></div>
-
-
-
-<div class="container"><a id="Learn To Fly"  href="!games/learntofly/index.html"><img class="gamethumb" align="center" src="!icons/learntofly.png"><div class="thumbtext">Learn To Fly</div></a></div>
-
-<div class="container"><a id="Learn To Fly 2"  href="!games/learntofly2/index.html"><img class="gamethumb" align="center" src="!icons/learntofly2.png"><div class="thumbtext">Learn To Fly 2</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<!-- Letter M -->
-
-
-<div class="container"><a id="Mario"  href="!games/mario/index.html"><img class="gamethumb" align="center" src="!icons/mario.png"><div class="thumbtext">Super Mario Bros HTML</div></a></div>
-
-<div class="container"><a id="Minecraft"  href="!games/minecraft/index.html"><img class="gamethumb" align="center" src="!icons/minecraft.png"><div class="thumbtext">Minecraft</div></a></div>
-
-<div class="container"><a id="Mindustry"  href="!games/mindustry/index.html"><img class="gamethumb" align="center" src="!icons/mindustry.png"><div class="thumbtext">Mindustry</div></a></div>
-
-<div class="container"><a id="Mother 3 (Earthbound 3)"  href="!games/GBA/mother3.html"><img class="gamethumb" align="center" src="!icons/mother3.png"><div class="thumbtext">Mother 3 (Earthbound 2)</div></a></div>
-
-
-
-<div class="container"><a id="Motox3m Pool"  href="!games/motox3m-pool/index.html"><img class="gamethumb" align="center" src="!icons/motox3m-pool.png"><div class="thumbtext">Motox3m Pool</div></a></div>
-
-<div class="container"><a id="Motox3m Winter"  href="!games/motox3m-winter/index.html"><img class="gamethumb" align="center" src="!icons/motox3m-winter.png"><div class="thumbtext">Motox3m Winter</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Motox3m"  href="!games/motox3m/index.html"><img class="gamethumb" align="center" src="!icons/motox3m.png"><div class="thumbtext">Motox3m</div></a></div>
-
-<div class="container"><a id="Motox3m 2"  href="!games/motox3m2/index.html"><img class="gamethumb" align="center" src="!icons/motox3m2.png"><div class="thumbtext">Motox3m 2</div></a></div>
-
-<div class="container"><a id="Multiplayer Pong"  href="!games/multiplayer-pong/index.html"><img class="gamethumb" align="center" src="!icons/pong.png"><div class="thumbtext">Multiplayer Pong</div></a></div>
-
-<div class="container"><a id="My Rusty Submarine"  href="!games/my-rusty-submarine/index.html"><img class="gamethumb" align="center" src="!icons/my-rusty-submarine.png"><div class="thumbtext">My Rusty Submarine</div></a></div>
-
-<!-- Letter N -->
-
-
-<div class="container"><a id="n-gon"  href="!games/n-gon/index.html"><img class="gamethumb" align="center" src="!icons/n-gon.png"><div class="thumbtext">n-gon</div></a></div>
-
-<!-- Letter O -->
-
-<div class="container"><a id="Offline Paradise"  href="!games/OfflineParadise/index.html"><img class="gamethumb" align="center" src="!icons/OfflineParadise.png"><div class="thumbtext">Offline Paradise</div></a></div>
-
-<div class="container"><a id="osu!"  href="!games/osu!/index.html"><img class="gamethumb" align="center" src="!icons/osu.png"><div class="thumbtext">Osu! Mania</div></a></div>
-
-
-<!-- Letter P -->
-
-
-<div class="container"><a id="Papa's Burgeria"  href="!games/papasburgeria/index.html"><img class="gamethumb" align="center" src="!icons/papas-burgeria.png"><div class="thumbtext">Papa's Burgeria</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Papa's Pizzarea"  href="!games/papas-pizzarea/index.html"><img class="gamethumb" align="center" src="!icons/papas-pizzeria.png"><div class="thumbtext">Papa's Pizzarea</div></a></div>
-
-<div class="container"><a id="Paper Mario"  href="!games/GBA/papermario.html"><img class="gamethumb" align="center" src="!icons/papermario.png"><div class="thumbtext">Paper Mario</div></a></div>
-
-<div class="container"><a id="Pokemon Clover"  href="!games/GBA/pokemonclover.html"><img class="gamethumb" align="center" src="!icons/clover.png"><div class="thumbtext">Pokemon Clover</div></a></div>
-
-<div class="container"><a id="Pokemon Emerald"  href="!games/GBA/pokemonemerald.html"><img class="gamethumb" align="center" src="!icons/pokemonemerald.png"><div class="thumbtext">Pokemon Emerald</div></a></div>
-
-<div class="container"><a id="Pokemon FloraSky"  href="!games/GBA/pokemonflorasky.html"><img class="gamethumb" align="center" src="!icons/pokemonflorasky.png"><div class="thumbtext">Pokemon FloraSky</div></a></div>
-
-<div class="container"><a id="Pokemon FireRed"  href="!games/GBA/pokemonred.html"><img class="gamethumb" align="center" src="!icons/pokemonred.png"><div class="thumbtext">Pokemon FireRed</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Pokemon LeafGreen"  href="!games/GBA/pokemongreen.html"><img class="gamethumb" align="center" src="!icons/pokemonleafgreen.png"><div class="thumbtext">Pokemon LeafGreen</div></a></div>
-
-<div class="container"><a id="Pokemon Ruby"  href="!games/GBA/pokemonruby.html"><img class="gamethumb" align="center" src="!icons/pokemonruby.png"><div class="thumbtext">Pokemon Ruby</div></a></div>
-
-<div class="container"><a id="Pokemon Sapphire"  href="!games/GBA/pokemonsapphire.html"><img class="gamethumb" align="center" src="!icons/pokemonsapphire.png"><div class="thumbtext">Pokemon Sapphire</div></a></div>
-
-<div class="container"><a id="Pokemon SunSky"  href="!games/GBA/pokemonsunsky.html"><img class="gamethumb" align="center" src="!icons/sunsky.png"><div class="thumbtext">Pokemon SunSky</div></a></div>
-
-<div class="container"><a id="Pokemon Unbound"  href="!games/GBA/pokemonunbound.html"><img class="gamethumb" align="center" src="!icons/pokemonunbound.png"><div class="thumbtext">Pokemon Unbound</div></a></div>
-
-<div class="container"><a id="Portal 2d"  href="!games/portal-2d/index.html"><img class="gamethumb" align="center" src="!icons/portal2d.png"><div class="thumbtext">Portal2D</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Punk-O-Matic 1"  href="!games/punk-o-matic/index.html"><img class="gamethumb" align="center" src="!icons/punkomatic1.png"><div class="thumbtext">Punk-O-Matic</div></a></div>
-
-<div class="container"><a id="Push Back"  href="!games/pushback/index.html"><img class="gamethumb" align="center" src="!icons/pushback.png"><div class="thumbtext">Pushback</div></a></div>
-
-<!-- Letter R -->
-
-
-<div class="container"><a id="Racer"  href="!games/racer/index.html"><img class="gamethumb" align="center" src="!icons/Racer.png"><div class="thumbtext">Racer</div></a></div>
-
-<div class="container"><a id="Radius Raid"  href="!games/radiusraid/index.html"><img class="gamethumb" align="center" src="!icons/raid.png"><div class="thumbtext">Radius Raid</div></a></div>
-
-<div class="container"><a id="Resturant Rush"  href="!games/restuant-rush/index.html"><img class="gamethumb" align="center" src="!icons/resr.png"><div class="thumbtext">Resturand Rush</div></a></div>
-
-<div class="container"><a id="Retrobowl"  href="!games/retrobowl/index.html"><img class="gamethumb" align="center" src="!icons/retrobowl.png"><div class="thumbtext">Retrobowl</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Retrohaunt"  href="!games/retrohaunt/index.html"><img class="gamethumb" align="center" src="!icons/retrohaunt.png"><div class="thumbtext">Retrohaunt</div></a></div>
-
-<div class="container"><a id="Riddle School 1"  href="!games/riddleschool1/index.html"><img class="gamethumb" align="center" src="!icons/riddleschool1.png"><div class="thumbtext">Riddle School</div></a></div>
-
-<div class="container"><a id="Riddle School 2"  href="!games/riddleschool2/index.html"><img class="gamethumb" align="center" src="!icons/riddleschool2.png"><div class="thumbtext">Riddle School 2</div></a></div>
-
-<div class="container"><a id="Riddle School 3"  href="!games/riddleschool3/index.html"><img class="gamethumb" align="center" src="!icons/riddleschool3.png"><div class="thumbtext">Riddle School 3</div></a></div>
-
-<div class="container"><a id="Riddle School 4"  href="!games/riddleschool4/index.html"><img class="gamethumb" align="center" src="!icons/riddleschool4.png"><div class="thumbtext">Riddle School 4</div></a></div>
-
-<div class="container"><a id="Riddle School 5"  href="!games/riddleschool5/index.html"><img class="gamethumb" align="center" src="!icons/riddleschool5.png"><div class="thumbtext">Riddle School 5</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Riddle Transfer 1"  href="!games/riddletransfer/index.html"><img class="gamethumb" align="center" src="!icons/riddletransfer1.png"><div class="thumbtext">Riddle Transfer</div></a></div>
-
-<div class="container"><a id="Riddle Transfer 2"  href="!games/riddletransfer2/index.html"><img class="gamethumb" align="center" src="!icons/riddletransfer2.png"><div class="thumbtext">Riddle Transfer 2</div></a></div>
-
-<div class="container"><a id="Rooftop Snipers 2"  href="!games/rooftop-snipers-2/index.html"><img class="gamethumb" align="center" src="!icons/Rooftop-Snipers.png"><div class="thumbtext">Rooftop Snipers</div></a></div>
-
-<div class="container"><a id="Run 3"  href="!games/run3/index.html"><img class="gamethumb" align="center" src="!icons/run3.png"><div class="thumbtext">Run 3</div></a></div>
-
-<!-- Letter S -->
-
-
-<div class="container"><a id="Sans"  href="!games/sans/index.html"><img class="gamethumb" align="center" src="!icons/sans.png"><div class="thumbtext">Custom Sans Fight</div></a></div>
-
-<div class="container"><a id="Santy is Home"  href="!games/santy-is-home/index.html"><img class="gamethumb" align="center" src="!icons/santyishome.png"><div class="thumbtext">Santy is Home</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Scratcharia"  href="!games/scratcharia/index.html"><img class="gamethumb" align="center" src="!icons/scratcharia.png"><div class="thumbtext">Scratcharia</div></a></div>
-
-<div class="container"><a id="Sonic Advance 1"  href="!games/GBA/sonicadvance1.html"><img class="gamethumb" align="center" src="!icons/sonicadvance1.png"><div class="thumbtext">Sonic Advance</div></a></div>
-
-<div class="container"><a id="Sonic Advance 2"  href="!games/GBA/sonicadvance2.html"><img class="gamethumb" align="center" src="!icons/sonicadvance2.png"><div class="thumbtext">Sonic Advance 2</div></a></div>
-
-<div class="container"><a id="Sonic Advance 3"  href="!games/GBA/sonicadvance3.html"><img class="gamethumb" align="center" src="!icons/sonicadvance3.png"><div class="thumbtext">Sonic Advance 3</div></a></div>
-
-<div class="container"><a id="Sonic Battle"  href="!games/GBA/sonicbattle.html"><img class="gamethumb" align="center" src="!icons/sonicbattle.png"><div class="thumbtext">Sonic Battle</div></a></div>
-
-<div class="container"><a id="Slime Rush TD"  href="!games/slime-rush-td/index.html"><img class="gamethumb" align="center" src="!icons/slime-rush-td.png"><div class="thumbtext">Slime Rush TD</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Slope"  href="!games/slope/index.html"><img class="gamethumb" align="center" src="!icons/slope.png"><div class="thumbtext">Slope</div></a></div>
-
-<div class="container"><a id="Slope 2"  href="!games/slope2/index.html"><img class="gamethumb" align="center" src="!icons/slope2.png"><div class="thumbtext">Slope 2</div></a></div>
-
-<div class="container"><a id="Space Company"  href="!games/space-company/index.html"><img class="gamethumb" align="center" src="!icons/spacecompany.png"><div class="thumbtext">Space Company</div></a></div>
-
-<div class="container"><a id="Space Garden"  href="!games/spacegarden/index.html"><img class="gamethumb" align="center" src="!icons/spacegarden.png"><div class="thumbtext">Space Garden</div></a></div>
-
-<div class="container"><a id="Space Invaders"  href="!games/spaceinvaders/index.html"><img class="gamethumb" align="center" src="!icons/spaceinv.png"><div class="thumbtext">Space Invaders</div></a></div>
-
-<div class="container"><a id="Spadium"  href="!games/spadium.html"><img class="gamethumb" align="center" src="!icons/spadium.png"><div class="thumbtext">Spadium (html proxy)</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Spelunky"  href="!games/spelunky/index.html"><img class="gamethumb" align="center" src="!icons/spelunky.png"><div class="thumbtext">Spelunky</div></a></div>
-
-<div class="container"><a id="Spinning Rat"  href="!games/spinningrat/index.html"><img class="gamethumb" align="center" src="!icons/spinningrat.png"><div class="thumbtext">Spinning Rat</div></a></div>
-
-<div class="container"><a id="Spongebob Squarepants - The Movie"  href="!games/GBA/spongebob_movie.html"><img class="gamethumb" align="center" src="!icons/spongebobmovie.png"><div class="thumbtext">Spongebob Squarepants - The Movie</div></a></div>
-
-<div class="container"><a id="Soccer Random"  href="!games/volley-random/index.html"><img class="gamethumb" align="center" src="!icons/soccerandom.png"><div class="thumbtext">Soccer Random</div></a></div>
-
-
-<div class="container"><a id="Stack Ball"  href="!games/stack-ball/index.html"><img class="gamethumb" align="center" src="!icons/stackball.png"><div class="thumbtext">Stack Ball</div></a></div>
-
-<div class="container"><a id="Starfox 64"  href="!games/GBA/starfox64.html"><img class="gamethumb" align="center" src="!icons/starfox64.png"><div class="thumbtext">Starfox 64</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Super Mario Advance 1"  href="!games/GBA/supermarioadvance1.html"><img class="gamethumb" align="center" src="!icons/supermarioadvance1.png"><div class="thumbtext">Super Mario Advance 1</div></a></div>
-
-<div class="container"><a id="Super Mario Advance 2"  href="!games/GBA/supermarioadvance2.html"><img class="gamethumb" align="center" src="!icons/supermarioadvance2.png"><div class="thumbtext">Super Mario Advance 2</div></a></div>
-
-<div class="container"><a id="Super Mario Advance 3"  href="!games/GBA/supermarioadvance3.html"><img class="gamethumb" align="center" src="!icons/supermarioadvance3.png"><div class="thumbtext">Super Mario Advance 3</div></a></div>
-
-<div class="container"><a id="Super Mario Advance 4"  href="!games/GBA/supermarioadvance4.html"><img class="gamethumb" align="center" src="!icons/supermarioadvance4.png"><div class="thumbtext">Super Mario Advance 4</div></a></div>
-
-<div class="container"><a id="Super Mario 64"  href="!games/GBA/supermario64.html"><img class="gamethumb" align="center" src="!icons/supermario64.png"><div class="thumbtext">Super Mario 64</div></a></div>
-
-
-<div class="container"><a id="Super Mario Party"  href="!games/GBA/supermarioparty.html"><img class="gamethumb" align="center" src="!icons/marioparty.png"><div class="thumbtext">Super Mario Party</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Super Smash Bros."  href="!games/GBA/ssb.html"><img class="gamethumb" align="center" src="!icons/supersmashbros64.png"><div class="thumbtext">Super Smash Bros.</div></a></div>
-
-<div class="container"><a id="Super Smash Flash"  href="!games/superflashsmash/index.html"><img class="gamethumb" align="center" src="!icons/supersmashflash.png"><div class="thumbtext">Super Smash Flash</div></a></div>
-
-<div class="container"><a id="Super Mario Kart"  href="!games/GBA/mariokart.html"><img class="gamethumb" align="center" src="!icons/mariokart64.png"><div class="thumbtext">Super Mario Kart</div></a></div>
-
-<div class="container"><a id="Stack"  href="!games/stack/index.html"><img class="gamethumb" align="center" src="!icons/stack.png"><div class="thumbtext">Stack</div></a></div>
-
-<div class="container"><a id="Station Meltdown"  href="!games/station-meltdown/index.html"><img class="gamethumb" align="center" src="!icons/Station-Meltdown.png"><div class="thumbtext">Station Meltdown</div></a></div>
-
-<div class="container"><a id="Henry Stickman - Stealing The Diamond"  href="!games/stealingthediamond/index.html"><img class="gamethumb" align="center" src="!icons/stealingthediamond.png"><div class="thumbtext">Stealing The Diamond</div></a></div>
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Subway Surfers"  href="!games/subwaysurferssanfrancisco/index.html"><img class="gamethumb" align="center" src="!icons/subsan.png"><div class="thumbtext">Subway Surfers</div></a></div>
-
-<div class="container"><a id="Super Auto Pets"  href="!games/superautopets/index.html"><img class="gamethumb" align="center" src="!icons/superautopets.png"><div class="thumbtext">Super Auto Pets</div></a></div>
-
-<div class="container"><a id="Superhot"  href="!games/superhot/index.html"><img class="gamethumb" align="center" src="!icons/superhot.png"><div class="thumbtext">Superhot</div></a></div>
-
-<div class="container"><a id="Sushi Unroll"  href="!games/sushi-unroll/index.html"><img class="gamethumb" align="center" src="!icons/sushi-unroll.png"><div class="thumbtext">Sushi Unroll</div></a></div>
-
-<div class="container"><a id="Swerve"  href="!games/swerve/index.html"><img class="gamethumb" align="center" src="!icons/swerve.png"><div class="thumbtext">Swerve</div></a></div>
-
-<div class="container"><a id="Synesthesia"  href="!games/synesthesia/index.html"><img class="gamethumb" align="center" src="!icons/synesthesia.png"><div class="thumbtext">Synesthesia</div></a></div>
-
-<!-- Letter T -->
-
-<div class="container"><a id="Table Tennis Ultimate Tournament"  href="!games/tabletennisultimatetournament/index.html"><img class="gamethumb" align="center" src="!icons/tabletennisultimatetournament.png"><div class="thumbtext">Table Tennis Ultimate Tournament</div></a></div>
-
-<div class="container"><a id="Temple Run 2"  href="!games/temple-run-2/index.html"><img class="gamethumb" align="center" src="!icons/templerun.png"><div class="thumbtext">Temple Run 2</div></a></div>
-
-<div class="container"><a id="Tetris"  href="!games/tetris/index.html"><img class="gamethumb" align="center" src="!icons/tetris.png"><div class="thumbtext">Tetris</div></a></div>
-
-<div class="container"><a id="The Square"  href="!games/thesquare/index.html"><img class="gamethumb" align="center" src="!icons/thesquare.png"><div class="thumbtext">The Square</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="There Is No Game"  href="!games/there-is-no-game/index.html"><img class="gamethumb" align="center" src="!icons/thereisnogame.png"><div class="thumbtext">There Is No Game</div></a></div>
-
-<div class="container"><a id="The Final Earth"  href="!games/the-final-earth/index.html"><img class="gamethumb" align="center" src="!icons/the-final-earth.png"><div class="thumbtext">The Final Earth</div></a></div>
-
-<div class="container"><a id="The Final Earth 2"  href="!games/the-final-earth-2/index.html"><img class="gamethumb" align="center" src="!icons/the-final-earth-2.png"><div class="thumbtext">The Final Earth 2</div></a></div>
-
-<div class="container"><a id="The Hotel"  href="!games/the-hotel/index.html"><img class="gamethumb" align="center" src="!icons/the-hotel.png"><div class="thumbtext">The Hotel</div></a></div>
-
-<div class="container"><a id="Tic Tac Toe AI"  href="!games/tic-tac-toe-ai/index.html"><img class="gamethumb" align="center" src="!icons/toeai.png"><div class="thumbtext">Tic Tac Toe AI</div></a></div>
-
-<div class="container"><a id="Tic Tac Toe"  href="!games/tic-tac-toe/index.html"><img class="gamethumb" align="center" src="!icons/toe2.png"><div class="thumbtext">Tic Tac Toe</div></a></div>
-
-<div class="container"><a id="Tiny Fishing"  href="!games/tiny-fishing/index.html"><img class="gamethumb" align="center" src="!icons/tiny-fishing.png"><div class="thumbtext">Tiny Fishing</div></a></div>
-
-<div class="container"><a id="Timeshooter"  href="!games/timeshooter/index.html"><img class="gamethumb" align="center" src="!icons/timeshooter.png"><div class="thumbtext">Timeshooter</div></a></div>
-
-<div class="container"><a id="Tower Master"  href="!games/towermaster/index.html"><img class="gamethumb" align="center" src="!icons/towermaster.png"><div class="thumbtext">Towermaster</div></a></div>
-
-<div class="container"><a id="Tube Jumpers"  href="!games/tube-jumpers/index.html"><img class="gamethumb" align="center" src="!icons/tubejumpers.png"><div class="thumbtext">Tube Jumpers</div></a></div>
-
-<div class="container"><a id="Tunnel Rush"  href="!games/tunnelrush/index.html"><img class="gamethumb" align="center" src="!icons/tunnelrush.png"><div class="thumbtext">Tunnel Rush</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="TV STATIC!1!!1!!"  href="!games/tv-static/index.html"><img class="gamethumb" align="center" src="!icons/tv-static.png"><div class="thumbtext">TV Static!!!</div></a></div>
-
-<div class="container"><a id="Trimps"  href="!games/Trimps/index.html"><img class="gamethumb" align="center" src="!icons/Trimps.png"><div class="thumbtext">Trimps</div></a></div>
-
-<div class="container"><a id="Twitch Tetris"  href="!games/twitch-tetris/index.html"><img class="gamethumb" align="center" src="!icons/twitchtetris.png"><div class="thumbtext">Twitch Tetris</div></a></div>
-
-<div class="container"><a id="Tyrone Tetris"  href="!games/tyronetetris/index.html"><img class="gamethumb" align="center" src="!icons/tetris.png"><div class="thumbtext">Tyrone Tetris</div></a></div>
-
-
-<!-- Letter U -->
-
-
-<div class="container"><a id="Unfair Mario"  href="!games/unfairmario/index.html"><img class="gamethumb" align="center" src="!icons/unfairmario.png"><div class="thumbtext">Unfair Mario</div></a></div>
-
-<!-- Letter V -->
-
-
-<div class="container"><a id="Veloce"  href="!games/veloce/index.html"><img class="gamethumb" align="center" src="!icons/VELOCE.png"><div class="thumbtext">Veloce</div></a></div>
-
-<div class="container"><a id="Vex 2"  href="!games/vex2/index.html"><img class="gamethumb" align="center" src="!icons/vex2.png"><div class="thumbtext">Vex 2</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Vex 3"  href="!games/vex3/index.html"><img class="gamethumb" align="center" src="!icons/vex3.png"><div class="thumbtext">Vex 3</div></a></div>
-
-
-<div class="container"><a id="Vex 4"  href="!games/vex4/index.html"><img class="gamethumb" align="center" src="!icons/vex4.png"><div class="thumbtext">Vex 4</div></a></div>
-
-<div class="container"><a id="Vex 5"  href="!games/vex5/index.html"><img class="gamethumb" align="center" src="!icons/vex5.png"><div class="thumbtext">Vex 5</div></a></div>
-
-<div class="container"><a id="Vex 6"  href="!games/vex6/index.html"><img class="gamethumb" align="center" src="!icons/vex5.png"><div class="thumbtext">Vex 6</div></a></div>
-
-<div class="container"><a id="Vex 7"  href="!games/vex7/index.html"><img class="gamethumb" align="center" src="!icons/vex7.png"><div class="thumbtext">Vex 7</div></a></div>
-
-<!-- Letter W -->
-
-
-<div class="container"><a id="Wallsmash"  href="!games/wallsmash/index.html"><img class="gamethumb" align="center" src="!icons/wallsmash.png"><div class="thumbtext">Wallsmash</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="Waterworks"  href="!games/waterworks/index.html"><img class="gamethumb" align="center" src="!icons/waterworks.png"><div class="thumbtext">Waterworks</div></a></div>
-
-
-<div class="container"><a id="Weavesilk"  href="!games/weavesilk/index.html"><img class="gamethumb" align="center" src="!icons/weavesilk.png"><div class="thumbtext">Weavesilk</div></a></div>
-
-<div class="container"><a id="Weavesilk"  href="!games/win-the-whitehouse/index.html"><img class="gamethumb" align="center" src="!icons/winthewhitehouse.png"><div class="thumbtext">Win the Whitehouse</div></a></div>
-
-<div class="container"><a id="Webxash"  href="!games/webxash/index.html"><img class="gamethumb" align="center" src="!icons/webxash.png"><div class="thumbtext">Webxash</div></a></div>
-
-<div class="container"><a id="Fluid WebGL Simulation"  href="!games/webgl-fluid-simulation/index.html"><img class="gamethumb" align="center" src="!icons/webgl-fluid-simulation.png"><div class="thumbtext">Fluid Simulation ;)</div></a></div>
-
-<div class="container"><a id="Whac-O'-Mole!"  href="!games/whac-a-mole/index.html"><img class="gamethumb" align="center" src="!icons/Whac-A-Mole.png"><div class="thumbtext">Whac A Mole!</div></a></div>
-
-<div class="container"><a id="Wordle"  href="!games/wordle/index.html"><img class="gamethumb" align="center" src="!icons/wordle.png"><div class="thumbtext">Wordle</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<div class="container"><a id="World's Hardest Game"  href="!games/worlds-hardest-game/index.html"><img class="gamethumb" align="center" src="!icons/whg.png"><div class="thumbtext">World's Hardest Game</div></a></div>
-
-
-<div class="container"><a id="World's Hardest Game 2"  href="!games/worlds-hardest-game-2/index.html"><img class="gamethumb" align="center" src="!icons/whg2.png"><div class="thumbtext">World's Hardest Game 2</div></a></div>
-
-<div class="container"><a id="Wolfenstien 3D"  href="!games/wolf3d/index.html"><img class="gamethumb" align="center" src="!icons/wolf3d.png"><div class="thumbtext">Wolfenstien 3D</div></a></div>
-
-<!-- Letter X -->
-
-
-<div class="container"><a id="X Trial Racing"  href="!games/x-trial-racing/index.html"><img class="gamethumb" align="center" src="!icons/xtr.png"><div class="thumbtext">X Trial Racing</div></a></div>
-
-<div class="container"><a id="xx142-b2exe"  href="!games/xx142-b2exe/index.html"><img class="gamethumb" align="center" src="!icons/xx142-b2exe.png"><div class="thumbtext">xx142-b2exe</div></a></div>
-
-<!-- Letter Y -->
-
-<div class="container"><a id="YoHoHo"  href="!games/yohoho/index.html"><img class="gamethumb" align="center" src="!icons/yohoho.png"><div class="thumbtext">Yohoho</div></a></div>
-
-<div class="container"><a id="Yoshi Fabrication"  href="!games/yoshifabrication/index.html"><img class="gamethumb" align="center" src="!icons/yoshifabrication.png"><div class="thumbtext">Yoshi Fabrication</div></a></div>
-
-<div class="container"><a id="You are Bezos"  href="!games/you-are-bezos/index.html"><img class="gamethumb" align="center" src="!icons/you-are-bezos.png"><div class="thumbtext">You Are Bezos</div></a></div>
-
-
-</div>
-<div class="holder">
-
-
-<!-- Letter Z -->
-
-
-<div class="container"><a id="Zombs Royale.io"  href="!games/zombs-royale/index.html"><img class="gamethumb" align="center" src="!icons/zombs-royale.png"><div class="thumbtext">ZombsRoyale.io</div></a></div>
-
-
-<div class="container"><a id="Zoro"  href="!games/zoro/index.html"><img class="gamethumb" align="center" src="!icons/zoro.png"><div class="thumbtext">Zoro</div></a></div>
-
-<div class="container"><a id="Zigzag"  href="!games/zigzag/index.html"><img class="gamethumb" align="center" src="!icons/zigzag.png"><div class="thumbtext">Zigzag (uncanny)</div></a></div>
-
-</div>
-<div class="holder">
-
-</div></div></div>
-</div></div>
 <div id="aboutblank" style="display:none">
-  <div class="ba">
     <div>
-  <h1 class="heading"><i>about:blank generator.</i></h1>
+    <h1 class="heading"><i>about:blank generator.</i></h1>
     <h2 class="heading" >bricked by moondoge#0001</h2>
     <p class="paragraph" >This about:blank generator opens links in a new tab, where chrome extensions cannot view them. <br>while this cannot unblock websites from relays/web filterers, it can provide a sense of anonimity to your browsing.</p>
-     <form id="chat-form" align="center">
-        <br>
-        <textarea id="user-input" style="width: 100%; height: 100px;" required></textarea>
-        <br>
-        <button onclick="aboutblank()" class="button" type="submit" height="70%"> Open link in new tab</button>
-    </form>
+<input type="text" id="websiteInput" placeholder="Enter website URL">
+<button onclick="loadWebsite()">Go</button>
+
+    </script>
+</div>
+</div>
+
+<div id="extras" style="display:none;">
+  <center>
+<br>
+<br>
+<br>
+<br>
+  <div>
+  <div>
+    <h1 class="heading"><i>cyanide.</i></h1>
+    <br width="100%" height="100%">
+
+    <button onclick="scratchanide()" class="button"><i>scratchanide</i></button>
+
+    <button onclick="aboutbl()" class="button"><i>about:blank</i></button>
+
+    <button onclick="bookmarklets()" class="button"><i>bookmarklets</i></button>
+
+    <button onclick="themes()" class="button"><i>themes</i></button>
   </div>
-</div>
-</div>
+    <hr style="opacity:0;">
+<br>
+
+  <label class="paragraph" for="tabNameInput">New Tab Name:</label>
+  <input class="functioninput" type="text" id="tabNameInput">
+  <button class="buttoninput" onclick="changeTabName()">Change Tab Name</button>
+
+  <label class="paragraph" for="faviconInput">New Favicon URL:</label>
+  <input class="functioninput" type="text" id="faviconInput">
+  <button class="buttoninput" onclick="changeFavicon()">Change Favicon</button>
+
+  <hr style="opacity: 0;">
+
+</center>
 </div>
 
+<div id="themes" style="display:none;">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <h1 class="heading"><i>cyanide.</i></h1>
+    <br width="100%" height="100%">
+<center>
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/default.css')">Default/Dark</button>
 
+    <button class="button" onclick="changeStylesheet('themeStyle', '!src/light.css')">Light</button>
+
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/classic.css')">Classic</button>
+
+     <button class="button" onclick="changeStylesheet('themeStyle', '!src/puredark.css')">Pure Darkness</button>
+
+    <button class="button" onclick="changeStylesheet('themeStyle', '!src/purelight.css')">Pure Light</button>
+  <hr style="opacity:0;">
+
+    <button class="button" onclick="changeStylesheet('themeStyle', '!src/windowsxp.css')">Windows XP</button>
+
+     <button class="button" onclick="changeStylesheet('themeStyle', '!src/sky.css')">Sky</button>
+
+     <button class="button" onclick="changeStylesheet('themeStyle', '!src/clickfire.css')">clickfire</button>
+
+     <button class="button" onclick="changeStylesheet('themeStyle', '!src/garticphone.css')">Gartic</button>
+
+     <button class="button" onclick="changeStylesheet('themeStyle', '!src/mustard.css')">Mustard</button>
+
+     <button class="button" onclick="changeStylesheet('themeStyle', '!src/piplup.css')">Piplup</button>
+     <hr style="opacity:0;">
+     <button class="button" onclick="changeStylesheet('themeStyle', '!src/crazy.css')">Crazy</button>
+  </center>
+</div>
+
+    <div id="bookmarklets" style="display:none;">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center>
+    <h1 style="text-align: center;" class="heading">cyanide bookmarklets.</h1>
+      <h2 class="heading"> created by moondoge#0001 (and 3kh0_#6969)</h2>
+      <br />
+      <p class="paragraph">Drag the button for the bookmarklet into your bookmarks bar.</p>
+      <p class="paragraph">(Keep in mind: You cannot use bookmarklets on a new tab or any system pages)</p>
+      <br />
+      <h2 class="heading">Useful Bookmarklets</h2>
+
+      <div>
+        <div class="bookmarklet">
+          <h3 class="heading">Eruda (Inspect Element)</h3>
+          <p class="paragraph">Inspect Element, click the button at the bottom right to activate it. <a href="https://github.com/liriliri/eruda">It is open-source!</a></p>
+          <a class="button" href="javascript:(function () { var script = document.createElement('script'); script.src='//cdn.jsdelivr.net/npm/eruda'; document.body.appendChild(script); script.onload = function () { eruda.init() } })();">
+            Activate Eruda
+          </a>
+        </div>
+
+        <div class="bookmarklet">
+          <h3 class="heading">Firebug (Inspect Element #2)</h3>
+          <p class="paragraph">Inspect Element (view and edit the html css and js of the page you are on)</p>
+          <a
+            class="button"
+            href="javascript:var firebug=document.createElement('script');firebug.setAttribute('src','https://luphoria.com/fbl/fbl/firebug-lite-debug.js');document.body.appendChild(firebug);(function(){if(window.firebug.version){firebug.init();}else{setTimeout(arguments.callee);}})();void(firebug);"
+          >
+            Activate Firebug
+          </a>
+        </div>
+
+        <div class="bookmarklet">
+          <h3 class="heading">X-Ray Goggles (Inspect Element #3)</h3>
+          <p class="paragraph">This bookmarklet lets you edit any elements on the page with an inspect tool. (Press esc to exit it)</p>
+          <a
+            class="button"
+            href="javascript:(function () {var script=document.createElement('script');script.src='https://x-ray-goggles.mouse.org/webxray.js';script.className='webxray';script.setAttribute('data-lang','en-US');script.setAttribute('data-baseuri','https://x-ray-goggles.mouse.org');document.body.appendChild(script);}())"
+          >
+            Activate X-ray Googles
+          </a>
+        </div>
+
+        <div class="bookmarklet">
+          <h3 class="heading">Edit+ (Inspect Element #4)</h3>
+          <p class="paragraph">Allows you to edit text on the page just by clicking there, and if you click the bookmarklet again it will disable it. Thank you BluePotato#8397 for finding this!</p>
+          <a class="button" href="javascript:if(document.body.contentEditable != 'true')void(document.body.contentEditable = 'true');else void(document.body.contentEditable = 'false');\">Edit On/Off</a>
+        </div>
+
+        <div class="bookmarklet">
+          <h3 class="heading">Portable about:blank embedder</h3>
+          <p class="paragraph">about:blank embedder in a bookmarklet</p>
+          <a
+            class="button"
+            href="javascript: (function () {var url = prompt('Paste the link you want to be embedded into an about:blank page.\n(INCLUDE https://)', 'https://example.com'); var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = '0'; win.document.body.style.height = '100vh'; var iframe = win.document.createElement('iframe'); iframe.style.border = 'none'; iframe.style.width = '100%'; iframe.style.height = '100%'; iframe.style.margin = '0'; iframe.referrerpolicy = 'no-referrer'; iframe.allow = 'fullscreen'; iframe.src = url.toString(); win.document.body.appendChild(iframe); var script = win.document.createElement('script'); script.src = 'https://3kh0.github.io/js/main.js'; win.document.body.appendChild(script); })();"
+          >
+            about:blank
+          </a>
+        </div>
+
+        <div class="bookmarklet">
+          <h3 class="heading">Google Translate Proxy</h3>
+          <p class="paragraph"> view your website in a google translate preview</p>
+          <a class="button" href="javascript:var a='https://translate.google.com/translate?u='';var b=encodeURI(location.href);var c='?tl=en';open(a+b+c);">Google Translate Bypasser</a>
+        </div>
+
+        <div class="bookmarklet">
+          <h3 class="heading">View Page Source</h3>
+          <p class="paragraph">View page source with Snoopy</p>
+          <a
+            class="button"
+            href="javascript:(function()%7Bvar d%3Ddocument%2Cs%2Ce%3Bvar el%3Dd.getElementById('snpy')%3Bif(typeof Snoopy!%3D'undefined')%7BSnoopy.toggle()%3Breturn%7Delse%7Bif(el)%7Bel.className%3D%2Fclosed%2F.test(el.className)%3Fel.className.replace('closed'%2C')%3Ael.className%2B' closed'%3Breturn%7D%7Ds%3Dd.createElement('link')%3Bs.setAttribute('href'%2C'http%3A%2F%2Fsnoopy-assets.allmarkedup.com%2Fsnoopy-min.css')%3Bs.setAttribute('rel'%2C'stylesheet')%3Bs.setAttribute('type'%2C'text%2Fcss')%3Bd.getElementsByTagName('head')%5B0%5D.appendChild(s)%3Be%3Dd.createElement('script')%3Be.setAttribute('src'%2C'http%3A%2F%2Fsnoopy-assets.allmarkedup.com%2Fsnoopy-min.js')%3Bd.getElementsByTagName('body')%5B0%5D.appendChild(e)%7D)()%3B"
+          >
+            View page source
+          </a>
+        </div>
+
+        <div class="bookmarklet">
+          <h3 class="heading">Adblocker</h3>
+          <p class="paragraph">Adblocker (Note: You will have to click it every time you go to a website)</p>
+          <a
+            class="button"
+            href="javascript:var st = confirm('strict adblocker?'); if(st){var invisible = document.createElement('style'); invisible.innerHTML = 'iframe{display:none} embed{display:none} object{display:none} frame{display:none}'; document.body.appendChild(invisible); setInterval(function(){var embeds = document.querySelectorAll('iframe, embed, frame, object'); for(i = 0; i < embeds.length; i++){embeds[i].remove()}}, 500)} else{var adblock = document.createElement('style'); adblock.innerHTML = '[src*=adserver] {display: none; } [src*=adlinks] {display: none;} [src*=adtech] {display:none;} [id*=google_ads] { display: none; } [src*=doubleclick.net] { display:none;} [src*=googlead] { display: none; } [href*=googlead] { display:none;} [src*=googlesyndication] { display: none;} [src*=ads.] { display: none; } [src*=.ad] {display: none; } [src*=ad.] {display:none;} [src*=adsmart] { display:none;}'; document.body.appendChild(adblock)} if(st){var elements = document.body.querySelectorAll('*'); for(i2 = 0; i2 < elements.length; i2++){if(elements[i2].id.includes('google_ads_iframe')){elements[i2].remove()}}} var x = document.getElementsByClassName('video-stream html5-main-video')[0]; function videoblock() { if(x.src.includes('pltype=adhost')) { x.currentTime = 999999999; }} setInterval(videoblock, 10)"
+          >
+            AdBlocker
+          </a>
+        </div>
+
+        <div class="bookmarklet">
+          <h3 class="heading">Youtube Adblocker #2</h3>
+          <p class="paragraph">Adblocker (Note: You will have to click it for every ad)</p>
+          <a class="button" href="javascript:(function()%7Bdocument.querySelector('video').currentTime %3D document.querySelector('video').duration%7D)()%3B">Youtube AdBlocker</a>
+        </div>
+
+        <h2 class="heading">Random Bookmarklets</h2>
+
+        <div>
+          <div class="bookmarklet">
+            <h3 class="heading">Make page 3D</h3>
+            <p class="paragraph">This does what the title says! Everything will be 3D!</p>
+            <a
+              class="button"
+              href="javascript:(function(){var js=document.body.appendChild(document.createElement('script'));js.onerror=function(){alert('Sorry, the script could not be loaded.'')};js.src='https://rawgit.com/Krazete/bookmarklets/master/tri.js'})();"
+            >
+              Make Page 3D
+            </a>
+          </div>
+
+          <div class="bookmarklet">
+            <h3 class="heading">Kick Ass</h3>
+            <p class="paragraph">A fun game you can play and destroy things on the website you're on.</p>
+            <a class="button" href="javascript:var%20KICKASSVERSION='2.0';var%20s%20=%20document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='//hi.kickassapp.com/kickass.js';void(0);">Kick Ass</a>
+          </div>
+
+          <div class="bookmarklet"></div>
+          <h3 class="heading">Snake Game</h3>
+          <p class="paragraph">Play snake in the corner of your page! Press P to play/pause</p>
+          <a
+            class="button"
+            href="javascript:Q=32;m=b=Q*Q;a=[P=l=u=d=p=S=w=0];u=8;f=(h=j=t=(b+Q)/2)-1;(B=(D=document).body).appendChild(x=D.createElement('p'));(X=x.style).position='fixed';X.left=X.top=0;X.background='#FFF%22;x.innerHTML=%22%3Cp%3E%3C/p%3E%3Ccanvas%3E%22;v=(s=x.childNodes)[0];(s=s[1]).width=s.height=5*Q;c=s.getContext(%222d%22);%20onkeydown=onblur=F=function(e,g){g?a[f]?(w+=m,f=Math.random(l+=8)*(R=Q-2)*R|(u=0),F(f+=Q+1+2*(f/R|0),g)):F(f):0%3Ee?(l?--l:(y=t,t=a[t]-2,F(y)),S+=(w*=0.8)/4,m=999/(u++%20+10),a[h+=[-1,-Q,1,Q][d=p]]?B.removeChild(x,alert(%22Game%20Over!\nThe%20game%20window%20will%20now%20be%20closed.\n\nMade%20by%203kh0%22)):(F(h),F(e,j=h),v.innerHTML=P?(setTimeout(F,50,e,0),S|0):%22Press%20P%20to%20play!%20Made%20by%203kh0%22)):-e?(y=(a[e]=e%3CQ|e%3E=Q*Q-Q|!(e%Q)|e%Q==Q-1|2*(e==h))+(e==f),e==h&&(a[j]=2+h),c.fillStyle=%22hsl(%22+99*!a[e]+%22,%22+2*m+%22%,%22+50*y+%22%)%22,c.fillRect(e%Q*5,5*(e/Q|0),5,5)):isNaN(y=e.keyCode-37)|43==y?(P=y&&!P)&&F(-1):%20p=!P|y&-4|!(y^2^d)?p:y;return!1};for(;--b;F(b));void%20F(-1);"
+          >
+            Play Snake
+          </a>
+        </div>
+
+        <div class="bookmarklet"></div>
+        <h3 class="heading">Return Youtube Dislikes</h3>
+        <p class="paragraph">Shows you the dislikes on a Youtube video in a new tab.</p>
+        <a
+          class="button"
+          href="javascript:var a='https://returnyoutubedislikeapi.com/votes?videoId=';var b=location.search.split('v=')[1].split('&')[0];if(location.hostname==='www.youtube.com'){open(a+b);}else if(location.hostname==='youtu.be'){open(a+b);}else if(location.hostname==='www.youtube-nocookie.com'){open(a+b);}"
+        >
+          Get Dislikes
+        </a>
+      </div>
+
+      <div class="bookmarklet">
+        <h3 class="heading">YoHoHo.io Hack</h3>
+        <p class="paragraph">This gives you the max player and max pets in yohoho.io</p>
+        <a
+          class="button"
+          href="javascript:(function()%7Bvar%20_0x174722%3D_0x5349%3Bfunction%20_0x5349(_0x189185%2C_0x5292a0)%7Bvar%20_0xf69f83%3D_0x1101()%3Breturn%20_0x5349%3Dfunction(_0x22b1ac%2C_0xdee93c)%7B_0x22b1ac%3D_0x22b1ac-0x1d9%3Bvar%20_0x1c59b4%3D_0xf69f83%5B_0x22b1ac%5D%3Breturn%20_0x1c59b4%3B%7D%2C_0x5349(_0x189185%2C_0x5292a0)%3B%7D(function(_0x162947%2C_0x5a35c1)%7Bvar%20_0x1d7e79%3D_0x5349%2C_0x3f41fd%3D_0x162947()%3Bwhile(!!%5B%5D)%7Btry%7Bvar%20_0x5ee40d%3DparseInt(_0x1d7e79(0x1e2))%2F0x1*(-parseInt(_0x1d7e79(0x1fb))%2F0x2)%2B-parseInt(_0x1d7e79(0x1eb))%2F0x3*(-parseInt(_0x1d7e79(0x1f7))%2F0x4)%2B-parseInt(_0x1d7e79(0x20f))%2F0x5%2B-parseInt(_0x1d7e79(0x1f8))%2F0x6%2B-parseInt(_0x1d7e79(0x20b))%2F0x7%2BparseInt(_0x1d7e79(0x204))%2F0x8*(parseInt(_0x1d7e79(0x1e9))%2F0x9)%2BparseInt(_0x1d7e79(0x1f4))%2F0xa*(parseInt(_0x1d7e79(0x1d9))%2F0xb)%3Bif(_0x5ee40d%3D%3D%3D_0x5a35c1)break%3Belse%20_0x3f41fd%5B'push'%5D(_0x3f41fd%5B'shift'%5D())%3B%7Dcatch(_0x338e30)%7B_0x3f41fd%5B'push'%5D(_0x3f41fd%5B'shift'%5D())%3B%7D%7D%7D(_0x1101%2C0x83dbe))%3Bvar%20_0xf03dc6%3D(function()%7Bvar%20_0x1817ae%3D!!%5B%5D%3Breturn%20function(_0x24b9a6%2C_0x56e202)%7Bvar%20_0x2e6656%3D_0x1817ae%3Ffunction()%7Bvar%20_0x1cfd89%3D_0x5349%3Bif(_0x56e202)%7Bvar%20_0x56b063%3D_0x56e202%5B_0x1cfd89(0x1ea)%5D(_0x24b9a6%2Carguments)%3Breturn%20_0x56e202%3Dnull%2C_0x56b063%3B%7D%7D%3Afunction()%7B%7D%3Breturn%20_0x1817ae%3D!%5B%5D%2C_0x2e6656%3B%7D%3B%7D())%2C_0x4be9bc%3D_0xf03dc6(this%2Cfunction()%7Bvar%20_0x7f72c4%3D_0x5349%3Breturn%20_0x4be9bc%5B'toString'%5D()%5B_0x7f72c4(0x1e3)%5D('(((.%2B)%2B)%2B)%2B%24')%5B'toString'%5D()%5B_0x7f72c4(0x211)%5D(_0x4be9bc)%5B_0x7f72c4(0x1e3)%5D(_0x7f72c4(0x1da))%3B%7D)%3B_0x4be9bc()%3Bvar%20_0x5a2fb3%3D(function()%7Bvar%20_0x4fa72b%3D!!%5B%5D%3Breturn%20function(_0x1d7e05%2C_0x5562c5)%7Bvar%20_0x37721b%3D_0x4fa72b%3Ffunction()%7Bvar%20_0x16d0ee%3D_0x5349%3Bif(_0x16d0ee(0x215)%3D%3D%3D'iRQFn')%7Bvar%20_0x4e6b3a%3D_0x38d8d7%3Ffunction()%7Bvar%20_0x3b2120%3D_0x16d0ee%3Bif(_0x1570d0)%7Bvar%20_0x4107aa%3D_0x4999cd%5B_0x3b2120(0x1ea)%5D(_0x14c1a1%2Carguments)%3Breturn%20_0x446509%3Dnull%2C_0x4107aa%3B%7D%7D%3Afunction()%7B%7D%3Breturn%20_0x29a8b1%3D!%5B%5D%2C_0x4e6b3a%3B%7Delse%7Bif(_0x5562c5)%7Bvar%20_0x581c83%3D_0x5562c5%5B_0x16d0ee(0x1ea)%5D(_0x1d7e05%2Carguments)%3Breturn%20_0x5562c5%3Dnull%2C_0x581c83%3B%7D%7D%7D%3Afunction()%7B%7D%3Breturn%20_0x4fa72b%3D!%5B%5D%2C_0x37721b%3B%7D%3B%7D())%3B(function()%7Bvar%20_0x180252%3D_0x5349%2C_0x57a488%3Btry%7Bvar%20_0x38868a%3DFunction(_0x180252(0x1f2)%2B_0x180252(0x209)%2B')%3B')%3B_0x57a488%3D_0x38868a()%3B%7Dcatch(_0x768270)%7B_0x57a488%3Dwindow%3B%7D_0x57a488%5B_0x180252(0x20c)%5D(_0x4bf308%2C0x1)%3B%7D())%2C(function()%7B_0x5a2fb3(this%2Cfunction()%7Bvar%20_0x122756%3D_0x5349%3Bif('WFald'!%3D%3D'WFald')%7Bvar%20_0x2be14a%3D_0x1286ba%5B_0x122756(0x1ea)%5D(_0x21c742%2Carguments)%3Breturn%20_0xc10b3a%3Dnull%2C_0x2be14a%3B%7Delse%7Bvar%20_0x376390%3Dnew%20RegExp(_0x122756(0x201))%2C_0x3acb61%3Dnew%20RegExp('%5Cx5c%2B%5Cx5c%2B%5Cx20*(%3F%3A%5Ba-zA-Z_%24%5D%5B0-9a-zA-Z_%24%5D*)'%2C'i')%2C_0x1a360c%3D_0x4bf308(_0x122756(0x1fd))%3B!_0x376390%5B_0x122756(0x1e5)%5D(_0x1a360c%2B_0x122756(0x203))%7C%7C!_0x3acb61%5B'test'%5D(_0x1a360c%2B_0x122756(0x1e4))%3F'ebNHv'!%3D%3D_0x122756(0x216)%3F_0x1a360c('0')%3A_0x450f89()%3A_0x4bf308()%3B%7D%7D)()%3B%7D())%3Bfunction%20_0x1101()%7Bvar%20_0x550c10%3D%5B'183285lNowSP'%2C'apply'%2C'6KFoCWW'%2C'%5B1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%5D'%2C'bind'%2C'fpBzY'%2C'toString'%2C'dhBsH'%2C'SWNEZ'%2C'return%5Cx20(function()%5Cx20'%2C'call'%2C'98310cvxqkT'%2C'exception'%2C'playerPetLevel'%2C'1456292zrKVuj'%2C'5620128LIVAYr'%2C'action'%2C'setItem'%2C'1078BKXzXO'%2C'ZxGQZ'%2C'init'%2C'If%5Cx20this%5Cx20page%5Cx20is%5Cx20not%5Cx20a%5Cx20yohoho.io%5Cx20game%2C%5Cx20please%5Cx20click%5Cx20on%5Cx20cancel.%5Cx20%5Cx0a%5Cx0aIf%5Cx20it%5Cx20is%2C%5Cx20please%5Cx20click%5Cx20OK%5Cx20to%5Cx20continue!'%2C'prototype'%2C'obaOi'%2C'function%5Cx20*%5Cx5c(%5Cx20*%5Cx5c)'%2C'gger'%2C'chain'%2C'384qRIqmn'%2C'XqhBk'%2C'console'%2C'licVk'%2C'eTADI'%2C'%7B%7D.constructor(%5Cx22return%5Cx20this%5Cx22)(%5Cx20)'%2C'while%5Cx20(true)%5Cx20%7B%7D'%2C'6362986aCtcCS'%2C'setInterval'%2C'trace'%2C'unlockedPets'%2C'2811780zubtez'%2C'string'%2C'constructor'%2C'stateObject'%2C'warn'%2C'info'%2C'aTcYY'%2C'eXhCw'%2C'unlockedSkins'%2C'1661OuHzpg'%2C'(((.%2B)%2B)%2B)%2B%24'%2C'Finished!%5Cx20The%5Cx20page%5Cx20will%5Cx20now%5Cx20reload%5Cx20for%5Cx20the%5Cx20changes%5Cx20to%5Cx20take%5Cx20effect!'%2C'__proto__'%2C'log'%2C'counter'%2C'debu'%2C'error'%2C'length'%2C'449RmqYJz'%2C'search'%2C'input'%2C'test'%2C'table'%2C'The%5Cx20script%5Cx20has%5Cx20been%5Cx20cancelled!%5Cx20Have%5Cx20a%5Cx20nice%5Cx20day!'%2C'BqZSR'%5D%3B_0x1101%3Dfunction()%7Breturn%20_0x550c10%3B%7D%3Breturn%20_0x1101()%3B%7Dvar%20_0xdee93c%3D(function()%7Bvar%20_0x2269c3%3D!!%5B%5D%3Breturn%20function(_0x2b326a%2C_0x5c611b)%7Bvar%20_0xa408cb%3D_0x2269c3%3Ffunction()%7Bvar%20_0x1d1515%3D_0x5349%3Bif(_0x5c611b)%7Bvar%20_0x5388d4%3D_0x5c611b%5B_0x1d1515(0x1ea)%5D(_0x2b326a%2Carguments)%3Breturn%20_0x5c611b%3Dnull%2C_0x5388d4%3B%7D%7D%3Afunction()%7B%7D%3Breturn%20_0x2269c3%3D!%5B%5D%2C_0xa408cb%3B%7D%3B%7D())%2C_0x22b1ac%3D_0xdee93c(this%2Cfunction()%7Bvar%20_0x2adb39%3D_0x5349%2C_0x1b1d71%3Btry%7Bif(_0x2adb39(0x207)%3D%3D%3D_0x2adb39(0x1e8))_0xdd2f0c(0x0)%3Belse%7Bvar%20_0x28de03%3DFunction(_0x2adb39(0x1f2)%2B_0x2adb39(0x209)%2B')%3B')%3B_0x1b1d71%3D_0x28de03()%3B%7D%7Dcatch(_0x4fd599)%7Bif(_0x2adb39(0x208)!%3D%3D_0x2adb39(0x1ee))_0x1b1d71%3Dwindow%3Belse%7Bif(_0x5c6a24)%7Bvar%20_0x4fc9ea%3D_0x2222ae%5B_0x2adb39(0x1ea)%5D(_0x2ac408%2Carguments)%3Breturn%20_0x5a3cb1%3Dnull%2C_0x4fc9ea%3B%7D%7D%7Dvar%20_0x1e2465%3D_0x1b1d71%5B_0x2adb39(0x206)%5D%3D_0x1b1d71%5B_0x2adb39(0x206)%5D%7C%7C%7B%7D%2C_0xeacc30%3D%5B_0x2adb39(0x1dd)%2C_0x2adb39(0x213)%2C_0x2adb39(0x214)%2C_0x2adb39(0x1e0)%2C'exception'%2C'table'%2C'trace'%5D%3Bfor(var%20_0x1d8669%3D0x0%3B_0x1d8669%3C_0xeacc30%5B_0x2adb39(0x1e1)%5D%3B_0x1d8669%2B%2B)%7Bif(_0x2adb39(0x1fc)%3D%3D%3D_0x2adb39(0x1fc))%7Bvar%20_0x115b45%3D_0xdee93c%5B_0x2adb39(0x211)%5D%5B_0x2adb39(0x1ff)%5D%5B'bind'%5D(_0xdee93c)%2C_0x2b0b70%3D_0xeacc30%5B_0x1d8669%5D%2C_0xf6fef4%3D_0x1e2465%5B_0x2b0b70%5D%7C%7C_0x115b45%3B_0x115b45%5B_0x2adb39(0x1dc)%5D%3D_0xdee93c%5B_0x2adb39(0x1ed)%5D(_0xdee93c)%2C_0x115b45%5B'toString'%5D%3D_0xf6fef4%5B'toString'%5D%5B_0x2adb39(0x1ed)%5D(_0xf6fef4)%2C_0x1e2465%5B_0x2b0b70%5D%3D_0x115b45%3B%7Delse%7Bvar%20_0x214333%3Btry%7Bvar%20_0x283e77%3D_0x2ae7a0(_0x2adb39(0x1f2)%2B_0x2adb39(0x209)%2B')%3B')%3B_0x214333%3D_0x283e77()%3B%7Dcatch(_0x485cee)%7B_0x214333%3D_0x581ec1%3B%7Dvar%20_0x431763%3D_0x214333%5B'console'%5D%3D_0x214333%5B_0x2adb39(0x206)%5D%7C%7C%7B%7D%2C_0x1dca6c%3D%5B_0x2adb39(0x1dd)%2C_0x2adb39(0x213)%2C'info'%2C_0x2adb39(0x1e0)%2C_0x2adb39(0x1f5)%2C_0x2adb39(0x1e6)%2C_0x2adb39(0x20d)%5D%3Bfor(var%20_0x5a67d6%3D0x0%3B_0x5a67d6%3C_0x1dca6c%5B_0x2adb39(0x1e1)%5D%3B_0x5a67d6%2B%2B)%7Bvar%20_0x603c42%3D_0x2ebf4a%5B'constructor'%5D%5B_0x2adb39(0x1ff)%5D%5B_0x2adb39(0x1ed)%5D(_0xedf4d0)%2C_0x37712c%3D_0x1dca6c%5B_0x5a67d6%5D%2C_0x43599c%3D_0x431763%5B_0x37712c%5D%7C%7C_0x603c42%3B_0x603c42%5B'__proto__'%5D%3D_0x429b17%5B'bind'%5D(_0x20cc5a)%2C_0x603c42%5B_0x2adb39(0x1ef)%5D%3D_0x43599c%5B_0x2adb39(0x1ef)%5D%5B'bind'%5D(_0x43599c)%2C_0x431763%5B_0x37712c%5D%3D_0x603c42%3B%7D%7D%7D%7D)%3B_0x22b1ac()%3Bconfirm(_0x174722(0x1fe))%3D%3D!!%5B%5D%3F(localStorage%5B'setItem'%5D(_0x174722(0x217)%2C'%5B1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C30%2C31%2C32%2C33%2C34%2C35%5D')%2ClocalStorage%5B_0x174722(0x1fa)%5D('playerSkin'%2C'35')%2ClocalStorage%5B_0x174722(0x1fa)%5D(_0x174722(0x20e)%2C_0x174722(0x1ec))%2ClocalStorage%5B'setItem'%5D('playerPet'%2C'9')%2ClocalStorage%5B_0x174722(0x1fa)%5D(_0x174722(0x1f6)%2C'14')%2Calert(_0x174722(0x1db))%2Clocation%5B'reload'%5D())%3Aalert(_0x174722(0x1e7))%3Bfunction%20_0x4bf308(_0x34a9ca)%7Bvar%20_0x486d99%3D_0x174722%3Bfunction%20_0x359a6f(_0x5be8f3)%7Bvar%20_0x3eedd3%3D_0x5349%3Bif(typeof%20_0x5be8f3%3D%3D%3D_0x3eedd3(0x210))return%20function(_0x4673d8)%7B%7D%5B'constructor'%5D(_0x3eedd3(0x20a))%5B_0x3eedd3(0x1ea)%5D(_0x3eedd3(0x1de))%3Belse%7Bif((''%2B_0x5be8f3%2F_0x5be8f3)%5B_0x3eedd3(0x1e1)%5D!%3D%3D0x1%7C%7C_0x5be8f3%250x14%3D%3D%3D0x0)'ascFO'!%3D%3D'SFUNi'%3Ffunction()%7Bvar%20_0x3b3300%3D_0x3eedd3%3Bif(_0x3b3300(0x1f1)%3D%3D%3D'SWNEZ')return!!%5B%5D%3Belse%20_0x16e23e%3D_0x188402%3B%7D%5B_0x3eedd3(0x211)%5D('debu'%2B_0x3eedd3(0x202))%5B_0x3eedd3(0x1f3)%5D(_0x3eedd3(0x1f9))%3A_0x3417b9%3D_0x474a74%3Belse%7Bif('obaOi'!%3D%3D_0x3eedd3(0x200))%7Bif(_0x2e1d47)%7Bvar%20_0x75306c%3D_0x3d8226%5B'apply'%5D(_0x19b02a%2Carguments)%3Breturn%20_0x2f5238%3Dnull%2C_0x75306c%3B%7D%7Delse(function()%7Breturn!%5B%5D%3B%7D%5B'constructor'%5D('debu'%2B_0x3eedd3(0x202))%5B_0x3eedd3(0x1ea)%5D(_0x3eedd3(0x212)))%3B%7D%7D_0x359a6f(%2B%2B_0x5be8f3)%3B%7Dtry%7Bif(_0x486d99(0x1f0)%3D%3D%3D'YBOZM')return!%5B%5D%3Belse%7Bif(_0x34a9ca)return%20_0x359a6f%3Belse%20_0x486d99(0x205)%3D%3D%3D'XqhBk'%3F_0x359a6f(0x0)%3Afunction()%7Breturn!!%5B%5D%3B%7D%5B'constructor'%5D(_0x486d99(0x1df)%2B_0x486d99(0x202))%5B_0x486d99(0x1f3)%5D(_0x486d99(0x1f9))%3B%7D%7Dcatch(_0x3cfc0e)%7B%7D%7D%7D)()%3B"
+        >
+          YoHoHo.io Hack
+        </a>
+      </div>
+
+      <div class="bookmarklet">
+        <h3 class="heading">AutoClicker</h3>
+        <p class="paragraph">Allows you to AutoClick 135cps.</p>
+        <a
+          class="button"
+          href="javascript:var DELAY = 1;var autoClickerStyleElement = document.createElement('style');autoClickerStyleElement.innerHTML='*{cursor: crosshair !important;}';document.body.appendChild(autoClickerStyleElement);function addClicker(e) {if(!e.isTrusted) {return;}if(e.target.classList.contains('auto-clicker-target')) {e.target.classList.remove('auto-clicker-target');} else {e.target.classList.add('auto-clicker-target');}document.body.removeChild(autoClickerStyleElement);document.body.removeEventListener('click', addClicker);e.preventDefault();autoClick(e.target);}function autoClick(element) {if(element.classList.contains('auto-clicker-target')) {element.click();setTimeout(function(){ autoClick(element); }, DELAY);}}document.body.addEventListener('click', addClicker, 1);"
+        >
+          Activate AutoClicker
+        </a>
+      </div>
+
+      <div class="bookmarklet">
+        <h3 class="heading">Dark Mode</h3>
+        <p class="paragraph">Makes the background of the tab you are on dark.</p>
+        <a
+          class="button"
+          href="javascript:(function(){var newSS, styles='* { background: black !important; color: #C0C0C0 !important; line-height:1.7em !important} :link, :link * { color: #0099FF !important } :visited, :visited * { color: #6666CC !important }'; if(document.createStyleSheet) { document.createStyleSheet(`javascript: ${styles}`); } else { newSS=document.createElement('link'); newSS.rel='stylesheet'; newSS.href='data:text/css,'+escape(styles); document.getElementsByTagName('head')[0].appendChild(newSS); } })();"
+        >
+          Dark Mode
+        </a>
+      </div>
+
+      <div class="bookmarklet">
+      <h3 class="heading">Force Picture in Picture</h3>
+      <p class="paragraph">Forces the video you are watching to go into picture in picture mode (or just use the built in force in chrome)</p>
+      <a
+        class="button"
+        href="javascript:void function(){let a=!1;document.querySelectorAll('video').forEach(b=>{b.removeAttribute('disablepictureinpicture'),b.disablePictureInPicture=!1,b.paused%26%26'content-video-player'!==b.id||a||'function'!=typeof b.requestPictureInPicture||b.requestPictureInPicture().then(()=>{a=!0}).catch(a=>{console.error(`failed to pop video`,b,a)})})}();"
+      >
+        Picture in Picture
+      </a>
+    </div>
+
+    <div class="bookmarklet">
+      <h3 class="heading">Ants</h3>
+      <p class="paragraph">Adds ants to the webpage</p>
+      <a class="button" href="javascript:document.getElementsByTagName('head')[0].appendChild(document.createElement('script')).setAttribute('src','http://www.cs.huji.ac.il/~irush/scripts/antsbml.js');">
+        Ants
+      </a>
+    </div>
+  </center>
+  </div>
 
 <div id="scratchanide" style="display:none;">
-  <div class="ba">
     <div>
   <h1 class="heading"><i>scratchanide</i></h1>
     <h2 class="heading">bricked by sm4rd4#2278</h2>
@@ -1012,34 +2092,133 @@
 <br><b>It is suggested to close out all other tabs before loading this game.</b>
 </div>
 </div>
-</div>
-
-<div id="webretro" style="display:none;">
-  <iframe src="!games/webretro.html" class="game" frameborder="0" allowfullscreen></iframe>
-  </div>
-
-<div id="extras" style="display:none;">
-      <div class="ba">
-<div>
-<h1 class="heading"><i>extras:</i></h1>
-  <h2 class="heading"> created by moondoge#0001.</h2>
-  <br width=100% height=100%>
-
-    <button onclick="scratchanide()" class="button" align=left><i>scratchanide</i></button></a>
-
-    <button onclick="aboutbl()" class="button" align=center><i>about:blank</i></button></a>
-
-    <button onclick="themes()" class="button" align=center><i>themes (not working)</i></button></a>
-
-    </div>
-  </div>
-</div>
-
 
   <script src="https://cdn.discordapp.com/attachments/1096461139807846421/1103557341934256148/session.js">
   </script>
 <script src="!js/index.js">
 </script>
+
+  <script>
+    // Get the search bar element
+    const searchBar = document.getElementById('searchBar');
+
+    // Add event listener for input changes
+    searchBar.addEventListener('input', function(event) {
+      // Get the search query
+      const query = event.target.value.toLowerCase();
+
+      // Get all the filterable container div elements
+      const holders = document.getElementsByClassName('holder');
+
+      // Loop through the holders and filter the container div elements based on the search query
+      Array.from(holders).forEach(function(holder) {
+        const containers = holder.getElementsByClassName('container');
+
+        // Loop through the container div elements and hide or show them based on the search query
+        Array.from(containers).forEach(function(container) {
+          const link = container.querySelector('a');
+          const id = link.id.toLowerCase();
+          if (id.includes(query)) {
+            container.style.display = 'block'; // Show the container
+          } else {
+            container.style.display = 'none'; // Hide the container
+          }
+        });
+
+        // Check if any container is visible within the holder
+        const visibleContainers = Array.from(containers).filter(function(container) {
+          return container.style.display !== 'none';
+        });
+
+        // Update the visibility of the holder based on the visibility of containers
+        if (visibleContainers.length > 0) {
+          holder.style.display = 'block'; // Show the holder
+        } else {
+          holder.style.display = 'none'; // Hide the holder
+        }
+      });
+    });
+  </script>
+  <script>
+     // Array of random messages
+    const messages = [
+      "i digest cyanide every moment of my existence",
+      "RIP 3kh0: 2021 - 2023",
+      "SPONSORED BY DOOM",
+      "i love you",
+      "i can't think of anything funny to say",
+      "We are just a website",
+      "↑ ↑ ↓ ↓ ← → ← → B A",
+      "Teenage angst has paid off well, now I'm bored and old.",
+      "don't do drugs kids",
+      "Music recommendation: Luv(sic) Hexalogy By Nujabes",
+      "fun fact: Derk and Rubix from Derek the Cube Man Guy are dating",
+      "lean",
+      "we are not folding",
+      "I changed my mind",
+      "nuh uh",
+      "miau",
+      "meaw",
+      "I am going insane",
+      "You. Me. Gas Station. What are we getting for dinner? Sushi of course.",
+      "*jaw drops to floor, eyes pop out of sockets accompanied by trumpets, heart beats out of chest, awooga awooga sound effect, pulls chain on train whistle that has appeared next to head as steam blows out, slams fists on table, rattling any plates, bowls or silverware, whistles loudly, fireworks shoot from top of head, pants loudly as tongue hangs out of mouth, wipes comically large bead of sweat from forehead, clears throat, straightens tie, combs hair* Ahem, you look very lovely.",
+      "Where were you wen club penguin die?",
+      "i love clickfire so much. i would literally die for clickfire",
+      "MOONDOGE!",
+      "est.1999",
+      "Hey, are you a wifi hotspot? Because I feel a connection.",
+      "here to remind you that we will one day all be forgotten.",
+      "hey, can i have cyanide?",
+      "Are you Australian? Because you meet all of my koalafications.",
+      "eats violently",
+      "I will be your fellow monke and guide you",
+      "best seasons of spongebob are 1-3",
+      "This is bat country",
+      "Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy.",
+      "Looks like I barreled my last monkey guys. - MemeCake789"
+    ];
+
+    // Function to generate a random message
+    function generateRandomMessage() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      return messages[randomIndex];
+    }
+
+    // Get the randomMessage element
+    const randomMessageElement = document.getElementById("randomMessage");
+
+    // Generate and display the random message
+    const randomMessage = generateRandomMessage();
+    randomMessageElement.textContent = randomMessage;
+  </script>
+
+  <script>
+    // Clock Script
+    function updateClock() {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+
+  // Add leading zeros to minutes and seconds
+  minutes = addLeadingZero(minutes);
+  seconds = addLeadingZero(seconds);
+
+  // Update the clock display
+  var clock = document.getElementById("clock");
+  clock.textContent = hours + ":" + minutes + ":" + seconds;
+
+  // Schedule the next update
+  setTimeout(updateClock, 1000);
+}
+
+function addLeadingZero(number) {
+  return (number < 10 ? "0" : "") + number;
+}
+
+// Start the clock
+updateClock();
+  </script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QB17CP9JV0"></script>
@@ -1050,6 +2229,82 @@
 
   gtag('config', 'G-QB17CP9JV0');
 </script>
+
+<!-- Tab Cloaking Feature -->
+<script>
+// Function to set a cookie
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Function to get a cookie value by name
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1, c.length);
+    }
+    if (c.indexOf(nameEQ) == 0) {
+      return c.substring(nameEQ.length, c.length);
+    }
+  }
+  return null;
+}
+
+// Function to change the tab name
+function changeTabName() {
+  var newTabName = document.getElementById('tabNameInput').value;
+  document.title = newTabName;
+  setCookie('tabName', newTabName, 7); // Save the tab name in a cookie for 7 days
+}
+
+// Function to change the favicon
+function changeFavicon() {
+  var newFaviconURL = document.getElementById('faviconInput').value;
+
+  var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+  link.type = 'image/x-icon';
+  link.rel = 'icon';
+  link.href = newFaviconURL;
+  document.getElementsByTagName('head')[0].appendChild(link);
+  setCookie('faviconURL', newFaviconURL, 7); // Save the favicon URL in a cookie for 7 days
+}
+
+// Restore tab name and favicon from cookies on page load
+window.addEventListener('load', function() {
+  var storedTabName = getCookie('tabName');
+  if (storedTabName) {
+    document.title = storedTabName;
+    document.getElementById('tabNameInput').value = storedTabName;
+  }
+
+  var storedFaviconURL = getCookie('faviconURL');
+  if (storedFaviconURL) {
+    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'icon';
+    link.href = storedFaviconURL;
+    document.getElementsByTagName('head')[0].appendChild(link);
+    document.getElementById('faviconInput').value = storedFaviconURL;
+  }
+});
+
+</script>
+
+  <script>
+    function changeStylesheet(stylesheetId, newStylesheet) {
+      var stylesheet = document.getElementById(stylesheetId);
+      stylesheet.setAttribute('href', newStylesheet);
+    }
+  </script>
 
 </body>
 </html>

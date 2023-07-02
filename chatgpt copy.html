@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Search</title>
+    <style>
+        /* Add your CSS styles here */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #gameList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        #gameList button {
+            margin: 10px;
+            padding: 20px;
+            font-size: 24px;
+            background-color: #f2f2f2;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #gameEmbed {
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        #gameEmbed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        #backButton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 9999;
+            background-color: #f2f2f2;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="searchBar" placeholder="Search...">
+    </div>
+
+    <div id="gameList">
+        <!-- Game buttons will be dynamically generated here -->
+    </div>
+
+    <div id="gameEmbed">
+        <!-- Game iframe will be embedded here -->
+    </div>
+
+    <script>
+        const games = [
+            {
+                title: "LOZ - Links Awakening",
+                thumbnail: "!icons/linksawakening.png",
+                url: "!games/GBA/linksawakening.html"
+            },
+            // Add more games here
+        ];
+
+        const gameList = document.getElementById("gameList");
+        const gameEmbed = document.getElementById("gameEmbed");
+        const backButton = document.createElement("button");
+        backButton.textContent = "Back";
+        backButton.id = "backButton";
+        backButton.style.display = "none";
+        backButton.addEventListener("click", function () {
+            backButton.style.display = "none";
+            gameEmbed.innerHTML = "";
+            gameList.style.display = "flex";
+        });
+        document.body.appendChild(backButton);
+
+        games.forEach(function (game) {
+            const button = document.createElement("button");
+            button.textContent = game.title;
+            button.addEventListener("click", function () {
+                backButton.style.display = "block";
+                gameList.style.display = "none";
+                gameEmbed.innerHTML = `<iframe src="${game.url}" frameborder="0" width="100%" height="100%"></iframe>`;
+            });
+            gameList.appendChild(button);
+        });
+    </script>
+</body>
+</html>
+

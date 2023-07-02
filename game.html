@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon"  href="!contributors/moondoge.gif">
+  <style type="style" src="default"></style>
+<title id="pageTitle">Game Selected | cyanide</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: #121212;
+      border: none;
+    }
+
+    #gameContainer {
+      width: 100%;
+      height: 100%;
+    }
+
+    #fullscreenButton, #gobackButton {
+      background-color: #121212;
+      color: aliceblue;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition-duration: 0.5s;
+    }
+      #fullscreenButton:hover, #gobackButton:hover {
+      background-color: aliceblue;
+      color: #121212;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      animation: bigui 1s ease-in-out infinite;
+    }
+        #fullscreenButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+      padding: 10px;
+    }
+      #gobackButton {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 999;
+      padding: 10px;
+    }
+
+    @keyframes bigui {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+  </style>
+</head>
+
+<body>
+  <button id="gobackButton" onclick="goBack()">Go Back</button>
+  <div id="gameContainer"></div>
+  <button id="fullscreenButton" onclick="toggleFullscreen()">Fullscreen</button>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    function toggleFullscreen() {
+      const elem = document.getElementById('gameContainer');
+
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        elem.msRequestFullscreen();
+      }
+    }
+
+    const queryParams = new URLSearchParams(window.location.search);
+    const gameParam = queryParams.get('game');
+    const nameParam = queryParams.get('name');
+    const gameContainer = document.getElementById('gameContainer');
+    const pageTitle = document.getElementById('pageTitle');
+
+    if (gameParam) {
+      const iframe = document.createElement('iframe');
+      iframe.src = gameParam;
+      iframe.width = '100%';
+      iframe.height = '100%';
+      gameContainer.appendChild(iframe);
+
+      if (nameParam) {
+        pageTitle.textContent = nameParam + " | cyanide";
+      }
+    } else {
+      gameContainer.textContent = 'No game selected.';
+    }
+  </script>
+</body>
+
+</html>
+

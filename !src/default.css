@@ -1,16 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap');
+
 body {
-  background-color: #121212; /* For browsers that do not support gradients */
+  margin: 0;
+  padding: 0;
 }
 
-/* CSS for the holder, (holds a whole row of games) A container, 
-    (holds one game together) gamethumb, and the thumbtext 
-                (holds text on top of games) */
-
-.holder{
-    align-items: center;
+.holder {
+  align-items: center;
   justify-content: center;
-display: flex;
-  margin: 10px, 0px, 0px, 0px;
+  display: flex;
+  margin: 10px 0;
 }
 
 .container {
@@ -19,78 +18,106 @@ display: flex;
   height: 175px;
   overflow: hidden;
   transition-duration: 1s;
-      position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
+  display: block;
+}
 
+.container:hover,
+.gamethumb:hover,
+.holder:hover {
+  border-radius: 40px;
 }
-.container:hover, .gamethumb:hover, .holder:hover{
-  border-radius:40px;
+
+.container:hover,
+.gamethumb:hover {
+  transform: rotate(5deg);
 }
-.container:hover, .gamethumb:hover{
-transform: rotate(5, 5, 5);
+
+.container,
+.gamethumb,
+.holder {
+  border-radius: 0px;
 }
-.container, .gamethumb, .holder{
-  border-radius:0px;
-}
+
 .container:hover img {
-      transform: scale(1.25,1.25);
+  transform: scale(1.25);
 }
 
 .thumbtext {
-    position: absolute;
-      font-family: sans-serif;
-  font-size:18px;
-  color:aliceblue;
+  position: absolute;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+  color: aliceblue;
   text-align: center;
   opacity: 0.5;
   transition-duration: 0.3s;
-    animation-name: rotate;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  background-color: #300f27;
+  box-sizing: border-box;
 }
 
-.gamethumb{
-background-color: #121212;
+.functioninput {
+  background-color: #300f27;
   color: aliceblue;
-  font-family: sans-serif;
+  font-family: 'Assistant', sans-serif;
+  opacity: 0.7;
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  border-style: none;
+  text-align: center;
+  transition-duration: 0.5s;
+}
+
+.functioninput:hover {
+  width: 200px;
+  background-color: aliceblue;
+  color: #300f27;
+  font-family: 'Assistant', sans-serif;
+  opacity: 0.7;
+  border-radius: 15px;
+}
+
+.gamethumb {
+  background-color: #300f27;
+  color: aliceblue;
+  font-family: 'Assistant', sans-serif;
   font-size: 18px;
-  float: right; 
+  float: right;
   margin: 0px 5px 20px 0px;
-border: 2px 2px 2px aliceblue;
-  width:175;
-  height:175;
+  width: 175px;
+  height: 175px;
   border-radius: 2px;
   transition-duration: 0.5s;
-  animation-name: rotate;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  opacity:0.5;
+  opacity: 0.5;
 }
 
-.gamethumb:hover{
-background-color: #121212;
+.gamethumb:hover {
+  background-color: #300f27;
   color: aliceblue;
-  font-family: sans-serif;
+  font-family: 'Assistant', sans-serif;
   font-size: 18px;
-  float: right; 
+  float: right;
   margin: 0px 5px 20px 0px;
-border: 2px 2px 2px aliceblue;
-  border-radius:  40px;
+  border: 0px, 0px, 10px solid aliceblue;
+  border-radius: 40px;
   transition-duration: 0.5s;
-  animation-name: rotate;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  opacity:0.5;
+  opacity: 0.5;
 }
 
 /* end of holder, container, gamethumb, and thumbtext css. */
 
 
+
 /* lol you can't edit this navbar id it stays the same with all themes */
 #navbar {
+  opacity: 1;
+  color:#210a1b;
+  z-index: 1000;
       align-items: center;
   justify-content: center;
   display: flex;
@@ -109,9 +136,9 @@ p {
   text-align: center;
 }
 textarea{
-  background-color: #121212;
+  background-color: #300f27;
   color: aliceblue;
-  font-family: sans-serif;
+  font-family: 'Assistant', sans-serif;
   font-size: 18px;
 border: 2px 2px 2px aliceblue;
   width:150;
@@ -136,7 +163,7 @@ animation-name: rotate;
 
 /* paragraph, heading, and button classes*/
 .paragraph{
-  font-family: sans-serif;
+  font-family: 'Assistant', sans-serif;
   font-size:18px;
   color:aliceblue;
   text-align: center;
@@ -148,7 +175,7 @@ animation-name: rotate;
   text-align: center;
 }
 .heading{
-font-family: sans-serif;
+font-family: 'Assistant', sans-serif;
 font-size:24px;
 color:aliceblue;
 opacity: 0.5;
@@ -164,13 +191,13 @@ transition-duration: 0.5s;
   color:white
 }
 .button{
-background-color: #121212;
+background-color: #300f27;
   color: aliceblue;
-  font-family: sans-serif;
+  font-family: 'Assistant', sans-serif;
   font-size: 18px;
-border: 2px 2px 2px aliceblue;
+border-style: none;
   width:200;
-  height:100;
+  height:75;
   border-radius: 2px;
   transition-duration: 0.5s;
   animation-name: rotate;
@@ -179,11 +206,33 @@ border: 2px 2px 2px aliceblue;
   opacity:0.5;
 }
 .button:hover{
-border: 4px 4px 15px aliceblue;
+border: 1px 1px 1px 15px aliceblue;
 background-color: #fffcfc;
-  color: #121212;
+  color: #300f27;
   width:250;
   height:100;
+  border-radius: 5px;
+  opacity:1;
+}
+.buttoninput{
+background-color: #300f27;
+  color: aliceblue;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+border-style: none;
+  width:100;
+  height:50;
+  border-radius: 2px;
+  transition-duration: 0.5s;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  opacity:0.5;
+}
+.buttoninput:hover{
+border: 1px 1px 1px 15px aliceblue;
+background-color: #fffcfc;
+  color: #300f27;
   border-radius: 5px;
   opacity:1;
 }
@@ -200,12 +249,12 @@ transition-duration:0.3s;}
 /* navtext properties (navtext is just navigation text :O */
 .navtext{
   text-align: center;
-    font-family: sans-serif;
+    font-family: 'Assistant', sans-serif;
   font-size:20px;
   color:aliceblue;
   text-decoration: none;
   border: 2px;
-  background-color: #121212;
+  background-color: #210a1b;
   opacity: 0.5;
   transition-duration: 0.5s;
 }
@@ -213,27 +262,17 @@ transition-duration:0.3s;}
 .navtext:hover{
   padding: 10px 0;
   text-align: center;
-    font-family: sans-serif;
+    font-family: 'Assistant', sans-serif;
   font-size:24px;
   color:aliceblue;
   text-decoration: none;
   border: 2px, 2px, 15px, aliceblue;
-  background-color: #121212;
+  background-color: #210a1b;
   opacity: 1;
 }
 
-/* don't change this */
-.game{
-  border-style: solid;
-  color:aliceblue;
-  width:100%;
-  height:100%;
-  align:center;
-}
-/* it would break your fork or whatever in the near future */
-
 .bar{
-    background: #121212;
+    background: #210a1b;
     transition: .4s;
     z-index:4;
     position: absolute;
@@ -251,3 +290,48 @@ transition-duration:0.3s;}
 /* Thanks for joining me on the journey through the
 cyanide css files, and I hope you stay safe and healthy out there!
 Don't forget to NEVER, EVER, take drugs kids! */ 
+
+        .ba {
+            min-width: 100%;
+            min-height: 1000px;
+            background: url("back.png"), #111111;
+            background-attachment: fixed;
+            background-repeat: repeat;
+            background-size: cover;
+            animation: scroll 50s linear infinite;
+            animation-name: parallax;
+            animation-duration: 25s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes scroll {
+            0% {
+                background-position: 0px 0px;
+            }
+            100% {
+                background-position: -6000px 0px;
+            }
+        }
+
+        @keyframes parallax {
+            0% {
+                background-position: 0px center;
+            }
+            100% {
+                background-position: -1000px center;
+            }
+        }
+
+        @media (prefers-reduced-motion) {
+            .ba {
+                animation: none;
+            }
+        }
+
+        @media (min-width: 670px) {
+            .title {
+                font-size: 5rem;
+            }
+        }

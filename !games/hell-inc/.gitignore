@@ -1,0 +1,6 @@
+app
+dist
+node_modules
+coverage
+publish.sh
+gifs
