@@ -74,43 +74,50 @@
   <button id="fullscreenButton" onclick="toggleFullscreen()">Fullscreen</button>
 
   <script>
-    function goBack() {
-      window.history.back();
-    }
+function goBack() {
+  window.history.back();
+}
 
-    function toggleFullscreen() {
-      const elem = document.getElementById('gameContainer');
+function toggleFullscreen() {
+  const elem = document.body;
 
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.mozRequestFullScreen) { /* Firefox */
-        elem.mozRequestFullScreen();
-      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) { /* IE/Edge */
-        elem.msRequestFullscreen();
-      }
-    }
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
 
-    const queryParams = new URLSearchParams(window.location.search);
-    const gameParam = queryParams.get('game');
-    const nameParam = queryParams.get('name');
-    const gameContainer = document.getElementById('gameContainer');
-    const pageTitle = document.getElementById('pageTitle');
+window.addEventListener('fullscreenchange', function() {
+  const isFullscreen = document.fullscreenElement || document.mozFullScreenElement || document.webkitIsFullScreen;
 
-    if (gameParam) {
-      const iframe = document.createElement('iframe');
-      iframe.src = gameParam;
-      iframe.width = '100%';
-      iframe.height = '100%';
-      gameContainer.appendChild(iframe);
+  document.getElementById('fullscreenButton').textContent = isFullscreen ? 'Exit Fullscreen' : 'Fullscreen';
+});
 
-      if (nameParam) {
-        pageTitle.textContent = nameParam + " | cyanide";
-      }
-    } else {
-      gameContainer.textContent = 'No game selected.';
-    }
+const queryParams = new URLSearchParams(window.location.search);
+const gameParam = queryParams.get('game');
+const nameParam = queryParams.get('name');
+const gameContainer = document.getElementById('gameContainer');
+const pageTitle = document.getElementById('pageTitle');
+
+if (gameParam) {
+  const iframe = document.createElement('iframe');
+  iframe.src = gameParam;
+  iframe.width = '100%';
+  iframe.height = '100%';
+  gameContainer.appendChild(iframe);
+
+  if (nameParam) {
+    pageTitle.textContent = nameParam + " | cyanide";
+  }
+} else {
+  gameContainer.textContent = 'No game selected.';
+}
+
   </script>
 </body>
 
