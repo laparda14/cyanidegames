@@ -82,7 +82,7 @@ p {
 }
 
 .parallax {
-  background-image: url('background.jpg');
+  background-image: url('https://rawcdn.githack.com/moondoges/cyanidegames/859742b615edff1d7546da5c2c75eb10d09ed276/Untitled%20design(39).png');
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -253,7 +253,6 @@ button:active {
 
 <div id="games" style="display:none">
 <center>
-  <input type="text" id="searchInput" placeholder="Search for button content">
   <br>
   <div id="buttonList">
     <button class="buttonItem" onclick="showDescription('Button 1')">Button 1</button>
@@ -262,63 +261,6 @@ button:active {
     <button class="buttonItem" onclick="showDescription('Button 4')">Button 4</button>
     <button class="buttonItem" onclick="showDescription('Button 5')">Button 5</button>
   </div>
-
-  <div class="description" id="description"></div>
-
-  <button id="backButton" onclick="goBack()">Back</button>
-
-  <script>
-    const searchInput = document.getElementById('searchInput');
-    const buttonList = document.getElementById('buttonList');
-    const buttonItems = buttonList.getElementsByClassName('buttonItem');
-    const description = document.getElementById('description');
-    const backButton = document.getElementById('backButton');
-
-    let selectedButton = null;
-
-    function showDescription(buttonText) {
-      selectedButton = buttonText;
-      hideButtonList();
-      description.textContent = `You clicked on ${buttonText}. This button does something.`;
-      description.style.display = 'block';
-      backButton.style.display = 'inline-block';
-    }
-
-    function hideButtonList() {
-      buttonList.style.display = 'none';
-    }
-
-    function showButtonList() {
-      buttonList.style.display = 'flex';
-    }
-
-    function goBack() {
-      selectedButton = null;
-      description.style.display = 'none';
-      backButton.style.display = 'none';
-      searchInput.value = '';
-      showButtonList();
-      filterButtons('');
-    }
-
-    function filterButtons(searchTerm) {
-      Array.from(buttonItems).forEach(function (item) {
-        const buttonText = item.textContent.toLowerCase();
-        if (buttonText.includes(searchTerm)) {
-          item.style.display = 'inline-block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    }
-
-    searchInput.addEventListener('input', function () {
-      const searchTerm = searchInput.value.toLowerCase();
-      if (selectedButton === null) {
-        filterButtons(searchTerm);
-      }
-    });
-  </script>
 </center>
 </div>
 
@@ -413,6 +355,8 @@ window.addEventListener('load', function() {
 });
 
 </script>
+
+
 
 <!-- End of Script -->
 
