@@ -1,10 +1,20 @@
 <html>
-    <head>
-        <style>
-        body{
-            background-color: #121212;
-        }
-                .game {
+<div class="game">
+    <div id='game'></div>
+</div>
+  
+<script type='text/javascript'>
+  
+EJS_player = '#game';
+EJS_core = 'n64';
+EJS_gameUrl = 'https://rawcdn.githack.com/moondoges/cyanidegames/3fde53541d82e98ab279fb2b2a4f31577e63120d/!roms/marioparty.n64';
+EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/ethanaobrien/emulatorjs@main/data/';
+  
+</script>
+<script src='https://cdn.jsdelivr.net/gh/ethanaobrien/emulatorjs@main/data/loader.js'></script>
+
+<style>
+    .game {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -21,20 +31,5 @@
         left: 0;
         overflow: hidden;
     }
-        </style>
-    </head>
-    <body>
-        <div>
-            <div id="game"></div>
-        </div>
-        <script>
-            EJS_player = "#game";
-            EJS_core = "n64";
-            EJS_gameName = "mariokart";
-            EJS_color = "#121212";
-            EJS_pathtodata = "https://rawcdn.githack.com/EmulatorJS/EmulatorJS/main/data/";
-            EJS_gameUrl = "https://rawcdn.githack.com/moondoges/cyanidegames/3fde53541d82e98ab279fb2b2a4f31577e63120d/!roms/marioparty.n64";
-        </script>
-        <script src="https://rawcdn.githack.com/EmulatorJS/EmulatorJS/main/data/loader.js"></script>
-    </body>
+</style>
 </html>

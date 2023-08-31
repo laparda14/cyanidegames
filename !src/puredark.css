@@ -293,3 +293,20 @@ Don't forget to NEVER, EVER, take drugs kids! */
         .ba {
 color:#121212;
         }
+
+
+/* CSS styles for the container of the panels */
+#panelsContainer {
+  background-size: cover;
+  opacity: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+  align-items: center;
+  
+  /* Set background properties */
+  background-size: cover; /* Adjust to your preference */
+  background-repeat: no-repeat;
+  background-position: center;
+}
