@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>cyanide.</title>
+<link rel="stylesheet" type="text/css" href="!src/BASE.css">
 <link rel="stylesheet" id="themeStyle" type="text/css" href="!src/default.css">
 <link rel="stylesheet" type="text/css" href="!src/buttonstyles.css">
    <link rel="icon" type="image/x-icon"  href="!contributors/moondoge.gif">
@@ -35,10 +36,72 @@
 <p class="paragraph" id="randomMessage"></p>
 <br width=100% height=100%>
 <button onclick="gameselect()" class="button" align=left><i>games</i></button></a>
-<a href="https://discord.gg/TnJwgKyXh9" target="_blank"><button class="button" align="center"><i>join our discord!</i></button></a>
+<a href="https://discord.gg/8H7g5Wrs5d" target="_blank"><button class="button" align="center"><i>join our discord!</i></button></a>
 <hr style="opacity: 0;">
-<div class="paragraph" id="clock"></div>
 </center>
+
+<div id="panelsContainer"></div>
+
+<script type="text/javascript">
+const panels = [
+  {
+    imgSrc: "!contributors/nujabes.png",
+    imgStyle: "border-radius: 200px; width: 100px; align-self: center;",
+    username: ".nujabes.",
+    role: "owner/creator/lead dev",
+    message: "hey whats up guys hows it going and welcome to another minecraft lets play episode 529 the garten of banban mod",
+    backgroundGif: ""
+  },
+  {
+    imgSrc: "!contributors/74bits.png",
+    imgStyle: "border-radius: 200px; width: 100px; align-self: center;",
+    username: "74bits",
+    role: "Developer/ BananaSaber Creator",
+    message: "",
+    backgroundGif: ""
+  },
+  {
+    imgSrc: "!contributors/mlg_piplup2678.png",
+    imgStyle: "border-radius: 200px; width: 100px; align-self: center;",
+    username: "mlg_piplup2678",
+    role: "derek the cube man guy",
+    message: "",
+    backgroundGif: ""
+  },
+  {
+    imgSrc: "!contributors/sm4rd4.png",
+    imgStyle: "border-radius: 200px; width: 100px; align-self: center;",
+    username: "sm4rd4",
+    role: "Created Scratchanide",
+    message: "",
+    backgroundGif: ""
+  },
+  {
+    imgSrc: "!contributors/3kh0.gif",
+    imgStyle: "border-radius: 200px; width: 100px; align-self: center;",
+    username: "3kh0",
+    role: "Created 3kh0.net",
+    message: "",
+    backgroundGif: ""
+  },
+  // Add more panel objects as needed
+];
+
+// Iterate through the panels array and generate the HTML
+const panelElements = panels.map(panel => `
+  <div class="panelcredit" style="background-image: url('${panel.backgroundGif}');">
+    <img src="${panel.imgSrc}" style="${panel.imgStyle}">
+    <p class="paragraph">${panel.username}</p>
+    <p class="credittext" style="font-size:12px;"><i>${panel.role}</i></p>
+    <p class="credittext" style="font-size:14px">${panel.message}</p>
+  </div>
+`).join('');
+
+// Now you can insert the panelElements into your HTML document where you want the panels to appear
+document.getElementById('panelsContainer').innerHTML = panelElements;
+
+
+</script>
 </div>
 </div>
 
@@ -97,9 +160,29 @@ thumbnail: "!icons/1v1space.jpg",
  url: "!games/1v1space/index.html"
   },
 {
+title: "3 Ninjas Kick Back",
+thumbnail: "!icons/3-ninjas-kick-back.jpg",
+ url: "!games/3-ninjas-kick-back/index.html"
+  },
+{
+title: "007 Shitou",
+thumbnail: "!icons/007-shitou.jpg",
+ url: "!games/007-shitou/index.html"
+  },
+{
+title: "10 Super Jogos",
+thumbnail: "!icons/10-super-jogos.jpg",
+ url: "!games/10-super-jogos/index.html"
+  },
+{
 title: "10 Minutes Till Dawn",
 thumbnail: "!icons/10minutestilldawn.jpg",
  url: "!games/10minutestilldawn/index.html"
+  },
+{
+title: "16t",
+thumbnail: "!icons/16t.jpg",
+ url: "!games/16t/index.html"
   },
 {
 title: "99balls",
@@ -115,6 +198,16 @@ thumbnail: "!icons/100-player-pong.jpg",
 title: "123movies",
 thumbnail: "!icons/123movies.jpg",
  url: "!games/123movies/index.html"
+  },
+{
+title: "688 Attack Sub",
+thumbnail: "!icons/688-attack-sub.jpg",
+ url: "!games/688-attack-sub/index.html"
+  },
+{
+title: "2020 Nen Super Baseball",
+thumbnail: "!icons/2020-nen-super-baseball.jpg",
+ url: "!games/2020-nen-super-baseball/index.html"
   },
 {
 title: "2048",
@@ -135,6 +228,11 @@ thumbnail: "!icons/9007199254740992.jpg",
 title: "A Dance Of Fire And Ice",
 thumbnail: "!icons/a-dance-of-fire-and-ice.jpg",
  url: "!games/a-dance-of-fire-and-ice/index.html"
+  },
+{
+title: "AA Harimanada!",
+thumbnail: "!icons/aa-harimanada.jpg",
+ url: "!games/aa-harimanada/index.html"
   },
 {
 title: "Achievement Unlocked",
@@ -217,6 +315,16 @@ thumbnail: "!icons/astray.jpg",
  url: "!games/astray/index.html"
   },
 {
+  title: "ATP Tour",
+thumbnail: "!icons/atp-tour.jpg",
+ url: "!games/atp-tour/index.html"
+  },
+{
+  title: "ATP Tour Championship Tennis",
+thumbnail: "!icons/atp-tour-championship-tennis.jpg",
+ url: "!games/atp-tour-championship-tennis/index.html"
+  },
+{
   title: "Avalanche",
 thumbnail: "!icons/avalanche.jpg",
  url: "!games/avalanche/index.html"
@@ -225,6 +333,11 @@ thumbnail: "!icons/avalanche.jpg",
   title: "Awesome Tanks 2",
 thumbnail: "!icons/awesometanks2.jpg",
  url: "!games/awesometanks2/index.html"
+  },
+{
+  title: "AWS Pro Moves Soccer",
+thumbnail: "!icons/aws-pro-moves-soccer.jpg",
+ url: "!games/aws-pro-moves-soccer/index.html"
   },
 {
   title: "Backrooms",
@@ -340,6 +453,16 @@ thumbnail: "!icons/blocky.jpg",
   title: "Blockpost",
 thumbnail: "!icons/blockpost.jpg",
  url: "!games/blockpost/index.html"
+  },
+{
+  title: "Bloons Tower Defense",
+thumbnail: "!icons/bloonstd.jpg",
+ url: "!games/bloonstd/index.html"
+  },
+{
+  title: "Bloons Tower Defense 2",
+thumbnail: "!icons/bloonstd2.jpg",
+ url: "!games/bloonstd2/index.html"
   },
 {
   title: "Bloons Tower Defense 4",
@@ -786,6 +909,23 @@ thumbnail: "!icons/fancypantsadventures.jpg",
 thumbnail: "!icons/final-fantasy-tactics.jpg",
  url: "!games/final-fantasy-tactics/index.html"
   },
+//ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+{
+  title: "Fireboy & Watergirl",
+thumbnail: "!icons/fireboywatergirl.jpg",
+ url: "!games/fireboywatergirl/index.html"
+  },
+{
+  title: "Fireboy & Watergirl 2",
+thumbnail: "!icons/fireboywatergirl2.jpg",
+ url: "!games/fireboywatergirl2/index.html"
+  },
+{
+  title: "Fireboy & Watergirl 3",
+thumbnail: "!icons/fireboywatergirl3.jpg",
+ url: "!games/fireboywatergirl3/index.html"
+  },
+//ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 {
   title: "Flappy Bird",
 thumbnail: "!icons/flappy.jpg",
@@ -1007,6 +1147,11 @@ thumbnail: "!icons/interactivebuddy.jpg",
  url: "!games/interactivebuddy/index.html"
   },
 {
+  title: "Jacksmith",
+thumbnail: "!icons/jacksmith.jpg",
+ url: "!games/jacksmith/index.html"
+  },
+{
   title: "Jetpack Joyride",
 thumbnail: "!icons/jetpack-joyride.jpg",
  url: "!games/jetpack-joyride/index.html"
@@ -1040,6 +1185,11 @@ thumbnail: "!icons/kirby-super-star-ultra.jpg",
   title: "Kirby And The Crystal Shards",
 thumbnail: "!icons/kirby-and-the-crystal-shards.jpg",
  url: "!games/kirby-and-the-crystal-shards/index.html"
+  },
+{
+  title: "Kingdom Wars",
+thumbnail: "!icons/kingdom-wars.jpg",
+ url: "!games/kingdom-wars/index.html"
   },
 {
   title: "Kitchen Gun Game",
@@ -1143,9 +1293,9 @@ thumbnail: "!icons/mother3.jpg",
  url: "!games/mother3/index.html"
   },
 {
-  title: "Mindustry",
-thumbnail: "!icons/mindustry.jpg",
- url: "!games/mindustry/index.html"
+  title: "Miner Cat 4",
+thumbnail: "!icons/minercat4.jpg",
+ url: "!games/minercat4/index.html"
   },
 {
   title: "Moto x3m",
@@ -1194,8 +1344,13 @@ thumbnail: "!icons/new-super-mario-bros.jpg",
   },
 {
   title: "Offline Paradise",
-thumbnail: "!icons/my-rusty-submarine.jpg",
- url: "!games/my-rusty-submarine/index.html"
+thumbnail: "!icons/OfflineParadise.jpg",
+ url: "!games/OfflineParadise/index.html"
+  },
+{
+  title: "Osu! Mania",
+thumbnail: "!icons/osu!.jpg",
+ url: "!games/osu!/index.html"
   },
 {
   title: "Paint",
@@ -1208,6 +1363,26 @@ thumbnail: "!icons/portalflash.jpg",
  url: "!games/portalflash/index.html"
   },
 {
+  title: "Papa's Burgeria",
+thumbnail: "!icons/papas-burgeria.jpg",
+ url: "!games/papas-burgeria/index.html"
+  },
+{
+  title: "Papa's Freezeria",
+thumbnail: "!icons/papas-freezeria.jpg",
+ url: "!games/papas-freezeria/index.html"
+  },
+{
+  title: "Papa's Pancakeria",
+thumbnail: "!icons/papas-pancakeria.jpg",
+ url: "!games/papas-pancakeria/index.html"
+  },
+{
+  title: "Papa's Pizzeria",
+thumbnail: "!icons/papas-pizzeria.jpg",
+ url: "!games/papas-pizzeria/index.html"
+  },
+{
   title: "Papa's Scooperia",
 thumbnail: "!icons/scooperia.jpg",
  url: "!games/scooperia/index.html"
@@ -1216,6 +1391,16 @@ thumbnail: "!icons/scooperia.jpg",
   title: "Paper Mario",
 thumbnail: "!icons/papermario.jpg",
  url: "!games/papermario/index.html"
+  },
+{
+  title: "Paper Minecraft",
+thumbnail: "!icons/paper-minecraft.jpg",
+ url: "!games/paper-minecraft/index.html"
+  },
+{
+  title: "Picky Package",
+thumbnail: "!icons/picky-package.jpg",
+ url: "!games/picky-package/index.html"
   },
 {
   title: "Pixel Gun Survival",
@@ -1453,6 +1638,11 @@ thumbnail: "!icons/shuttledeck.jpg",
  url: "!games/shuttledeck/index.html"
   },
 {
+  title: "Simpsons Wrestling",
+thumbnail: "!icons/simpsons-wrestling.gif",
+ url: "!games/simpsons-wrestling/index.html"
+  },
+{
   title: "Slime Rush TD",
 thumbnail: "!icons/slime-rush-td.jpg",
  url: "!games/slime-rush-td/index.html"
@@ -1486,6 +1676,26 @@ thumbnail: "!icons/soundboard.jpg",
   title: "Starve",
 thumbnail: "!icons/starve.jpg",
  url: "!games/starve/index.html"
+  },
+{
+  title: "Sonic The Hedgehog",
+thumbnail: "!icons/sonic-the-hedgehog.jpg",
+ url: "!games/sonic-the-hedgehog/index.html"
+  },
+{
+  title: "Sonic The Hedgehog 2",
+thumbnail: "!icons/sonic-the-hedgehog-2.jpg",
+ url: "!games/sonic-the-hedgehog-2/index.html"
+  },
+{
+  title: "Sonic & Knuckles 3",
+thumbnail: "!icons/sonic-the-hedgehog-3.jpg",
+ url: "!games/sonic-the-hedgehog-3/index.html"
+  },
+{
+  title: "Sonic 3D Blast",
+thumbnail: "!icons/sonic3dblast.jpg",
+ url: "!games/sonic3dblast/index.html"
   },
 {
   title: "Sonic Advance",
@@ -2150,6 +2360,7 @@ console.log("There are " + gameCount + " games.");
      <hr style="opacity:0;">
      <button class="button" onclick="changeStylesheet('themeStyle', '!src/crazy.css')">Crazy</button>
      <button class="button" onclick="changeStylesheet('themeStyle', '!src/moneyfolder.css')">moneyfolder</button>
+     <button class="button" onclick="changeStylesheet('themeStyle', '!src/trump.css')">Trump</button>
   </center>
 </div>
 
@@ -2460,6 +2671,15 @@ console.log("There are " + gameCount + " games.");
       "best seasons of spongebob are 1-3",
       "This is bat country",
       "Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy. Crazy? I was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy.",
+      "oh, my GODDDD!!!!!!111!! is that Dogemoon?!?!? is that dogemoon!?!?! i think its dogemoon!!!!11!!!",
+      "tear off your skin",
+      "my life is like a video game, trying hard to beat the stage - all while i am still collecting coins",
+      "Now with 10% reduced fat!",
+      "RIP CHEEMS",
+      "cyanide onlyfans coming soon",
+      "real talk: dont disrespect your teachers, just because i made this website doesn't mean i stand for that.",
+      "",
+      "shadowwizardmoneygang.gif",
       "Looks like I barreled my last monkey guys. - MemeCake789"
     ];
 
@@ -2593,6 +2813,25 @@ window.addEventListener('load', function() {
 
 <script src="https://cdn.jsdelivr.net/npm/ip-address@8.1.0/dist/cjs/ip-address.min.js"></script>
 
-
+    <img src="chat.png"
+         onmouseover="this.src='chat2.png';"
+         onmouseout="this.src='chat.png';"
+         id="chatbutton">
+<style type="text/css">
+  #chatbutton{
+    position: absolute;
+position: fixed;
+border-radius: 100px;
+bottom: 0;
+right: 0;
+margin: 10px;
+width: 60px;
+height: 60px;
+transition-duration: 0.75s;
+  }
+#chatbutton:hover{
+  scale: 1.1;
+}
+</style>
 </body>
 </html>
