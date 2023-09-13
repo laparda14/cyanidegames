@@ -42,48 +42,50 @@ body {
 
 .container:hover img {
   transform: scale(1.25);
+  
 }
 
 .thumbtext {
   position: absolute;
   font-family: 'JetBrains Mono', sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   color: aliceblue;
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.9;
   transition-duration: 0.3s;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 5px;
-  background-color: #ffdb58;
+  background-color: #1e1e28;
   box-sizing: border-box;
 }
 
 .functioninput {
-  background-color: #ffdb58;
+  background-color: #2200ff;
   color: aliceblue;
   font-family: 'JetBrains Mono', sans-serif;
-  opacity: 0.7;
   border-radius: 5px;
   width: 150px;
   height: 40px;
   border-style: none;
   text-align: center;
+
   transition-duration: 0.5s;
 }
 
 .functioninput:hover {
   width: 200px;
-  background-color: aliceblue;
-  color: #ffdb58;
+  background-color: rgb(255, 255, 255);
+  color: #2200ff;
   font-family: 'JetBrains Mono', sans-serif;
-  opacity: 0.7;
+  opacity: 1;
   border-radius: 15px;
+  font-size: 20px;
 }
 
 .gamethumb {
-  background-color: #ffdb58;
+  background-color: #3b00ec;
   color: aliceblue;
   font-family: 'JetBrains Mono', sans-serif;
   font-size: 18px;
@@ -93,7 +95,7 @@ body {
   height: 175px;
   border-radius: 2px;
   transition-duration: 0.5s;
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .gamethumb:hover {
@@ -106,7 +108,7 @@ body {
   border: 0px, 0px, 10px solid aliceblue;
   border-radius: 40px;
   transition-duration: 0.5s;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 /* end of holder, container, gamethumb, and thumbtext css. */
@@ -116,7 +118,7 @@ body {
 /* lol you can't edit this navbar id it stays the same with all themes */
 #navbar {
   opacity: 1;
-  color:#210a1b;
+  color:#ffffff;
   z-index: 1000;
       align-items: center;
   justify-content: center;
@@ -131,12 +133,15 @@ p {
   color: aliceblue;
   font-family: sans-serif
   animation-name: rotate;
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-iteration-count: 1;
   text-align: center;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 textarea{
-  background-color: #ffdb58;
+  background-color: #ffffff;
   color: aliceblue;
   font-family: 'JetBrains Mono', sans-serif;
   font-size: 18px;
@@ -164,35 +169,45 @@ animation-name: rotate;
 /* paragraph, heading, and button classes*/
 .paragraph{
   font-family: 'JetBrains Mono', sans-serif;
-  font-size:18px;
-  color:aliceblue;
-  text-align: center;
-  opacity: 0.5;
-  transition-duration: 0.3s;
+  font-size:20px;
+  color:rgb(255, 255, 255);
+  text-align: left;
+  opacity: 0;
+  transition-delay: 1s;
+  transition-duration: 3s;
     animation-name: rotate;
   animation-duration: 1s;
+  
   animation-iteration-count: 1;
-  text-align: center;
+  text-align: left;
+  padding-left: 5%;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  
 }
 .heading{
 font-family: 'JetBrains Mono', sans-serif;
-font-size:24px;
-color:aliceblue;
-opacity: 0.5;
-    animation-name: rotate;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  text-align: center;
+font-size:50px;
+color:rgb(255, 255, 255);
+opacity: 1;
+animation-name: rotate;
+animation-duration: 1s;
+animation-iteration-count: 1;
+text-align: left;
+padding-left: 5%;
+padding-right: 5%;
 transition-duration: 0.5s;
 }
 .heading:hover{
-  border: 4px 4px 30px aliceblue;
+  border: 4px 4px 4px aliceblue;
   opacity: 1; 
   color:white
 }
+
+
 .button{
-  background-color: #110037;
-  color: E2FFF4;
+  color: #ffffff;
   font-family: 'JetBrains Mono', sans-serif;
   font-size: 18px;
   border-style: none;
@@ -203,19 +218,20 @@ transition-duration: 0.5s;
   animation-name: rotate;
   animation-duration: 1s;
   animation-iteration-count: 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
   
   background: linear-gradient(
     50deg,
-    rgba(49, 0, 158, 0.25) 12%,
-    rgba(49, 0, 158, 0.1) 77%
+    rgba(49, 0, 158, 1) 12%,
+    rgba(49, 0, 158, 1) 77%
   );
-  background-blend-mode: ;
-  box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+
 }
 .button:hover{
   border: 1px 1px 1px 15px rgb(255, 255, 255);
+  font-size: 25px;
   background-color: #ffffff;
   color: #000000;
   width:250;
@@ -278,8 +294,9 @@ transition-duration:0.3s;}
   text-decoration: none;
   border: 2px;
   background-color: #31009E;
-  opacity: 0.5;
+  opacity: 1;
   transition-duration: 0.5s;
+  padding: 5px;
 }
 
 .navtext:hover{
@@ -292,6 +309,7 @@ transition-duration:0.3s;}
   border: 2px, 2px, 15px, aliceblue;
   background-color: #110037;
   opacity: 1;
+  padding: 5px;
 }
 
 .bar{
@@ -307,8 +325,8 @@ transition-duration:0.3s;}
 /* This is the effect that is used in cyanide 1.0. 
     Do whatever you want to it, I don't care! */
 @keyframes rotate{
-  0%{transform: translate(-150px,0px); opacity: 0;}
-  100%{transform: translate(0px,0px); opacity:1}  
+  0%{transform: translate(-150px,0px); opacity: 0; visibility: visible;}
+  100%{transform: translate(0px,0px); opacity:1; visibility: visible;}  
 }
 /* Thanks for joining me on the journey through the
 cyanide css files, and I hope you stay safe and healthy out there!
