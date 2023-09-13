@@ -42,6 +42,7 @@ body {
 
 .container:hover img {
   transform: scale(1.25);
+  
 }
 
 .thumbtext {
@@ -135,6 +136,9 @@ p {
   animation-duration: 3s;
   animation-iteration-count: 1;
   text-align: center;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 textarea{
   background-color: #ffffff;
@@ -168,14 +172,19 @@ animation-name: rotate;
   font-size:20px;
   color:rgb(255, 255, 255);
   text-align: left;
-  opacity: 1;
+  opacity: 0;
   transition-delay: 1s;
   transition-duration: 3s;
     animation-name: rotate;
   animation-duration: 1s;
+  
   animation-iteration-count: 1;
   text-align: left;
   padding-left: 5%;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  
 }
 .heading{
 font-family: 'JetBrains Mono', sans-serif;
@@ -209,6 +218,9 @@ transition-duration: 0.5s;
   animation-name: rotate;
   animation-duration: 1s;
   animation-iteration-count: 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
   
   background: linear-gradient(
     50deg,
@@ -284,6 +296,7 @@ transition-duration:0.3s;}
   background-color: #31009E;
   opacity: 1;
   transition-duration: 0.5s;
+  padding: 5px;
 }
 
 .navtext:hover{
@@ -296,6 +309,7 @@ transition-duration:0.3s;}
   border: 2px, 2px, 15px, aliceblue;
   background-color: #110037;
   opacity: 1;
+  padding: 5px;
 }
 
 .bar{
@@ -311,8 +325,8 @@ transition-duration:0.3s;}
 /* This is the effect that is used in cyanide 1.0. 
     Do whatever you want to it, I don't care! */
 @keyframes rotate{
-  0%{transform: translate(-150px,0px); opacity: 0;}
-  100%{transform: translate(0px,0px); opacity:1}  
+  0%{transform: translate(-150px,0px); opacity: 0; visibility: visible;}
+  100%{transform: translate(0px,0px); opacity:1; visibility: visible;}  
 }
 /* Thanks for joining me on the journey through the
 cyanide css files, and I hope you stay safe and healthy out there!
