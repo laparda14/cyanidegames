@@ -31,9 +31,12 @@
 <br>
 <br>
 <br>
+<br>
+
 <center>
 <h1 class="heading"><i>cyanide.</i></h1>
-<p class="paragraph" id="randomMessage"></p>
+
+</p><p class="paragraph" id="randomMessage"></p>
 <br width=100% height=100%>
 <button onclick="gameselect()" class="button" align=left><i>games</i></button></a>
 <a href="discord.html" target="_self"><button class="button" align="center"><i>chatroom</i></button></a>
@@ -46,7 +49,7 @@
 const panels = [
   {
     imgSrc: "!contributors/nujabes.png",
-    imgStyle: "border-radius: 200px; width: 100px; align-self: center;",
+    imgStyle: "border-radius: 200px; width: 100px; align-self: center;  animation-name: rotate; animation-duration: 1.4s; animation-iteration-count: 1; animation-delay: 1s; animation-fill-mode: forwards; opacity: 0;",
     username: ".nujabes.",
     role: "owner/creator/lead dev",
     message: "",
@@ -54,7 +57,7 @@ const panels = [
   },
   {
     imgSrc: "!contributors/74bits.png",
-    imgStyle: "border-radius: 200px; width: 100px; align-self: center;",
+    imgStyle: "border-radius: 200px; width: 100px; align-self: center; animation-name: rotate; animation-duration: 1.4s; animation-iteration-count: 1; animation-delay: 1s; animation-fill-mode: forwards; opacity: 0;",
     username: "74bits",
     role: "Developer/ BananaSaber Creator",
     message: "",
@@ -62,7 +65,7 @@ const panels = [
   },
   {
     imgSrc: "!contributors/mlg_piplup2678.png",
-    imgStyle: "border-radius: 200px; width: 100px; align-self: center;",
+    imgStyle: "border-radius: 200px; width: 100px; align-self: center; animation-name: rotate; animation-duration: 1.4s; animation-iteration-count: 1; animation-delay: 1s; animation-fill-mode: forwards; opacity: 0;",
     username: "mlg_piplup2678",
     role: "derek the cube man guy",
     message: "",
@@ -70,7 +73,7 @@ const panels = [
   },
   {
     imgSrc: "!contributors/sm4rd4.png",
-    imgStyle: "border-radius: 200px; width: 100px; align-self: center;",
+    imgStyle: "border-radius: 200px; width: 100px; align-self: center; animation-name: rotate; animation-duration: 1.4s; animation-iteration-count: 1; animation-delay: 1s; animation-fill-mode: forwards; opacity: 0;",
     username: "sm4rd4",
     role: "Created Scratchanide",
     message: "",
@@ -78,7 +81,7 @@ const panels = [
   },
   {
     imgSrc: "!contributors/3kh0.gif",
-    imgStyle: "border-radius: 200px; width: 100px; align-self: center;",
+    imgStyle: "border-radius: 200px; width: 100px; align-self: center; animation-name: rotate; animation-duration: 1.4s; animation-iteration-count: 1; animation-delay: 1s; animation-fill-mode: forwards; opacity: 0;",
     username: "3kh0",
     role: "Created 3kh0.net",
     message: "",
@@ -90,10 +93,10 @@ const panels = [
 // Iterate through the panels array and generate the HTML
 const panelElements = panels.map(panel => `
   <div class="panelcredit" style="background-image: url('${panel.backgroundGif}');">
-    <img src="${panel.imgSrc}" style="${panel.imgStyle}">
-    <p class="paragraph">${panel.username}</p>
-    <p class="credittext" style="font-size:12px;"><i>${panel.role}</i></p>
-    <p class="credittext" style="font-size:14px">${panel.message}</p>
+    <img src="${panel.imgSrc}" style="${panel.imgStyle} ">
+    <p class="paragraph" style= "animation-name: rotate; animation-duration: 2.3s; animation-iteration-count: 1; animation-delay: 1s; animation-fill-mode: forwards; opacity: 0;">${panel.username}</p>
+    <p class="credittext" style="font-size:12px; animation-name: rotate; animation-duration: 2.4s; animation-iteration-count: 1; animation-delay: 1s; animation-fill-mode: forwards; opacity: 0;"><i>${panel.role}</i></p>
+    <p class="credittext" style="font-size:14px; animation-name: rotate; animation-duration: 2.5s; animation-iteration-count: 1; animation-delay: 1s; animation-fill-mode: forwards; opacity: 0;">${panel.message}</p>
   </div>
 `).join('');
 
@@ -2347,31 +2350,37 @@ console.log("There are " + gameCount + " games.");
 <center>
   <button class="button" onclick="changeStylesheet('themeStyle', '!src/default.css')">Default/Dark</button>
 
-    <button class="button" onclick="changeStylesheet('themeStyle', '!src/light.css')">Light</button>
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/light.css')">Light</button>
 
   <button class="button" onclick="changeStylesheet('themeStyle', '!src/classic.css')">Classic</button>
 
-     <button class="button" onclick="changeStylesheet('themeStyle', '!src/puredark.css')">Pure Darkness</button>
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/puredark.css')">Pure Darkness</button>
 
-    <button class="button" onclick="changeStylesheet('themeStyle', '!src/purelight.css')">Pure Light</button>
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/purelight.css')">Pure Light</button>
+  
   <hr style="opacity:0;">
 
-    <button class="button" onclick="changeStylesheet('themeStyle', '!src/windowsxp.css')">Windows XP</button>
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/windowsxp.css')">Windows XP</button>
 
-     <button class="button" onclick="changeStylesheet('themeStyle', '!src/sky.css')">Sky</button>
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/sky.css')">Sky</button>
 
-     <button class="button" onclick="changeStylesheet('themeStyle', '!src/clickfire.css')">clickfire</button>
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/clickfire.css')">clickfire</button>
 
-     <button class="button" onclick="changeStylesheet('themeStyle', '!src/garticphone.css')">Gartic</button>
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/garticphone.css')">Gartic</button>
 
-     <button class="button" onclick="changeStylesheet('themeStyle', '!src/mustard.css')">Mustard</button>
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/mustard.css')">Mustard</button>
 
-     <button class="button" onclick="changeStylesheet('themeStyle', '!src/piplup.css')">Piplup</button>
-     <hr style="opacity:0;">
-     <button class="button" onclick="changeStylesheet('themeStyle', '!src/crazy.css')">Crazy</button>
-     <button class="button" onclick="changeStylesheet('themeStyle', '!src/moneyfolder.css')">moneyfolder</button>
-     <button class="button" onclick="changeStylesheet('themeStyle', '!src/trump.css')">Trump</button>
-     <button class="button" onclick="changeStylesheet('themeStyle', '!src/infared.css')">Infared</button>
+  <hr style="opacity:0;">
+
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/piplup.css')">Piplup</button>
+  
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/crazy.css')">Crazy</button>
+  
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/moneyfolder.css')">moneyfolder</button>
+  
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/trump.css')">Trump</button>
+  
+  <button class="button" onclick="changeStylesheet('themeStyle', '!src/infared.css');">Infared</button>
 
 
     </center>
@@ -2652,6 +2661,9 @@ console.log("There are " + gameCount + " games.");
   <script>
      // Array of random messages
     const messages = [
+      "[ INSERT MESSAGE HERE ]",
+      "OMG IS THAT AMONGUS/GARTEN OF BANBAN 1v1ing SKIBIDI TOLIET in FNF!!!111!1!1!",
+      "life is like cyanide, one minute ur taking it, the next minute ur not (cuz ur ded)",
       "i digest cyanide every moment of my existence",
       "RIP 3kh0: 2021 - 2023 (i swear on 1 dollar bill)",
       "i love you",
