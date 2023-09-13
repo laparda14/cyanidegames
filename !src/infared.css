@@ -165,7 +165,7 @@ animation-name: rotate;
 /* paragraph, heading, and button classes*/
 .paragraph{
   font-family: 'JetBrains Mono', sans-serif;
-  font-size:10px;
+  font-size:20px;
   color:rgb(255, 255, 255);
   text-align: left;
   opacity: 1;
@@ -187,7 +187,7 @@ animation-duration: 1s;
 animation-iteration-count: 1;
 text-align: left;
 padding-left: 5%;
-padding-bottom: -25px
+padding-right: 5%;
 transition-duration: 0.5s;
 }
 .heading:hover{
@@ -195,6 +195,8 @@ transition-duration: 0.5s;
   opacity: 1; 
   color:white
 }
+
+
 .button{
   color: #ffffff;
   font-family: 'JetBrains Mono', sans-serif;
