@@ -430,7 +430,7 @@ thumbnail: "!icons/ben10-omniverse.jpg",
 {
     title: "Big Tower Tiny Square",
 thumbnail: "!icons/big-tower-tiny-square.jpg",
- url: "!games/bigredbutton/index.html"
+ url: "!games/big-tower-tiny-square/index.html"
   },
 {
   title: "Big Red Button",
@@ -443,9 +443,9 @@ thumbnail: "!icons/bindingofissac.jpg",
  url: "!games/bindingofissac/index.html"
   },
 {
-  title: "Biters",
-thumbnail: "!icons/biters.jpg",
- url: "!games/biters/index.html"
+  title: "biters.io",
+thumbnail: "!icons/biters-io.jpg",
+ url: "!games/biters-io/index.html"
   },
 {
   title: "Bitlife",
@@ -927,7 +927,6 @@ thumbnail: "!icons/fancypantsadventures.jpg",
 thumbnail: "!icons/final-fantasy-tactics.jpg",
  url: "!games/final-fantasy-tactics/index.html"
   },
-//ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 {
   title: "Fireboy & Watergirl",
 thumbnail: "!icons/fireboywatergirl.jpg",
@@ -943,7 +942,6 @@ thumbnail: "!icons/fireboywatergirl2.jpg",
 thumbnail: "!icons/fireboywatergirl3.jpg",
  url: "!games/fireboywatergirl3/index.html"
   },
-//ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 {
   title: "Flappy Bird",
 thumbnail: "!icons/flappy.jpg",
@@ -2232,7 +2230,7 @@ console.log("There are " + gameCount + " games.");
       // Create a new <img> tag for the game thumbnail
       const thumbnail = document.createElement("img");
       thumbnail.classList.add("gamethumb");
-      thumbnail.src = game.thumbnail;
+      thumbnail.src = "https://raw.githack.com/moondoges/cyanidegames/main/" + game.thumbnail;
       link.appendChild(thumbnail);
 
       // Create a new <div> tag for the game title
@@ -2703,8 +2701,12 @@ console.log("There are " + gameCount + " games.");
       "RIP CHEEMS",
       "cyanide onlyfans coming soon",
       "real talk: dont disrespect your teachers, just because i made this website doesn't mean i stand for that.",
+      "your moma so evil when its her birthday she do not want cake           she wants souls",
+      "i went to chess club on 9/15/23 and i am writing this message from the classroom",
       "",
       "shadowwizardmoneygang.gif",
+
+
       "Looks like I barreled my last monkey guys. - MemeCake789"
     ];
 
@@ -2836,6 +2838,59 @@ window.addEventListener('load', function() {
       stylesheet.setAttribute('href', newStylesheet);
     }
   </script>
+<script>
+  // Select all images/videos on page
+const images = document.querySelectorAll('img[data-src],video[data-src]');
+
+function preloadImage(img) {
+  // Create a new image element
+  const newImg = new Image(); 
+  newImg.src = img.getAttribute("data-src");
+  newImg.onload = function() {
+    // When image loads, swap in the new image
+    img.src = newImg.src;
+  }
+}
+
+const preloadVideo = (video) => {
+  // Create a new video element  
+  const newVideo = document.createElement("video");
+
+  // Set video attributes
+  newVideo.src = video.getAttribute("data-src");
+  newVideo.autoplay = video.autoplay;
+  newVideo.loop = video.loop;
+  newVideo.muted = video.muted;
+
+  // Swap old video with new one when it loads
+  newVideo.onloadedmetadata = () => {
+    video.srcObject = null;  
+    video.src = newVideo.src;
+    video.load();
+  };
+}
+
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      const img = entry.target;
+      // Video lazy loading
+      if(img.tagName === 'VIDEO') {
+        preloadVideo(img);
+      } else {
+      // Image lazy loading
+        preloadImage(img);  
+      }
+      observer.unobserve(img); 
+    }
+  });
+});
+
+images.forEach(img => {
+  observer.observe(img);
+});
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/ip-address@8.1.0/dist/cjs/ip-address.min.js"></script>
 
