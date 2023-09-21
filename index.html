@@ -2230,7 +2230,7 @@ console.log("There are " + gameCount + " games.");
       // Create a new <img> tag for the game thumbnail
       const thumbnail = document.createElement("img");
       thumbnail.classList.add("gamethumb");
-      thumbnail.src = "https://raw.githack.com/moondoges/cyanidegames/main/" + game.thumbnail;
+      thumbnail.src = game.thumbnail;
       link.appendChild(thumbnail);
 
       // Create a new <div> tag for the game title
