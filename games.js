@@ -1057,6 +1057,61 @@ thumbnail: "!icons/grimaces-birthday.jpg",
   url: "!games/stick-duel-battle/index.html"
 },
 {
+  title: "Abduction",
+  thumbnail: "!icons/abduction.jpg",
+  url: "!games/abduction/index.html"
+},
+{
+  title: "Bubble Tanks 2",
+  thumbnail: "!icons/bubble-tanks-2.jpg",
+  url: "!games/bubble-tanks-2/index.html"  
+},
+{
+  title: "Clicker Heroes",
+  thumbnail: "!icons/clicker-heroes.jpg",
+  url: "!games/clicker-heroes/index.html"
+},
+{
+  title: "Fancy Pants Adventures",
+  thumbnail: "!icons/fancypants-adventures.jpg",
+  url: "!games/fancypants-adventures/index.html"
+},
+{
+  title: "Gun Mayhem",
+  thumbnail: "!icons/gun-mayhem.jpg",
+  url: "!games/gun-mayhem/index.html"
+},
+{
+  title: "Gun Mayhem 2",
+  thumbnail: "!icons/gun-mayhem-2.jpg",
+  url: "!games/gun-mayhem-2/index.html"
+},
+{
+  title: "Gun Mayhem Redux",
+  thumbnail: "!icons/gun-mayhem-redux.jpg",
+  url: "!games/gun-mayhem-redux/index.html"
+},  
+{
+  title: "Sinjid",
+  thumbnail: "!icons/sinjid.jpg",
+  url: "!games/sinjid/index.html"
+},
+{
+  title: "Sinjid: Shadow of the Warrior",
+  thumbnail: "!icons/sinjid-shadow-of-the-warrior.jpg",
+  url: "!games/sinjid-shadow-of-the-warrior/index.html"
+},
+{
+  title: "Strike Force Heroes",
+  thumbnail: "!icons/strike-force-heroes.jpg",
+  url: "!games/strike-force-heroes/index.html"
+},
+{ 
+  title: "Warfare 1944",
+  thumbnail: "!icons/warfare-1944.jpg",
+  url: "!games/warfare-1944/index.html"
+},
+{
   title: "Stick Merge",
   thumbnail: "!icons/stick-merge.jpg",
   url: "!games/stick-merge/index.html"
