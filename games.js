@@ -2005,6 +2005,71 @@ thumbnail: "!icons/thesquare.jpg",
  url: "!games/thesquare/index.html"
   },
 {
+  title: "3 Card Poker",
+  thumbnail: "!icons/3-card-poker.jpg",
+  url: "!games/3-card-poker/index.html"
+},
+{
+  title: "Antcity",
+  thumbnail: "!icons/antcity.jpg",
+  url: "!games/antcity/index.html"
+},
+{ 
+  title: "Asteroids",
+  thumbnail: "!icons/asteroids.jpg",
+  url: "!games/asteroids/index.html"
+},
+{
+  title: "Asteroids 2000",
+  thumbnail: "!icons/asteroids-2000.jpg",
+  url: "!games/asteroids-2000/index.html"  
+},
+{
+  title: "Blackjack",
+  thumbnail: "!icons/blackjack.jpg",
+  url: "!games/blackjack/index.html"
+},
+{
+  title: "Flash Chess 3D",
+  thumbnail: "!icons/flash-chess-3d.jpg",
+  url: "!games/flash-chess-3d/index.html"
+},
+{
+  title: "Flashout",
+  thumbnail: "!icons/flashout.jpg",
+  url: "!games/flashout/index.html"
+},
+{
+  title: "Minesweeper",
+  thumbnail: "!icons/minesweeper.jpg",
+  url: "!games/minesweeper/index.html"
+},
+{
+  title: "Minisiege",  
+  thumbnail: "!icons/minisiege.jpg",
+  url: "!games/minisiege/index.html" 
+},
+{
+  title: "Pigeon Ascent",
+  thumbnail: "!icons/pigeon-ascent.jpg",
+  url: "!games/pigeon-ascent/index.html"
+},
+{
+  title: "Stick RPG 2",
+  thumbnail: "!icons/stick-rpg-2.jpg",
+  url: "!games/stick-rpg-2/index.html"
+},
+{
+  title: "Warfare 1917",
+  thumbnail: "!icons/warfare-1917.jpg",
+  url: "!games/warfare-1917/index.html" 
+},
+{
+  title: "Wii Tanks",
+  thumbnail: "!icons/wii-tanks.jpg",
+  url: "!games/wii-tanks/index.html"
+},
+{
   title: "This Is Patrick",
 thumbnail: "!icons/thisispatrick.jpg",
  url: "!games/thisispatrick/index.html"
