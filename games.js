@@ -1559,6 +1559,11 @@ thumbnail: "!games/pokemonfirered.jpg",
  url: "!games/pokemonfirered/index.html"
   },
 {
+  title: "Pokemon Shiny Gold Sigma",
+thumbnail: "!games/pokemon-shiny-gold-sigma.jpg",
+ url: "!games/pokemon-shiny-gold-sigma/index.html"
+  },
+{
   title: "Pokemon Platnium",
 thumbnail: "!games/pokemon-platnium.jpg",
  url: "!games/pokemon-platnium/index.html"
