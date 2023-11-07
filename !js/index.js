@@ -1,6 +1,5 @@
   function index() {
   document.getElementById("index").style.display = "block";
-    document.getElementById("offlinedownloads").style.display = "none";
       document.getElementById("games").style.display = "none";
       document.getElementById("aboutblank").style.display = "none";
       document.getElementById("scratchanide").style.display = "none";
@@ -10,7 +9,6 @@
     }
     function gameselect() {
   document.getElementById("index").style.display = "none";
-    document.getElementById("offlinedownloads").style.display = "none";
       document.getElementById("games").style.display = "block";
       document.getElementById("aboutblank").style.display = "none";
       document.getElementById("scratchanide").style.display = "none";
@@ -21,7 +19,6 @@
 
     function offlinedownloads() {
   document.getElementById("index").style.display = "none";
-    document.getElementById("offlinedownloads").style.display = "block";
       document.getElementById("games").style.display = "none";
       document.getElementById("aboutblank").style.display = "none";
       document.getElementById("scratchanide").style.display = "none";
@@ -33,7 +30,6 @@
          }
                   function aboutbl() {
   document.getElementById("index").style.display = "none";
-    document.getElementById("offlinedownloads").style.display = "none";
       document.getElementById("games").style.display = "none";
       document.getElementById("aboutblank").style.display = "block";
       document.getElementById("scratchanide").style.display = "none";
@@ -43,7 +39,6 @@
 
                   function scratchanide() {
   document.getElementById("index").style.display = "none";
-    document.getElementById("offlinedownloads").style.display = "none";
       document.getElementById("games").style.display = "none";
       document.getElementById("aboutblank").style.display = "none";
       document.getElementById("scratchanide").style.display = "block";
@@ -53,7 +48,6 @@
 
 function extras() {
   document.getElementById("index").style.display = "none";
-  document.getElementById("offlinedownloads").style.display = "none";
   document.getElementById("games").style.display = "none";
   document.getElementById("aboutblank").style.display = "none";
   document.getElementById("scratchanide").style.display = "none";
@@ -64,7 +58,6 @@ function extras() {
 
 function themes() {
   document.getElementById("index").style.display = "none";
-  document.getElementById("offlinedownloads").style.display = "none";
   document.getElementById("games").style.display = "none";
   document.getElementById("aboutblank").style.display = "none";
   document.getElementById("scratchanide").style.display = "none";

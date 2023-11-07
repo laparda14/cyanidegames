@@ -157,6 +157,26 @@ thumbnail: "!games/achievementunlocked.jpg",
   url: "!games/pokemon-sunsky/index.html"
 },
 {
+  title: "Pokemon Black",
+  thumbnail: "!games/pokemon-black.jpg",
+  url: "!games/pokemon-black/index.html"
+},
+{
+  title: "Pokemon Black 2",
+  thumbnail: "!games/pokemon-black-2.jpg",
+  url: "!games/pokemon-black-2/index.html"
+},
+{
+  title: "Pokemon White",
+  thumbnail: "!games/pokemon-white.jpg",
+  url: "!games/pokemon-white/index.html"
+},
+{
+  title: "Pokemon White 2",
+  thumbnail: "!games/pokemon-white-2.jpg",
+  url: "!games/pokemon-white-2/index.html"
+},
+{
   title: "Board Game Classics",
   thumbnail: "!games/board-game-classics.jpg",
   url: "!games/board-game-classics/index.html"
@@ -1592,11 +1612,6 @@ thumbnail: "!games/pokemon-heartgold.jpg",
   title: "Pokemon SoulSilver",
 thumbnail: "!games/pokemon-soulsilver.jpg",
  url: "!games/pokemon-soulsilver/index.html"
-  },
-{
-  title: "Pokemon SunSky",
-thumbnail: "!games/pokemonsunsky.jpg",
- url: "!games/pokemonsunsky/index.html"
   },
 {
   title: "Pokemon Unbound",
