@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap');
+
+body {
+  background-color:#210a1b;
+}
+
+
+.container {
+  border: 0px solid black;
+}
+
+.thumbtext {
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+  color: aliceblue;
+  opacity: 0.5;
+  transition-duration: 0.3s;
+  background-color: #300f27;
+}
+
+.functioninput {
+  background-color: #300f27;
+  color: aliceblue;
+  font-family: 'Assistant', sans-serif;
+  transition-duration: 0.5s;
+}
+
+.functioninput:hover {
+  width: 200px;
+  background-color: aliceblue;
+  color: #300f27;
+  font-family: 'Assistant', sans-serif;
+  opacity: 0.7;
+  border-radius: 15px;
+}
+
+.gamethumb {
+  background-color: #300f27;
+  color: aliceblue;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+}
+
+.gamethumb:hover {
+  background-color: #300f27;
+  color: aliceblue;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+  border: 0px, 0px, 10px solid aliceblue;
+}
+
+/* end of holder, container, gamethumb, and thumbtext css. */
+
+
+
+/* lol you can't edit this navbar id it stays the same with all themes */
+#navbar {
+  color:#210a1b;
+}
+
+/* this are very basic default classes, but since
+I always apply classes you dont really have to worry
+              about these too much. */
+p {
+  color: aliceblue;
+  font-family: sans-serif
+}
+
+textarea{
+  background-color: #300f27;
+  color: aliceblue;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+border: 2px 2px 2px aliceblue;
+}
+
+textarea:hover{
+border: 2px 2px 15px aliceblue;
+}
+
+/* this is the end of the terribly made classes */
+
+/* paragraph, heading, and button classes*/
+.paragraph{
+  font-family: 'Assistant', sans-serif;
+  font-size:18px;
+  color:aliceblue;
+}
+
+.heading{
+font-family: 'Assistant', sans-serif;
+font-size:24px;
+color:aliceblue;
+opacity: 0.5;
+    animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  text-align: center;
+transition-duration: 0.5s;
+}
+
+.heading:hover{
+  border: 4px 4px 30px aliceblue;
+  opacity: 1; 
+  color:white
+}
+
+.button{
+background-color: #300f27;
+  color: aliceblue;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+border-style: none;
+  opacity:0.5;
+}
+
+.button:hover{
+border: 1px 1px 1px 15px aliceblue;
+background-color: #fffcfc;
+  color: #300f27;
+}
+
+.buttoninput{
+background-color: #300f27;
+  color: aliceblue;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+}
+
+.buttoninput:hover{
+border: 1px 1px 1px 15px aliceblue;
+background-color: #fffcfc;
+  color: #300f27;
+  border-radius: 5px;
+}
+
+.credittext{
+  font-family: 'Assistant', sans-serif;
+  color:aliceblue;
+}
+
+      div.panelcredit{
+      background-color: #300f27;
+      border-radius: 40px;
+     }
+     div.panelcredit:hover{
+      scale: 1.05;
+      background-color: #441538;
+      border-radius: 40px;
+     }
+
+/* this one just makes shit round lol */
+.round{box-shadow: 0px 0px 5px #8FB2D5;}
+
+.round:hover{box-shadow: 0px 0px 15px #8FB2D5;}
+
+/* navtext properties (navtext is just navigation text :O */
+
+.navtext{
+    font-family: 'Assistant', sans-serif;
+  color:aliceblue;
+  border: 2px;
+  background-color: #210a1b;
+}
+
+.navtext:hover{
+    font-family: 'Assistant', sans-serif;
+  color:aliceblue;
+  border: 2px, 2px, 15px, aliceblue;
+  background-color: #210a1b;
+}
+
+.bar{
+    background: #210a1b;
+}
+
+/* Thanks for joining me on the journey through the
+cyanide css files, and I hope you stay safe and healthy out there!
+Don't forget to NEVER, EVER, take drugs kids! */ 
+
+        .ba {
+            min-width: 100%;
+            min-height: 1000px;
+            background: url("back.png"), #111111;
+            background-attachment: fixed;
+            background-repeat: repeat;
+            background-size: cover;
+            animation: scroll 50s linear infinite;
+            animation-name: parallax;
+            animation-duration: 25s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes scroll {
+            0% {
+                background-position: 0px 0px;
+            }
+            100% {
+                background-position: -6000px 0px;
+            }
+        }
+
+        @keyframes parallax {
+            0% {
+                background-position: 0px center;
+            }
+            100% {
+                background-position: -1000px center;
+            }
+        }
+
+        @media (prefers-reduced-motion) {
+            .ba {
+                animation: none;
+            }
+        }
+
+        @media (min-width: 670px) {
+            .title {
+                font-size: 5rem;
+            }
+        }

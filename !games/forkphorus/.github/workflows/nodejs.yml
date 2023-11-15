@@ -1,0 +1,27 @@
+name: Node CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.JS
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14
+    - name: Run build
+      run: |
+        npm ci
+        npm run build
+    - name: Run tests
+      run: |
+        cd tests
+        npm ci
+        npx playwright install-deps
+        npm test
